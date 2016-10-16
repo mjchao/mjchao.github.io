@@ -2,8 +2,51 @@
 <html>
 <head>
 <title>Mickey Chao</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- My styles -->
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+<!-- My javascript logic-->
+<script src="js/index.js"></script>
+
 </head>
-<body>
-<h1>Currently under construction...</h1>
+<body onload="ShowMenu()">
+
+<div id="pnl_menu" class="centered-content">
+	<h1>Mickey Chao</h1>
+	<br/>
+	<button type="button" class="btn btn-primary" onclick="ShowProjects()">Projects</button>
+	<button type="button" class="btn btn-primary" onclick="ShowSkills()">Skills</button>
+	<button type="button" class="btn btn-primary" onclick="ShowTimeline()">Timeline</button>
+</div>
+
+<div id="pnl_projects" class="centered-content">
+	<h1>Projects</h1>
+	<br/>
+	<p>Project text</p>
+</div>
+
+<div id="pnl_skills" class="centered-content">
+	<h1>Skills</h1>
+	<br/>
+	<p>Skills text</p>
+</div>
+
+<div id="pnl_timeline" class="centered-content">
+	<h1>Timeline</h1>
+	<br/>
+	<p>Timeline text</p>
+
+	<div id="pnl_another_panel">Test</div>
+</div>
 </body>
 </html>
