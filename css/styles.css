@@ -6,8 +6,12 @@ body {
 	background-size: cover;
 }
 
-.centered-content {
-	position: absolute;
+.faded {
+	opacity: 0.25;
+}
+
+.page-centered-content {
+	position: fixed;
 	left: 50%;
 	top: 50%;
 	-webkit-transform: translate(-50%, -50%);
@@ -15,6 +19,27 @@ body {
 	transform: translate(-50%, -50%);
 }
 
+.centered-content{
+	text-align: center;
+}
+
 h1 {
 	font-family: Arial, Verdana;
+}
+
+.projects-button {
+	margin: 5px;
+	white-space: normal;
+	height: 192px;
+	width: 192px;
+}
+
+.projects-image {
+	height: 128px;
+	width: 128px;
+}
+
+.projects-description {
+	font-family: Times New Roman, Georgia;
+	font-size: 20px;
 }

@@ -7,11 +7,14 @@ function HideAll() {
 
 function ShowMenu() {
 	HideAll();
+	$("#pnl_menu").removeClass("faded");
 	$("#pnl_menu").show();
 }
 
 function ShowProjects() {
 	HideAll();
+	ShowMenu();
+	$("#pnl_menu").addClass("faded");
 	$("#pnl_projects").show();
 }
 
