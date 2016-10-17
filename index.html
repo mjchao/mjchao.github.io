@@ -19,7 +19,7 @@
 <script src="js/index.js"></script>
 
 </head>
-<body onload="InitPanels()">
+<body onload="InitManagers()">
 <div id="pnl_menu" class="page-centered-content">
 	<h1>Mickey Chao</h1>
 	<h1>Note: Still under construction</h1>
@@ -30,7 +30,13 @@
 </div>
 
 <div id="pnl_projects" class="centered-content">
-	<div id="pnl_projects_list" class="container">
+	<div id="pnl_projects_description" class="container full-page">
+		<button class="close" onclick="ShowProjectsList()">x</button>
+		<div id="project_description">
+			Testing
+		</div>
+	</div>
+	<div id="pnl_projects_list" class="container full-page">
 		<button class="close" onclick="HideProjects()">x</button>
 		<div class="row">
 			<div class="col-xs-12">
@@ -39,7 +45,7 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-12 col-sm-4">	
-				<button class="btn btn-info projects-button">
+				<button class="btn btn-info projects-button" onclick="ShowProjectsDescription('projects/graph-3d.html')">
 					<img src=images/graph3d.png class="projects-image"/><br/>
 					<span class="projects-description">Graph 3D</span>
 				</button>

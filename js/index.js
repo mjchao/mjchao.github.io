@@ -86,7 +86,6 @@ var panel_manager = {
 	
 };
 
-
 function ShowMenu() {
 	panel_manager.ShowMenu();
 }
@@ -111,6 +110,47 @@ function ShowTimeline() {
 	panel_manager.ShowTimeline();
 }
 
-function InitPanels() {
+var project_panel_manager = {
+	list_state: VISIBLE,
+	description_state: HIDDEN,
+
+	Init: function() {
+		this.list_panel = $("#pnl_projects_list");
+		this.description_panel = $("#pnl_projects_description");
+		this.project_description = $("#project_description");
+
+		this.description_panel.hide();
+	},
+
+	ShowList: function() {
+		if (this.list_state == HIDDEN) {
+			this.list_panel.fadeIn(FADE_DURATION);
+			this.description_panel.fadeOut(FADE_DURATION);
+		}
+		this.list_state = VISIBLE;
+		this.description_state = HIDDEN;
+	},
+
+	ShowDescription: function(project) {
+		this.project_description.load(project);
+		if (this.description_state == HIDDEN) {
+			this.description_panel.fadeIn(FADE_DURATION);
+			this.list_panel.fadeOut(FADE_DURATION);
+		}
+		this.description_state = VISIBLE;
+		this.list_state = HIDDEN;
+	},
+};
+
+function ShowProjectsDescription(project) {
+	project_panel_manager.ShowDescription(project);
+}
+
+function ShowProjectsList() {
+	project_panel_manager.ShowList();
+}
+
+function InitManagers() {
 	panel_manager.Init();
+	project_panel_manager.Init();
 }
