@@ -73,7 +73,7 @@ var panel_manager = {
 
 	ShowTimeline: function() {
 		if (this.timeline_state == HIDDEN) {
-			this.timeline_panel.fadeIn(FADE_DURATION);
+			this.timeline_panel.fadeIn(FADE_DURATION_RELAXED);
 		}
 		this.timeline_state = VISIBLE;
 	},
@@ -202,7 +202,7 @@ function ShowSkillsList() {
 }
 
 function InitManagers() {
-	panel_manager.Init();
 	projects_panel_manager.Init();
 	skills_panel_manager.Init();
+	panel_manager.Init();
 }
