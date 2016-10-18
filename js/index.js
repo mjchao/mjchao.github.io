@@ -4,7 +4,8 @@ var FADED_OPACITY = 0.1;
 var HIDDEN = 0;
 var VISIBLE = 1;
 var FADED = 2;
-var FADE_DURATION = 1250;
+var FADE_DURATION_RELAXED = 1250;
+var FADE_DURATION_QUICK = 500;
 
 var panel_manager = {
 	menu_state: HIDDEN,
@@ -27,45 +28,45 @@ var panel_manager = {
 
 	ShowMenu: function() {
 		if (this.menu_state == HIDDEN) {
-			this.menu_panel.fadeIn(FADE_DURATION);
+			this.menu_panel.fadeIn(FADE_DURATION_RELAXED);
 		}
 		else if (this.menu_state == FADED) {
-			this.menu_panel.fadeTo(FADE_DURATION, 1.0);
+			this.menu_panel.fadeTo(FADE_DURATION_RELAXED, 1.0);
 		}
 		this.menu_state = VISIBLE;
 	},
 
 	FadeMenu: function() {
 		if (this.menu_state == VISIBLE) {
-			this.menu_panel.fadeTo(FADE_DURATION, FADED_OPACITY);
+			this.menu_panel.fadeTo(FADE_DURATION_RELAXED, FADED_OPACITY);
 		}
 		this.menu_state = FADED;
 	},
 
 	ShowProjects: function() {
 		if (this.projects_state == HIDDEN) {
-			this.projects_panel.fadeIn(FADE_DURATION);
+			this.projects_panel.fadeIn(FADE_DURATION_RELAXED);
 		}
 		this.projects_state = VISIBLE;
 	},
 
 	HideProjects: function() {
 		if (this.projects_state == VISIBLE) {
-			this.projects_panel.fadeOut(FADE_DURATION);
+			this.projects_panel.fadeOut(FADE_DURATION_RELAXED);
 		}
 		this.projects_state = HIDDEN;
 	},
 
 	ShowSkills: function() {
 		if (this.skills_state == HIDDEN) {
-			this.skills_panel.fadeIn(FADE_DURATION);
+			this.skills_panel.fadeIn(FADE_DURATION_RELAXED);
 		}
 		this.skills_state = VISIBLE;
 	},
 
 	HideSkills: function() {
 		if (this.skills_state == VISIBLE) {
-			this.skills_panel.fadeOut(FADE_DURATION);
+			this.skills_panel.fadeOut(FADE_DURATION_RELAXED);
 		}
 		this.skills_state = HIDDEN;
 	},
@@ -79,7 +80,7 @@ var panel_manager = {
 
 	HideTimeline: function() {
 		if (this.timeline_state == VISIBLE) {
-			this.timeline_panel.fadeOut(FADE_DURATION);
+			this.timeline_panel.fadeOut(FADE_DURATION_RELAXED);
 		}
 		this.timeline_state = HIDDEN;
 	},
@@ -134,8 +135,8 @@ var projects_panel_manager = {
 
 	ShowList: function() {
 		if (this.list_state == HIDDEN) {
-			this.list_panel.fadeIn(FADE_DURATION);
-			this.description_panel.fadeOut(FADE_DURATION);
+			this.list_panel.fadeIn(FADE_DURATION_QUICK);
+			this.description_panel.fadeOut(FADE_DURATION_QUICK);
 		}
 		this.list_state = VISIBLE;
 		this.description_state = HIDDEN;
@@ -144,15 +145,15 @@ var projects_panel_manager = {
 	ShowDescription: function(project) {
 		this.project_description.load(project);
 		if (this.description_state == HIDDEN) {
-			this.description_panel.fadeIn(FADE_DURATION);
-			this.list_panel.fadeOut(FADE_DURATION);
+			this.description_panel.fadeIn(FADE_DURATION_QUICK);
+			this.list_panel.fadeOut(FADE_DURATION_QUICK);
 		}
 		this.description_state = VISIBLE;
 		this.list_state = HIDDEN;
 	},
 };
 
-function ShowProjectsDescription(project) {
+function ShowProjectDescription(project) {
 	projects_panel_manager.ShowDescription(project);
 }
 
@@ -174,8 +175,8 @@ var skills_panel_manager = {
 
 	ShowList: function() {
 		if (this.list_state == HIDDEN) {
-			this.list_panel.fadeIn(FADE_DURATION);
-			this.description_panel.fadeOut(FADE_DURATION);
+			this.list_panel.fadeIn(FADE_DURATION_QUICK);
+			this.description_panel.fadeOut(FADE_DURATION_QUICK);
 		}
 		this.list_state = VISIBLE;
 		this.description_state = HIDDEN;
@@ -184,8 +185,8 @@ var skills_panel_manager = {
 	ShowDescription: function(project) {
 		this.project_description.load(project);
 		if (this.description_state == HIDDEN) {
-			this.description_panel.fadeIn(FADE_DURATION);
-			this.list_panel.fadeOut(FADE_DURATION);
+			this.description_panel.fadeIn(FADE_DURATION_QUICK);
+			this.list_panel.fadeOut(FADE_DURATION_QUICK);
 		}
 		this.description_state = VISIBLE;
 		this.list_state = HIDDEN;
