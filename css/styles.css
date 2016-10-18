@@ -4,6 +4,7 @@ body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	margin: 5px;
 }
 
 #pnl_projects_description {
@@ -58,4 +59,8 @@ body {
 .list-grid-description {
 	font-family: Times New Roman, Georgia;
 	font-size: 20px;
+}
+
+.description-panel {
+	padding-bottom: 50px;
 }

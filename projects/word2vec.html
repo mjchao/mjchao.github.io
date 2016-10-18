@@ -7,7 +7,7 @@
 	<h1 class="centered-text">Word Vectors for Advertising Algorithms</h1>
 	<br/>
 	<h2>Summary</h2>
-	<p><b>Goal:</b> Represent words in Google product data with vectors to express similarity. Similarity scores can be used to improve advertising algorithms.</p>
+	<p><b>Goal:</b> Represent words in Google product data with vectors to express similarity with words in potential customer queries.</p>
 
 	<p><b>Process:</b>
 		<ol>
@@ -31,14 +31,14 @@
 	<p>I interned for 13 weeks at Google during summer 2016. I was part of the Visual Shopping team and received this project for my internship. My goal was to improve one of their models by supplying it with a measure of similarity between words.</p> 
 
 	<h2>Process</h2>
-	<p>Most of my development process is not confidential because it closely follows the publicly available Tensorflow tutorial <a href="https://www.tensorflow.org/versions/r0.11/tutorials/word2vec/index.html">Vector Representations of Words</a>. My final algorithm differed quite a bit from the tutorial's algorithm, and those parts are confidential, but high-level idea is the same.
+	<p>Most of my development process is not confidential because it closely follows the publicly available Tensorflow tutorial <a href="https://www.tensorflow.org/versions/r0.11/tutorials/word2vec/index.html">Vector Representations of Words</a>. My final algorithm differed quite a bit from the tutorial's algorithm, and those parts are confidential, but the high-level idea is the same.
 	</p>
 
 	<p>I started off by spending two weeks involved in orientation classes and familiarizing myself with the internal parallel computing framework and several other tools. By the end of five weeks, I had completed a preliminary module for extracting several hundred million words and creating several billion skip-gram training examples.</p>
 
-	<p>For the next four weeks (weeks 6-9), I experimented with Tensorflow, read coworkers' code, and managed to build a graph to read in my skip-gram training examples and apply noise-contrastive estimation (NCE) loss. I managed to schedule the job to run on internal servers and report training and validation loss. While my code was running, I created a Tkinter UI to accept words as input and plot their nearest neighbors and similarity scores.</p>
+	<p>For the next four weeks (weeks 6-9), I experimented with Tensorflow, read coworkers' code, and managed to build a graph to read in my skip-gram training examples and apply noise-contrastive estimation (NCE) loss. I managed to schedule the job to run on internal servers and report train and test loss. While my code was running, I created a Tkinter UI to accept words as input and plot their nearest neighbors and similarity scores.</p>
 
-	<p>Although the initial algorithm ran succesfully, it failed to produce useful results. I spent the following two weeks (10-11) analyzing the training data and behavior of the model on different inputs to try and figure out the cause. Eventually, I determined that there were issues with initialization and over-representation of words in the dataset. After making several tweaks, the model started producing acceptable results. For example, words similar to "lenovo" were "thinkpad" and "cpu."
+	<p>Although the initial algorithm ran succesfully, it failed to produce useful results. I spent the following two weeks (10-11) analyzing the training data and behavior of the model on different inputs to try and figure out the cause. Eventually, I determined that there were issues with initialization and over-representation of words in the training data. After making several tweaks, the model started producing acceptable results. For example, words similar to "lenovo" were "thinkpad" and "cpu."
 
 	<p>I spent the final two weeks (12-13) integrating my word vectors into my team's model and writing up the user guide for my project. By the time my internship was over, my team's model was running and I had provided some 25 pages of documentation describing my project in high- and low-level detail. I also created a bash script to make it easier for others to run my code.</p>
 </body>
