@@ -105,6 +105,11 @@ function ShowSkills() {
 	panel_manager.ShowSkills();
 }
 
+function HideSkills() {
+	panel_manager.HideSkills();
+	panel_manager.ShowMenu();
+}
+
 function ShowTimeline() {
 	panel_manager.FadeMenu();
 	panel_manager.ShowTimeline();

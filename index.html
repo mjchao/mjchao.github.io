@@ -31,85 +31,113 @@
 
 <div id="pnl_projects" class="centered-content">
 	<div id="pnl_projects_description" class="container full-page">
-		<button class="close" onclick="ShowProjectsList()">x</button>
+		<button class="close fixed-close-button" onclick="ShowProjectsList()">x</button>
 		<div id="project_description">
 			Testing
 		</div>
 	</div>
 	<div id="pnl_projects_list" class="container full-page">
-		<button class="close" onclick="HideProjects()">x</button>
-		<div class="row">
-			<div class="col-xs-12">
-			<h1>Projects</h1><br/>
-			</div>
-		</div>
+		<button class="close fixed-close-button" onclick="HideProjects()">x</button>
+		<h1>Projects</h1><br/>
 		<div class="row">
 			<div class="col-xs-12 col-sm-4">	
-				<button class="btn btn-info projects-button" onclick="ShowProjectsDescription('projects/graph-3d.html')">
-					<img src=images/graph3d.png class="projects-image"/><br/>
-					<span class="projects-description">Graph 3D</span>
+				<button class="btn btn-info list-grid-button" onclick="ShowProjectsDescription('projects/graph-3d.html')">
+					<img src=images/graph3d.png class="list-grid-image"/><br/>
+					<span class="list-grid-description">Graph 3D</span>
 				</button>
 			</div>
 			<div class="col-xs-12 col-sm-4">
-				<button class="btn btn-info projects-button">
-					<img src=images/sudoku-solver.jpg class="projects-image"/><br/>
-					<span class="projects-description">Sudoku OCR</span>
+				<button class="btn btn-info list-grid-button">
+					<img src=images/sudoku-solver.jpg class="list-grid-image"/><br/>
+					<span class="list-grid-description">Sudoku OCR</span>
 				</button>
 			</div>
 			<div class="col-xs-12 col-sm-4">
-				<button class="btn btn-info projects-button">
-					<img src=images/imgapprox.png class="projects-image"/><br/>
-					<span class="projects-description">Genetic Image Approximation</span>
+				<button class="btn btn-info list-grid-button">
+					<img src=images/imgapprox.png class="list-grid-image"/><br/>
+					<span class="list-grid-description">Genetic Image Approximation</span>
 				</button>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-xs-12 col-sm-4">	
-				<button class="btn btn-info projects-button">
-					<img src=images/logic.png class="projects-image"/><br/>
-					<span class="projects-description">Logic and AI</span>
+				<button class="btn btn-info list-grid-button">
+					<img src=images/logic.png class="list-grid-image"/><br/>
+					<span class="list-grid-description">Logic and AI</span>
 				</button>
 			</div>
 			<div class="col-xs-12 col-sm-4">
-				<button class="btn btn-info projects-button">
-					<img src=images/interactive-whiteboard.png class="projects-image"/><br/>
-					<span class="projects-description">Interactive Whiteboard</span>
+				<button class="btn btn-info list-grid-button">
+					<img src=images/interactive-whiteboard.png class="list-grid-image"/><br/>
+					<span class="list-grid-description">Interactive Whiteboard</span>
 				</button>
 			</div>
 			<div class="col-xs-12 col-sm-4">
-				<button type="button" class="btn btn-info projects-button">
-					<img src=images/computer-algebra.png class="projects-image"/><br/>
-					<span class="projects-description">Computer Algebra</span>
+				<button type="button" class="btn btn-info list-grid-button">
+					<img src=images/computer-algebra.png class="list-grid-image"/><br/>
+					<span class="list-grid-description">Computer Algebra</span>
 				</button>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-xs-12 col-sm-4">	
-				<button class="btn btn-info projects-button">
-					<img src=images/physics-engine.png class="projects-image"/><br/>
-					<span class="projects-description">Physics Engine</span>
+				<button class="btn btn-info list-grid-button">
+					<img src=images/physics-engine.png class="list-grid-image"/><br/>
+					<span class="list-grid-description">Physics Engine</span>
 				</button>
 			</div>
 			<div class="col-xs-12 col-sm-4">
-				<button class="btn btn-info projects-button">
-					<img src=images/word2vec.png class="projects-image"/><br/>
-					<span class="projects-description">Word Vectors and Shopping Ads</span>
+				<button class="btn btn-info list-grid-button">
+					<img src=images/word2vec.png class="list-grid-image"/><br/>
+					<span class="list-grid-description">Word Vectors and Shopping Ads</span>
 				</button>
 			</div>
 			<div class="col-xs-12 col-sm-4">
-				<button class="btn btn-info projects-button">
-					<img src=images/gateway-test-framework.png class="projects-image"/><br/>
-					<span class="projects-description">Gateway Test Framework</span>
+				<button class="btn btn-info list-grid-button">
+					<img src=images/gateway-test-framework.png class="list-grid-image"/><br/>
+					<span class="list-grid-description">Gateway Test Framework</span>
 				</button>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div id="pnl_skills" class="centered-content">
-	<h1>Skills</h1>
-	<br/>
-	<p>Skills text</p>
+<div id="pnl_skills" class="centered-content full-page">
+	<div id="pnl_skills_list" class="container full-page">
+		<button class="close fixed-close-button" onclick="HideSkills()">x</button>
+		<h1>Skills/Knowledge</h1>
+		<div class="row">
+			<div class="col-xs-12 col-sm-4">
+				<button class="btn btn-info list-grid-button">
+					<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/155px-Java_programming_language_logo.svg.png" class="list-grid-image"/>
+				</button>
+			</div>
+			<div class="col-xs-12 col-sm-4">
+				<button class="btn btn-info list-grid-button">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/C_plus_plus.svg/100px-C_plus_plus.svg.png" class="list-grid-image"/>
+				</button>
+			</div>
+			<div class="col-xs-12 col-sm-4">
+				<button class="btn btn-info list-grid-button">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/110px-Python-logo-notext.svg.png" class="list-grid-image"/>
+					<span class="list-grid-description">Python</span>
+				</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-4">
+				<button class="btn btn-info list-grid-button">
+					<img src=images/visual-basic.png class="list-grid-image"/>
+					<span class="list-grid-description">Visual Basic</span>
+				</button>
+			</div>
+			<div class="col-xs-12 col-sm-4">
+				<button class="btn btn-info list-grid-button">
+					<img src="http://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" class="list-grid-image"/>
+				</button>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div id="pnl_timeline" class="centered-content">

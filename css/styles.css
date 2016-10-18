@@ -12,9 +12,16 @@ body {
 	left 0px;
 }
 
+.fixed-close-button {
+	position: fixed;
+	right: 5%;
+}
+
 .full-page {
+	position: fixed;
 	width: 100%;
 	height: 100%;
+	overflow: auto;
 }
 
 .page-centered-content {
@@ -39,19 +46,19 @@ h1 {
 	font-family: Arial, Verdana;
 }
 
-.projects-button {
+.list-grid-button {
 	margin: 5px;
 	white-space: normal;
 	height: 192px;
 	width: 192px;
 }
 
-.projects-image {
+.list-grid-image {
 	height: 128px;
 	width: 128px;
 }
 
-.projects-description {
+.list-grid-description {
 	font-family: Times New Roman, Georgia;
 	font-size: 20px;
 }
