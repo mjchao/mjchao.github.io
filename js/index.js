@@ -1,5 +1,5 @@
 "use strict";
-var FADED_OPACITY = 0.1;
+var FADED_OPACITY = 0.05;
 
 var HIDDEN = 0;
 var VISIBLE = 1;
@@ -154,6 +154,14 @@ var projects_panel_manager = {
 };
 
 function ShowProjectDescription(project) {
+	// If the list is fading, the user can still click the buttons.
+	// We don't want to do anything in that case.
+	if (panel_manager.projects_state == HIDDEN) {
+		return;
+	}
+	if (projects_panel_manager.list_state == HIDDEN) {
+		return;
+	}
 	projects_panel_manager.ShowDescription(project);
 }
 
@@ -194,6 +202,12 @@ var skills_panel_manager = {
 };
 
 function ShowSkillDescription(skill) {
+	if (panel_manager.skills_state == HIDDEN) {
+		return;
+	}
+	if (skills_panel_manager.list_state == HIDDEN ) {
+		return;
+	}
 	skills_panel_manager.ShowDescription(skill);
 }
 

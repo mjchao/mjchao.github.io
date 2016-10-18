@@ -14,7 +14,7 @@ body {
 
 .fixed-close-button {
 	position: fixed;
-	top: 0%;
+	z-index: 999999;
 	right: 5%;
 }
 
@@ -34,17 +34,13 @@ body {
 	transform: translate(-50%, -50%);
 }
 
-.centered-content{
+.centered-text {
 	text-align: center;
 }
 
 .exit-button {
 	top: 0px;
 	right: 0px;
-}
-
-h1 {
-	font-family: Arial, Verdana;
 }
 
 .list-grid-button {
