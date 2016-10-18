@@ -115,6 +115,11 @@ function ShowTimeline() {
 	panel_manager.ShowTimeline();
 }
 
+function HideTimeline() {
+	panel_manager.HideTimeline();
+	panel_manager.ShowMenu();
+}
+
 var project_panel_manager = {
 	list_state: VISIBLE,
 	description_state: HIDDEN,
