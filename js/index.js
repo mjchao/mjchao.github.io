@@ -205,4 +205,5 @@ function InitManagers() {
 	projects_panel_manager.Init();
 	skills_panel_manager.Init();
 	panel_manager.Init();
+	document.body.style.visibility = "visible";
 }

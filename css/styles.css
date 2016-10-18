@@ -14,6 +14,7 @@ body {
 
 .fixed-close-button {
 	position: fixed;
+	top: 0%;
 	right: 5%;
 }
 
