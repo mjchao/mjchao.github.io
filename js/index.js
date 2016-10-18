@@ -193,7 +193,7 @@ var skills_panel_manager = {
 	},
 };
 
-function ShowSkillsDescription(skill) {
+function ShowSkillDescription(skill) {
 	skills_panel_manager.ShowDescription(skill);
 }
 
