@@ -176,7 +176,7 @@ var skills_panel_manager = {
 	Init: function() {
 		this.list_panel = $("#pnl_skills_list");
 		this.description_panel = $("#pnl_skills_description");
-		this.project_description = $("#skill_description");
+		this.skill_description = $("#skill_description");
 
 		this.description_panel.hide();
 	},
@@ -190,8 +190,8 @@ var skills_panel_manager = {
 		this.description_state = HIDDEN;
 	},
 
-	ShowDescription: function(project) {
-		this.project_description.load(project);
+	ShowDescription: function(skill) {
+		this.skill_description.load(skill);
 		if (this.description_state == HIDDEN) {
 			this.description_panel.fadeIn(FADE_DURATION_QUICK);
 			this.list_panel.fadeOut(FADE_DURATION_QUICK);
