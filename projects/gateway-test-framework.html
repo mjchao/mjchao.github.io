@@ -1,6 +1,37 @@
 <!DOCTYPE html>
 <html>
 <body>
-	<h1>Gateway Test Framework</h1>
+	<h1 class="centered-text">Gateway Test Framework</h1>
+	<center><img src=images/gateway-test-framework.png></img></center>
+
+	<h2>Summary</h2>
+	<p><b>Goal:</b>Perform automatic regression tests on a gateway that submits trade orders to an exchange.</p>
+
+	<p><b>Process:</b>
+		<ol>
+			<li> Generate requirements for the gateway.</li>
+			<li> Design an automated test framework.</li>
+			<li> Write test cases against requirements.</li>
+		</ol>
+	</p>
+
+	<p><b>Delivered:</b>
+		<ul>
+			<li>Test framework design document.</li>
+			<li>Automated test framework.</li>
+			<li>Test cases.</li>
+		</ul>
+	</p>
+
+	<h2>Overview</h2>
+	<p>I interned for 10 weeks at Jump Trading during summer 2015. I was part of the Quality Assurance team and received this project (and second one) for my internship. My goal was to test the correctness of a gateway that connected to the BATS exchange.</p>
+
+	<h2>Process</h2>
+	<p>In this project, I worked with two software engineering interns who wrote the code for the gateway. We discussed the requirements and then validated our findings with our mentors. Then, the software engineering interns implemented the gateway according to the requirements while I implemented my framework to test against the requirements.</p>
+
+	<p>During the first week, I familiarized myself with trading terminology and the internal libraries that were available. By the end of the second week, I had designed my framework to use the Command design pattern and interpret test cases written in plaintext. By the end of the sixth week, I had successfully implemented the framework, tested the majority of the requirements and presented it to the team.</p>
+
+	<p>The test framework performed various actions such as submitting orders, listening for order confirmations, and killing and restarting the gateway to check for loss of data. The framework was also capable of flooding the gateway with orders and verifying all of them at a later time.</p>
+
 </body>
 </html>
