@@ -2,5 +2,44 @@
 <html>
 <body>
 	<h1>Photo OCR of Sudoku Puzzles</h1>
+	<img src=images/sudoku-solver-descr.png></img>
+
+	<h2>Summary</h2>
+	<p><b>Goal:</b> Detect the grid and the numbers in images of Sudoku Puzzles and solve the puzzles.</p>
+
+	<p><b>Process:</b>
+	<ol>
+		<li> Extract the grid.</li>
+		<li> Extract the digits.</li>
+		<li> Recognize the digits.</li>
+		<li> Solve puzzle with the extracted digits.</li>
+		<li> Draw the solution onto the puzzle.</li>
+	</ol>
+	</p>
+
+	<p><b>Delivered:</b>
+	<ol>
+		<li>Functions for extracting grid.</li>
+		<li>Algorithm for digit recognition and its training data.</li>
+		<li>Algorithm for solving an extracted Sudoku puzzle.</li>
+		<li><a href="https://github.com/mjchao/Sudoku-Solver">Project repository</a></li>
+	</ol>
+	</p>
+
+	<h2>Overview</h2>
+	<p>I worked on this project during one week of my holiday break in December 2015. I wanted to explore some simple computer vision techniques and followed a tutorial on <a href="http://aishack.in/tutorials/sudoku-grabber-opencv-plot/">AI Shack</a>.</p>
+
+	<h2>Process</h2>
+	<p>First, I followed a lot of the tutorial for extracting the grid and I was introduced to concepts such as dilating the image, thresholding based on color, and then floodfilling to get the gridlines of the Sudoku puzzle. Once the lines were extracted and the corners of the puzzle detected, I undistorted the image of the puzzle so that I obtained an isolated square Sudoku grid. Since all the grid squares were of the same size, it was relatively straightforward to partition the undistorted square into 81 smaller squares.</p>
+
+	<p>Once the grid was extracted, I applied a simple feedforwad neural network. I generated several thousand images of digits and added in noise pixels and distortions. I used the resulting images as training data. The classifier achieved around 80% accuracy on my dataset.</p>
+
+	<p>After implementing the digits classifier, I wrote a straightforward, brute-force algorithm to try and solve the Sudoku puzzle with backtracking.</p>
+
+	<p>It turns out that the program was unable to solve too many puzzles. I analyzed the stages of the pipeline and found that the grid extraction algorithm worked fine. The digit recognizer unfortunately could only achieve 80% accuracy, which often caused it to incorrectly read a few digits per puzzle.</p>
+	
+	<p>I didn't have the computing power to add multiple layers and more hidden units, and that probably would not have helped much. The serious problem was that the feedforward neural network simply looked at the presence of pixels, rather than the relative locations of pixels. For example, shifting the digit "1" to the right by a bit wcould make it align with the vertical part of the digit "7" and cause it to mistake the "1" for a "7".</p>
+	
+	<p>A few months later, I returned to this project and realized a convolution neural network could do a better job on this task.</p>
 </body>
 </html>
