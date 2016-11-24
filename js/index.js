@@ -11,18 +11,19 @@ var panel_manager = {
 	menu_state: HIDDEN,
 	projects_state: HIDDEN,
 	skills_state: HIDDEN,
-	timeline_state: HIDDEN,
+	about_state: HIDDEN,
 
 	Init: function() {
 		this.menu_panel = $("#pnl_menu");
 		this.projects_panel = $("#pnl_projects");
 		this.skills_panel = $("#pnl_skills");
-		this.timeline_panel = $("#pnl_timeline");
+		this.about_panel = $("#pnl_about");
 
 		this.menu_panel.hide();
 		this.projects_panel.hide();
 		this.skills_panel.hide();
-		this.timeline_panel.hide();
+		this.about_panel.hide();
+                this.about_panel.hide();
 		this.ShowMenu();
 	},
 
@@ -71,18 +72,18 @@ var panel_manager = {
 		this.skills_state = HIDDEN;
 	},
 
-	ShowTimeline: function() {
-		if (this.timeline_state == HIDDEN) {
-			this.timeline_panel.fadeIn(FADE_DURATION_RELAXED);
+	ShowAbout: function() {
+		if (this.about_state == HIDDEN) {
+			this.about_panel.fadeIn(FADE_DURATION_RELAXED);
 		}
-		this.timeline_state = VISIBLE;
+		this.about_state = VISIBLE;
 	},
 
-	HideTimeline: function() {
-		if (this.timeline_state == VISIBLE) {
-			this.timeline_panel.fadeOut(FADE_DURATION_RELAXED);
+	HideAbout: function() {
+		if (this.about_state == VISIBLE) {
+			this.about_panel.fadeOut(FADE_DURATION_RELAXED);
 		}
-		this.timeline_state = HIDDEN;
+		this.about_state = HIDDEN;
 	},
 	
 };
@@ -111,13 +112,13 @@ function HideSkills() {
 	panel_manager.ShowMenu();
 }
 
-function ShowTimeline() {
+function ShowAbout() {
 	panel_manager.FadeMenu();
-	panel_manager.ShowTimeline();
+	panel_manager.ShowAbout();
 }
 
-function HideTimeline() {
-	panel_manager.HideTimeline();
+function HideAbout() {
+	panel_manager.HideAbout();
 	panel_manager.ShowMenu();
 }
 
