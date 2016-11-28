@@ -69,8 +69,8 @@ p + p {
 
 .description-panel {
 	position: absolute;
-	top 0px;
-	left 0px;
+	top: 0px;
+	left: 0px;
 	padding-bottom: 50px;
 }
 
