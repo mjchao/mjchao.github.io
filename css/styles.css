@@ -15,6 +15,10 @@ p, ul, ol {
         font-size: 13pt;
 }
 
+p + p {
+    margin-top: 20px;
+}
+
 .fixed-close-button {
 	position: fixed;
 	z-index: 999999;
