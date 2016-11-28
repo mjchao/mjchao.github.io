@@ -1,4 +1,5 @@
 "use strict";
+
 var FADED_OPACITY = 0.05;
 
 var HIDDEN = 0;
@@ -222,3 +223,16 @@ function InitManagers() {
 	panel_manager.Init();
 	document.body.style.visibility = "visible";
 }
+
+function TestAPNGSupport() {
+    if (!APNG) {
+        $("#img_mjchao").attr('src', 'images/mjchao.png')
+        console.log("Changing image to non animated.");
+    }
+}
+
+function OnLoad() {
+    TestAPNGSupport();
+}
+
+window.onload = OnLoad;

@@ -7,6 +7,14 @@ body {
 	margin: 5px;
 }
 
+#pnl_about_content {
+        padding: 50px;
+}
+
+p, ul, ol {
+        font-size: 13pt;
+}
+
 .fixed-close-button {
 	position: fixed;
 	z-index: 999999;
