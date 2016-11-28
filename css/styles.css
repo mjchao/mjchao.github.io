@@ -69,3 +69,7 @@ p, ul, ol {
 	left 0px;
 	padding-bottom: 50px;
 }
+
+.bottom-row {
+        padding-bottom: 25px;
+}
