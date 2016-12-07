@@ -7,11 +7,26 @@ body {
 	margin: 5px;
 }
 
+h1 {
+        font-weight: bolder;
+}
+
+h2 {
+        font-weight: bold;
+}
+
+h3 {
+        font-style: italic;
+}
+
+h4 {
+}
+
 #pnl_about_content {
         padding: 50px;
 }
 
-p, ul, ol {
+p, ul, ol, dl {
         font-size: 13pt;
 }
 
