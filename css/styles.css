@@ -70,16 +70,29 @@ p + p {
 	white-space: normal;
 	height: 192px;
 	width: 192px;
+        position: relative;
+}
+
+.list-grid-image-container {
+        height: 130px;
+        width: 130px;
+        overflow: hidden;
 }
 
 .list-grid-image {
-	height: 128px;
-	width: 128px;
+        max-width: 128px;
+        max-height: 128px;
+        background-size: cover;
+        margin-top: -40px;
 }
 
 .list-grid-description {
 	font-family: Times New Roman, Georgia;
 	font-size: 20px;
+        position: absolute;
+        bottom: 3%;
+        width: 100%;
+        left: 0%;
 }
 
 .description-panel {

@@ -1,6 +1,28 @@
 <!DOCTYPE>
 <html>
 <body>
-	<h1>Logic and AI</h1>
+    <h1 class="centered-text">Logic and AI</h1>
+    <br/>
+    <center><img src="images/logic.png"></img></center>
+    <h2>Summary</h2>
+    <p><b>Goal:</b>Explore algorithms for manipulating and proving statements expressed in first-order logic.</p>
+    <p><b>Process:</b>
+        <ol>
+            <li>Parse an infix logic expression into postfix.</li>
+            <li>Convert postfix into tree form.</li>
+            <li>Convert tree into conjunctive normal form.</li>
+            <li>Apply resolution to prove new statements.</li>
+        </ol>
+    </p>
+    <p><b>Delivered:</b> A library that accepts a knowledge base and provides a function to query whether a given statement is true or not necessarily true.</p>
+
+    <h2>Overview</h2>
+    <p>I worked on this project during the winter semester of 2016 and part of my summer break in 2016 before I began my internship at Google. Logic and knowledgebases were my first experience with an artificial intelligence program being able to generalize to different tasks. Of course, the knowledgebase had to be different for each new task, but the algorithms remained the same and generalized.</p>
+
+    <h2>Process</h2>
+    <p>My first step was to create the necessary abstractions to parse out tokens in logic expressions. For example, the expression "FORALL x f(x)"  had to be parsed into the tokens "FORALL", "x", "f", "(", "x", and ")". This was relatively straightforward pattern matching.</p>
+
+
+    <p>Next, I revisited Dijkstra's Shunting Yard Algorithm for converting infix mathematical expressions to postfix. I made several modifications so that it would take logic operators and deal with quantifiers. The following illustrates a challenge with the modifications: "FORALL(x, y) EXISTS z f(x, y, z)". The correct postfix was "x y z f FORALL(x, y) EXISTS(z)". We cannot separate "EXISTS(z)" into two tokens "z EXISTS" because if the postfix were "z f z EXISTS" we wouldn't be sure if it represented "EXISTS(z) f(z)" or "EXISTS(z, f(z))". The postfix is also created such that functions can take a variable number of operators. While "f(x) AND g(y)" could be ambiguously represented in postfix as "x y f g" (which could mean "g(f(x, y))" as well), the algorithm will always convert the expression to
 </body>
 </html>
