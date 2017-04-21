@@ -40,6 +40,13 @@ p + p {
 	right: 5%;
 }
 
+.fixed-home-button {
+        position: fixed;
+        z-index: 999999;
+        top: 5%;
+        right: 5%;
+}
+
 .full-page {
 	position: fixed;
 	width: 100%;
