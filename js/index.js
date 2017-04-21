@@ -36,6 +36,7 @@ var panel_manager = {
 			this.menu_panel.fadeTo(FADE_DURATION_RELAXED, 1.0);
 		}
 		this.menu_state = VISIBLE;
+                document.title = "Mickey Chao"
 	},
 
 	FadeMenu: function() {
@@ -50,6 +51,7 @@ var panel_manager = {
 			this.projects_panel.fadeIn(FADE_DURATION_RELAXED);
 		}
 		this.projects_state = VISIBLE;
+                document.title = "Mickey Chao - Projects"
 	},
 
 	HideProjects: function() {
@@ -64,6 +66,7 @@ var panel_manager = {
 			this.skills_panel.fadeIn(FADE_DURATION_RELAXED);
 		}
 		this.skills_state = VISIBLE;
+                document.title = "Mickey Chao - Skills"
 	},
 
 	HideSkills: function() {
@@ -78,6 +81,7 @@ var panel_manager = {
 			this.about_panel.fadeIn(FADE_DURATION_RELAXED);
 		}
 		this.about_state = VISIBLE;
+                document.title = "Mickey Chao - About Me"
 	},
 
 	HideAbout: function() {
