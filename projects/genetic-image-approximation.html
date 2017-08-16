@@ -1,6 +1,38 @@
 <!DOCTYPE html>
 <html>
 <body>
-	<h1>Image Approximation with Genetic Algorithms</h1>
+    <h1>Image Approximation with Genetic Algorithms</h1>
+    <center><img src=images/imgapprox.png></img></center>
+
+    <h2>Summary</h2>
+    <p><b>Goal:</b> Approximate an image with 100 polygons.</p>
+
+    <p><b>Process:</b>
+        <ol>
+            <li>Start with a random configuration of 100 polygons.</li>
+            <li>Randomly mutate shapes by changing color, adding vertices, shifting vertices, and performing other changes.</li>
+            <li>Keep the mutations that bring the approximation closer to the target image.</li>
+            <li>Repeat for hundreds of thousands of iterations.</li>
+        </ol>
+    </p>
+
+    <p><b>Delivered:</b>
+        <ul>
+            <li>Code to take in an image and various parameters (e.g. number of shapes, number of iterations) and create an approximation of the original image.</li>
+            <li>Code to produce an animation showing the progression of the genetic search algorithm.</li>
+            <li>Report detailing the performance of various parameter settings.</li>
+            <li><a href="https://github.com/mjchao/Genetic-Search-Image-Approximation" target="_blank">Project Repository</a>.</li>
+        </ul>
+    </p>
+
+    <h2>Overview</h2>
+    <p>This was the first assignment in my EECS 492: Intro to Artificial Intelligence class. I worked on this in September 2015 and submitted my report. In November 2016, I also changed the code to use the more-efficient Pillow library instead of Pygame for rendering images. This change allowed me to feasibly run the algorithm for millions of iterations to generate an animated picture of the genetic search on my headshot image. Given a few hours to run, the algorithm can generate a solid approximation of most small (less than 100x100 pixel) images and probably runs decently on larger images.</p>
+
+    <h2>Process</h2>
+    <p>The first step was to create the necessary abstractions for polygons, RGBA colors, and other structures that would determine how to draw the approximation on a canvas. This was straightforward object-oriented programming.</p>
+    <p>After those abstractions, I spent an enormous amount of time trying to blend the alpha values of polygons in Pygame. This was extremely unintuitive as it required you to draw the image on the computer screen, or else the colors would not blend and a polygon would simply cover up any polygons below it. This took a few weeks.</p>
+    <p>Once the image approximation could be drawn, I easily implemented the scoring function, which simply took the euclidean distance between the target image and its approximation.</p>
+    <p>Finally, the algorithm could be run on arbitrary images and I submitted a report with the results of running 500,000 iterations of the genetic algorithm on 6 images. It took about 6 hours per image.</p>
+    <p>In November 2016, I changed the code to use the Pillow library. It took just a few hours to get this working and I will probably never use Pygame again for rendering static images. This Pillow library also sped up the code about 10 times faster than before. I easily left it running on a server for a day and it went through 4,000,000 iterations.</p>
 </body>
 </html>
