@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:700|Open+Sans:700|Passion+One|Playfair+Display|Raleway:700');
+
+#page {
+  //max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+body {
+  font-size: 16px;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.8em;
+}
+
+p {
+  font-family: 'Playfair Display', serif;
+}
+
+a.btn {
+  font-size: 1.2em;
+  text-decoration: none;
+  background-color: #a9a9a9;
+  border: 1px solid #a9a9a9;
+  padding: 7px 15px;
+  transition: background-color .5s;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+a.btn:hover {
+  background-color: rgba(0,0,0,0.3);
+}
+
+header {
+  height: 430px;
+  position: relative;
+  background: url(../images/banner.png) no-repeat center bottom;
+}
+
+header a.logo {
+  position: absolute;
+  display: block;
+  font-family: 'Passion One', cursive;
+  font-size: 48px;
+  text-decoration: none;
+  width: 160px;
+  height: 80px;
+  top: 0px;
+  left: 0px;
+  background: url(../images/logo.png) no-repeat 0 0;
+}
+
+header div.hero {
+  position: absolute;
+  width: 50%;
+  top: 80px;
+  left: 40%;
+}
+
+header div.hero h1 {
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  font-size: 5em;
+}
+
+header div.hero h2 {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5em;
+}
+
+section {
+  padding: 0 30px;
+}
+
+section.main {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding-bottom: 100px;
+  display: flex;
+  width: 100%;
+  background-color: #87ceeb;
+  position: relative;
+  left: -10px;
+}
+
+section.main aside {
+  width: 33%;
+  float: left;
+  text-align: center;
+  flex: 1;
+}
+
+section.main .content {
+  margin: 15px;
+  padding-bottom: 15px;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+section.main .content p {
+  text-align: left;
+}
+
+section.main .content .btn {
+  position: absolute;
+  bottom: 0;
+}
+
