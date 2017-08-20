@@ -29,6 +29,7 @@ a.btn {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+  box-shadow: 2px 2px 2px #888888;
 }
 
 a.btn:hover {
@@ -80,8 +81,8 @@ section {
 section.main {
   margin-top: 40px;
   margin-bottom: 30px;
-  padding-bottom: 100px;
-  display: flex;
+  padding-bottom: 4em;
+  display: table;
   width: 100%;
   background-color: #87ceeb;
   position: relative;
@@ -92,12 +93,11 @@ section.main aside {
   width: 33%;
   float: left;
   text-align: center;
-  flex: 1;
+  display: table-cell;
 }
 
 section.main .content {
   margin: 15px;
-  padding-bottom: 15px;
   height: 100%;
   position: relative;
   text-align: center;
@@ -110,5 +110,15 @@ section.main .content p {
 section.main .content .btn {
   position: absolute;
   bottom: 0;
+}
+
+@supports (display: flex) {
+  section.main {
+    display: flex;
+  }
+
+  section.main aside {
+    flex: 1;
+  }
 }
 
