@@ -66,6 +66,8 @@ header div.hero h1 {
   text-align: center;
   font-family: 'Comfortaa', cursive;
   font-size: 5em;
+  margin-top: .3em;
+  margin-bottom: 0em;
 }
 
 header div.hero h2 {
