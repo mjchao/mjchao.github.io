@@ -2,7 +2,7 @@
 
 #page {
   //max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 0;
   position: relative;
 }
 
@@ -82,7 +82,6 @@ section.main {
   margin-top: 40px;
   margin-bottom: 30px;
   padding-bottom: 4em;
-  display: table;
   width: 100%;
   background-color: #87ceeb;
   position: relative;
@@ -112,6 +111,8 @@ section.main .content .btn {
   bottom: 0;
 }
 
+/* this is better than using table and table-cell displays to get same-height
+columns. But Safari does not support flex, so we have to make this check.*/
 @supports (display: flex) {
   section.main {
     display: flex;
@@ -119,6 +120,16 @@ section.main .content .btn {
 
   section.main aside {
     flex: 1;
+  }
+}
+
+@supports not(display: flex) {
+  section.main {
+    display: table;
+  }
+
+  section.main aside {
+    display: table-cell;
   }
 }
 
