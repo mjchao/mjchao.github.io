@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:700|Open+Sans:700|Passion+One|Playfair+Display|Raleway:700');
+
+#page {
+  margin: 0 0;
+  position: relative;
+}
+
+body {
+  font-size: 16px;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.8em;
+}
+
+p {
+  font-family: 'Playfair Display', serif;
+}
