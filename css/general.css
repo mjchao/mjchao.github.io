@@ -58,6 +58,7 @@ nav ul {
   position: absolute;
   top: 17px;
   left: 110px;
+  width: 100%;
 }
 
 nav ul li:hover {
@@ -66,6 +67,7 @@ nav ul li:hover {
 
 nav > ul > li {
   float: left;
+  width: 25%;
 }
 
 nav ul li a {
@@ -73,6 +75,5 @@ nav ul li a {
   color: #fff;
   padding: 10px 20px;
   text-decoration: none;
-  width: 125px;
   position: relative;
 }

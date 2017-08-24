@@ -5,25 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mickey Chao</title>
     <link rel="stylesheet" type="text/css" media="screen" href="css/index.css">
+
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
   </head>
   <body>
     <div id="page">
       <header>
-      
-      <nav>
-        <a class="logo" title="Mickey Chao" href=""></a>
-        <ul>
-          <li>
-            <a title="Skills" href="#">Skills</a>
-          </li>
-          <li>
-            <a title="Projects" href="#">Projects</a>
-          </li>
-          <li>
-            <a title="Contact" href="#">Contact</a>
-          </li>
-        </ul>
-      </nav>
+        <div w3-include-html="nav.html"></div>
         <div class="hero">
           <h1>Mickey Chao</h1>
           <h2>Intelligent Software Engineering</h2>
@@ -83,5 +71,7 @@
       </footer>
     </div>
   </body>
-
+  <script>
+    w3.includeHTML();
+  </script>
 </html>
