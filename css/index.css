@@ -23,13 +23,13 @@ header {
   background: url(../images/banner.png) no-repeat center bottom;
 }
 
-header a.logo {
+nav a.logo {
   position: absolute;
   display: block;
   font-family: 'Passion One', cursive;
   font-size: 48px;
   text-decoration: none;
-  width: 160px;
+  width: 100px;
   height: 80px;
   top: 0px;
   left: 0px;
