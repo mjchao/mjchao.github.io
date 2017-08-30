@@ -18,8 +18,48 @@ section.main {
 }
 
 section.main aside {
+  position: absolute;
   width: 33%;
   height: 50%;
   float: left;
   text-align: center;
+  transition: all 1s ease;
+}
+
+section.main .selected {
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+}
+
+section.main .row1 {
+  top: 0%;
+}
+
+section.main .row2 {
+  top: 50%;
+}
+
+section.main .row2.selected {
+  top: 0%;
+}
+
+section.main .col2 {
+  left: 33%;
+}
+
+section.main .col2.selected {
+  margin-left: -33%;
+}
+
+section.main .col3 {
+  left: 66%;
+}
+
+section.main .col3.selected {
+  margin-left: -66%;
+}
+
+section.main aside div {
+  transition: all 1s ease;
 }
