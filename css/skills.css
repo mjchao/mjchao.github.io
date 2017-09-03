@@ -3,6 +3,10 @@
 /* https://stackoverflow.com/questions/29730294/increase-a-div-size-on-click-with-css-alone */
 /* https://codepen.io/guynaldo007/pen/gcybi */
 
+h3 {
+  font-size: 2em;
+}
+
 nav ul li.skills::before {
   content: '\25b6';
   color: #ffd700;
@@ -24,12 +28,28 @@ section.main aside {
   float: left;
   text-align: center;
   transition: all 1s ease;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #888888;
+  border: 1px solid gray;
+  margin: 5px;
+}
+
+section.main aside:hover {
+  background-color: #87ceeb;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #888888;
+  margin: 0px;
 }
 
 section.main .selected {
-  width: 100%;
+  width: 99%;
   height: 100%;
   z-index: 10000;
+  background-color: white;
 }
 
 section.main .row1 {
@@ -60,6 +80,17 @@ section.main .col3.selected {
   margin-left: -66%;
 }
 
-section.main aside div {
-  transition: all 1s ease;
+section.main div.content {
+  display: none;
 }
+
+section.main aside img {
+  max-width: 96px;
+  max-height: 96px;
+  object-fit: scale-down;
+}
+
+section.main .selected div.content {
+  display: block;
+}
+
