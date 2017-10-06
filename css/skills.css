@@ -12,6 +12,7 @@ nav ul li.skills::before {
   color: #ffd700;
   position: relative;
   left: 20px;
+  top: -2px;
 }
 
 section.main {
@@ -47,8 +48,9 @@ section.main aside:hover {
 
 section.main .selected {
   width: 99%;
-  height: 100%;
+  min-height: 100%;
   z-index: 10000;
+  overflow: auto;
   background-color: white;
 }
 
@@ -80,8 +82,13 @@ section.main .col3.selected {
   margin-left: -66%;
 }
 
-section.main div.content {
+section.main div.content p {
   display: none;
+  padding: 0 20% 0 20%;
+}
+
+section.main div p {
+  text-align: left;
 }
 
 section.main aside img {
@@ -90,7 +97,7 @@ section.main aside img {
   object-fit: scale-down;
 }
 
-section.main .selected div.content {
+section.main .selected div.content p {
   display: block;
 }
 
