@@ -1,0 +1,86 @@
+section.main {
+  position: absolute;
+  width: 95%;
+  height: 90%;
+  top: 75px;
+  margin-left: 1%;
+}
+
+section.main aside {
+  position: absolute;
+  width: 33%;
+  height: 50%;
+  float: left;
+  text-align: center;
+  transition: all 1s ease;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #888888;
+  border: 1px solid gray;
+  margin: 5px;
+}
+
+section.main aside:hover {
+  background-color: #87ceeb;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #888888;
+  margin: 0px;
+}
+
+section.main .selected {
+  width: 99%;
+  min-height: 100%;
+  z-index: 10000;
+  overflow: auto;
+  background-color: white;
+}
+
+section.main .row1 {
+  top: 0%;
+}
+
+section.main .row2 {
+  top: 50%;
+}
+
+section.main .row2.selected {
+  top: 0%;
+}
+
+section.main .col2 {
+  left: 33%;
+}
+
+section.main .col2.selected {
+  margin-left: -33%;
+}
+
+section.main .col3 {
+  left: 66%;
+}
+
+section.main .col3.selected {
+  margin-left: -66%;
+}
+
+section.main div.content p {
+  display: none;
+  padding: 0 20% 0 20%;
+}
+
+section.main div p {
+  text-align: left;
+}
+
+section.main aside img {
+  max-width: 96px;
+  max-height: 96px;
+  object-fit: scale-down;
+}
+
+section.main .selected div.content p {
+  display: block;
+}
