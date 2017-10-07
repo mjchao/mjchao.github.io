@@ -3,6 +3,7 @@
 
 h3 {
   font-size: 2em;
+  margin: 10px;
 }
 
 nav ul li.projects::before {
