@@ -66,12 +66,12 @@ section.main .col3.selected {
   margin-left: -66%;
 }
 
-section.main div.content p {
+section.main div.content {
   display: none;
   padding: 0 20% 0 20%;
 }
 
-section.main div p {
+section.main div p, section.main div ul {
   text-align: left;
 }
 
@@ -91,6 +91,6 @@ section.main .selected img {
   transition: all .7s ease-in;
 }
 
-section.main .selected div.content p {
+section.main .selected div.content {
   display: block;
 }
