@@ -76,16 +76,16 @@ section.main div p {
 }
 
 section.main aside img {
-  max-width: 128px;
-  max-height: 64px;
+  max-width: 256px;
+  max-height: 128px;
   object-fit: scale-down;
   transform: scale(1);
   transition: all .7s ease-in;
 }
 
 section.main .selected img {
-  max-width: 256px;
-  max-height: 128px;
+  max-width: 1286px;
+  max-height: 64px;
   object-fit: scale-down;
   transform: scale(1);
   transition: all .7s ease-in;
