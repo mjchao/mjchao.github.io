@@ -48,9 +48,11 @@ section.main {
   margin-top: 40px;
   margin-bottom: 30px;
   padding-bottom: 4em;
-  width: 100%;
+  /* Can't get the blue fill entire horizontal space with width=100% :/ */
+  width: 101.75%;
   background-color: #87ceeb;
   position: relative;
+  left: -1%;
 }
 
 section.main aside {
@@ -61,7 +63,7 @@ section.main aside {
 }
 
 section.main .content {
-  margin: 15px;
+  margin: 30px;
   height: 100%;
   position: relative;
   text-align: center;
