@@ -44,18 +44,13 @@ header div.hero h2 {
   font-size: 2.5em;
 }
 
-section {
-  padding: 0 30px;
-}
-
 section.main {
   margin-top: 40px;
   margin-bottom: 30px;
   padding-bottom: 4em;
-  width: 95%;
+  width: 100%;
   background-color: #87ceeb;
   position: relative;
-  left: -10px;
 }
 
 section.main aside {

@@ -7,6 +7,8 @@
 
 body {
   font-size: 16px;
+  min-width: 930px;
+  min-height: 430px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -35,6 +37,7 @@ nav {
   top: 0;
   left: 0;
   padding: 75px 0 0 0;
+  min-width: 700px;
   width: 100%;
   position: fixed;
   z-index: 9999;
@@ -74,7 +77,6 @@ nav ul li a {
   display: inline-block;
   color: #fff;
   padding: 10px 20px;
-  width: 70%;
   text-decoration: none;
   position: relative;
 }
