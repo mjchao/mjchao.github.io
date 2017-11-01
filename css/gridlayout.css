@@ -71,7 +71,7 @@ section.main div.content {
   padding: 0 20% 0 20%;
 }
 
-section.main div p, section.main div ul {
+section.main div p, section.main div ul, section.main div ol {
   text-align: left;
 }
 

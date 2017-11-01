@@ -27,7 +27,7 @@ h3 {
   font-size: 1.8em;
 }
 
-p {
+p, ul, ol {
   font-family: 'Playfair Display', serif;
 }
 
