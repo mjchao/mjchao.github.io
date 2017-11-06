@@ -14,3 +14,7 @@ nav ul li.projects::before {
   top: -2px;
 }
 
+nav ul li.projects a {
+  width: 60%;
+}
+

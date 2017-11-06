@@ -17,3 +17,7 @@ nav ul li.skills::before {
   top: -2px;
 }
 
+nav ul li.skills a {
+  width: 60%;
+}
+

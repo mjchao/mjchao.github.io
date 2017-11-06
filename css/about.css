@@ -8,6 +8,10 @@ nav ul li.about::before {
   top: -2px;
 }
 
+nav ul li.about a {
+  width: 60%;
+}
+
 section.main {
   position: absolute;
   top: 75px;
