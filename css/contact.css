@@ -1,0 +1,19 @@
+@import url(general.css);
+
+nav ul li.contact::before {
+  content: '\25b6';
+  color: #ffd700;
+  position: relative;
+  left: 20px;
+  top: -2px;
+}
+
+nav ul li.contact a {
+  width: 60%;
+}
+
+section.main {
+  position: absolute;
+  top: 75px;
+  padding: 1em;
+}
