@@ -86,8 +86,8 @@ section.main aside img {
 }
 
 section.main .selected img {
-  max-width: 20%;
-  max-height: 20%;
+  max-width: 80%;
+  max-height: 300px;
   object-fit: scale-down;
   transform: scale(1);
   transition: all .7s ease-in;
