@@ -79,7 +79,7 @@ section.main div p, section.main div ul, section.main div ol {
 
 section.main aside img {
   max-width: 80%;
-  max-height: 400px;
+  max-height: 350px;
   object-fit: scale-down;
   transform: scale(1);
   transition: all .7s ease-in;
