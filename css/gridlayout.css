@@ -5,7 +5,7 @@ section.main {
   min-width: 800px;
   min-height: 800px;
   top: 75px;
-  left: -2px;
+  left: 0px;
 }
 
 section.main aside {
@@ -96,3 +96,16 @@ section.main .selected img {
 section.main .selected div.content {
   display: block;
 }
+
+section.main .close {
+  display: none;
+}
+
+section.main .selected .close {
+  display: inline;
+  position: absolute;
+  cursor: pointer;
+  top: 15px;
+  left: 30px;
+}
+
