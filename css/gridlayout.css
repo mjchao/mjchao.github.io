@@ -1,9 +1,11 @@
 section.main {
   position: absolute;
-  width: 95%;
+  width: 100%;
+  min-width: 800px;
+  min-height: 650px;
   height: 90%;
   top: 75px;
-  margin-left: 1%;
+  left: -2px;
 }
 
 section.main aside {
@@ -77,15 +79,15 @@ section.main div p, section.main div ul, section.main div ol {
 
 section.main aside img {
   max-width: 256px;
-  max-height: 128px;
+  max-height: 256px;
   object-fit: scale-down;
   transform: scale(1);
   transition: all .7s ease-in;
 }
 
 section.main .selected img {
-  max-width: 1286px;
-  max-height: 64px;
+  max-width: 384px;
+  max-height: 384px;
   object-fit: scale-down;
   transform: scale(1);
   transition: all .7s ease-in;
