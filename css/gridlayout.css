@@ -23,7 +23,7 @@ section.main aside {
   margin: 5px;
 }
 
-section.main aside:hover {
+section.main aside:not(.selected):hover {
   background-color: #87ceeb;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -37,7 +37,7 @@ section.main .selected {
   height: 100%;
   z-index: 10000;
   overflow: auto;
-  background-color: white;
+  background-color: #87ceeb;
 }
 
 section.main .row1 {
@@ -70,7 +70,7 @@ section.main .col3.selected {
 
 section.main div.content {
   display: none;
-  padding: 0 20% 0 20%;
+  padding: 0 20% 3em 20%;
 }
 
 section.main div p, section.main div ul, section.main div ol {
@@ -98,14 +98,31 @@ section.main .selected div.content {
 }
 
 section.main .close {
-  display: none;
+  visibility: hidden;
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  opacity: 0;
+  transition:opacity 2s linear;
 }
 
 section.main .selected .close {
-  display: inline;
-  position: absolute;
+  visibility: visible;
+  position: fixed;
   cursor: pointer;
   top: 15px;
   left: 30px;
+  color: rgba(0,0,0,0.5);
+  font-weight: 300;
+  font-size: 2em;
+  transition: color .5s;
+  /* Have to delay .7s so that it appears once the selected
+     div has fully expanded */
+  transition:opacity 1s linear 0.7s;
+  opacity: 1;
+}
+
+section.main .selected .close:hover {
+  color: rgba(0,0,0,0.2);
 }
 
