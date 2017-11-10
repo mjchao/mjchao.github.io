@@ -108,7 +108,7 @@ section.main .close {
 
 section.main .selected .close {
   visibility: visible;
-  position: fixed;
+  position: absolute;
   cursor: pointer;
   top: 15px;
   left: 30px;
