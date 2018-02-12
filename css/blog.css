@@ -1,0 +1,56 @@
+@import url(general.css);
+
+nav ul li.blog::before {
+  content: '\25b6';
+  color: #ffd700;
+  position: relative;
+  left: 20px;
+  top: -2px;
+}
+
+nav ul li.blog a {
+  width: 60%;
+}
+
+section.main {
+  position: absolute;
+  top: 75px;
+}
+
+section.main > h1 {
+  text-align: center;
+}
+
+section.main aside.intro {
+  padding: 1em 2em 0 2em;
+}
+
+section.main div.posts {
+  padding: 0 1em 0 1em;
+}
+
+section.main aside.post {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  float: left;
+  margin: 1em;
+}
+
+section.main aside.post h1.post-title {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+section.main aside.post div.post-image {
+  width: 300px;
+  height: 150px;
+}
+
+section.main aside.post div.post-content {
+  background-color: #87ceeb;
+  width: 280px;
+  height: 140px;
+  padding: 5px 10px 5px 10px;
+}
+
