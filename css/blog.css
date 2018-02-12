@@ -53,15 +53,18 @@ section.main aside.post h1.post-title {
 }
 
 section.main aside.post div.post-image {
+  display: flex;
   width: 300px;
   height: 150px;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 section.main aside.post div.post-image img {
   max-width: 100%;
   max-height: 100%;
   object-fit: scale-down;
+  height: auto;
 }
 
 section.main aside.post div.post-content {
