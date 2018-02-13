@@ -3,8 +3,8 @@ import json
 
 ROOT = "/"
 CURDIR = os.path.join(ROOT, "blog")
-BLOG_POST_TEMPLATE = "post.template.html"
-BLOG_SUMMARY_TEMPLATE = "summary.template.html"
+BLOG_POST_TEMPLATE = "post.template"
+BLOG_SUMMARY_TEMPLATE = "summary.template"
 
 with open(BLOG_POST_TEMPLATE, "r") as f:
     post_template = f.read()
