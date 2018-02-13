@@ -1,4 +1,5 @@
-@import url(general.css);
+@import url("general.css");
+@import url("nav.css");
 
 nav ul li.about::before {
   content: '\25b6';

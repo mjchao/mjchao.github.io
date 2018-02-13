@@ -1,5 +1,6 @@
-@import url(general.css);
-@import url(blog-summary.css);
+@import url("general.css");
+@import url("nav.css");
+@import url("blog-summary.css");
 
 nav ul li.blog::before {
   content: '\25b6';

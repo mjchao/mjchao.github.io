@@ -7,10 +7,16 @@
     <title>{{title}}</title>
     <link rel="stylesheet" type="text/css" media="screen" href="../css/blog-post.css">
 
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
     <script src="https://www.w3schools.com/lib/w3.js"></script>
   </head>
   <body>
-    <a class="main-menu" href="../blog.html">Back</a>
+    <nav>
+      <a class="home" title="home" href="../blog.html">
+        <i class="fa fa-home"></i>
+      </a>
+    </nav>
     <header>
       <h1>{{title}}</h1>
       <img src="{{BLOGDIR}}/header.png"></img>
@@ -22,4 +28,4 @@
   <script>
     w3.includeHTML();
   </script>
-</html>
+</html

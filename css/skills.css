@@ -1,5 +1,6 @@
-@import url(general.css);
-@import url(gridlayout.css);
+@import url("general.css");
+@import url("nav.css");
+@import url("gridlayout.css");
 
 /* https://stackoverflow.com/questions/29730294/increase-a-div-size-on-click-with-css-alone */
 /* https://codepen.io/guynaldo007/pen/gcybi */
