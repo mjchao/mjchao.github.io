@@ -5,13 +5,15 @@
     <meta http-equiv="Content-Type" context="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{title}}</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/blog.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/blogpost.css">
 
     <script src="https://www.w3schools.com/lib/w3.js"></script>
   </head>
   <body>
+    <a class="main-menu" href="../blog.html">Back to Blogs List</a>
     <header>
-
+      <h1>{{title}}</h1>
+      <img src="{{CONTENTDIR}}/header.png"></img>
     </header>
     <section class="blogpost">
       <div w3-include-html="{{CONTENTDIR}}/content.html"></div>

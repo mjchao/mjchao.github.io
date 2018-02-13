@@ -1,0 +1,9 @@
+@import url(general.css);
+
+body {
+  margin: 2em;
+}
+
+header {
+  text-align: center;
+}
