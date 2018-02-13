@@ -19,6 +19,7 @@
     </nav>
     <header>
       <h1>{{title}}</h1>
+      <h2>{{date}}</h2>
       <img src="{{BLOGDIR}}/header.png"></img>
     </header>
     <section class="blogpost">
