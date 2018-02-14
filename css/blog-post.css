@@ -1,18 +1,31 @@
 @import url("general.css");
+@import url("blog-summary.css");
 
 body {
   margin: 3em;
+  /* No long nav, so we don't need to enforce min-width or min-height anymore */
+  min-width: 0;
+  min-height: 0;
 }
 
 header {
   text-align: center;
 }
 
+.blogpost h2 {
+  padding-top: 0.5em;
+  margin-bottom: -0.3em;
+}
+
+.related .related-header {
+  padding-top: 0.5em;
+  margin-bottom: -0.3em;
+}
+
 nav {
   top: 0;
   left: 0;
   padding: 10px 0 10px 0;
-  width: 100%;
   position: fixed;
   z-index: 9999;
 }
