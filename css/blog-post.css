@@ -32,6 +32,8 @@ nav {
 nav a.home {
   position: absolute;
   display: block;
+  width: 38px;
+  height: 38px;
   top: 10px;
   left: 5px;
   font-size: 2em;
