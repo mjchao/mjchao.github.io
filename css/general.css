@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa:700|Passion+One|Playfair+Display|Raleway:700');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:700|Passion+One|Merriweather|Raleway:700');
 
 #page {
   margin: 0 0;
@@ -28,7 +28,8 @@ h3 {
 }
 
 p, ul, ol {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Merriweather', serif;
+  line-height: 1.7em;
 }
 
 a.btn {
