@@ -17,6 +17,12 @@ header {
   margin-bottom: -0.3em;
 }
 
+.blogpost h3 {
+  padding-top: 0.5em;
+  margin-bottom: -0.3em;
+  font-style: italic;
+}
+
 .related .related-header {
   padding-top: 0.5em;
   margin-bottom: -0.3em;
