@@ -1,7 +1,7 @@
 
 aside.summary {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   border: 1px solid black;
   float: left;
   margin: 1em;
@@ -24,8 +24,8 @@ aside.summary h1.summary-title {
 
 aside.summary div.summary-image {
   display: flex;
-  width: 300px;
-  height: 150px;
+  width: 400px;
+  height: 200px;
   justify-content: center;
   align-items: center;
 }
@@ -39,8 +39,8 @@ aside.summary div.summary-image img {
 
 aside.summary div.summary-content {
   background-color: #87ceeb;
-  width: 280px;
-  height: 140px;
+  width: 380px;
+  height: 190px;
   padding: 5px 10px 5px 10px;
 }
 

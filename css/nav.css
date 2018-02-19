@@ -1,5 +1,5 @@
 nav {
-  background-color: rgba(0,0,0,.30);
+  background-color: #C0C0C0;
   position: relative;
   top: 0;
   left: 0;
@@ -32,7 +32,7 @@ nav ul {
 }
 
 nav ul li:hover {
-  background-color: rgba(0,0,0,.40);
+  background-color: #808080;
 }
 
 nav > ul > li {
