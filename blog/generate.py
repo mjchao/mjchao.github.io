@@ -28,9 +28,11 @@ for blogdir in blogdirs:
     with open("%s/vars.json" %(blogdir)) as f:
         vars = json.load(f)
 
-    # provide DIR variable by default, which is the directory in which the
-    # blog data was stored.
+    # provide BLOGDIR and BLOGPOST variable by default, which is the directory
+    # and blogpost
     vars["BLOGDIR"] = os.path.join(CURDIR, blogdir)
+    with open(os.path.join(blogdir, "content.html"), "r") as f:
+        vars["BLOGPOST"] = str(f.read())
 
     # Prevent substiting {{RELATED}} directly as a list. We want to
     # substitute in the actual summaries, so that requires some special logic
@@ -64,6 +66,7 @@ for blogdir in blogdirs:
         related_posts_html += (
                 "<div w3-include-html=\"%s.summary.html\"></div>\n"
                 %(os.path.join(CURDIR, related)))
+
     post_html = post_html.replace("{{%s}}" %(RELATED_POSTS_VAR),
             related_posts_html)
 

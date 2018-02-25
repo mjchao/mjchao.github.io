@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../css/blog-post.css">
 
     <script src="https://www.w3schools.com/lib/w3.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
   <body>
     <nav>
@@ -20,7 +22,7 @@
       <img src="{{BLOGDIR}}/header.png"></img>
     </header>
     <section class="blogpost">
-      <div w3-include-html="{{BLOGDIR}}/content.html"></div>
+      {{BLOGPOST}}
     </section>
     <section class="related posts">
       <h2 class="related-header">Related</h2>
