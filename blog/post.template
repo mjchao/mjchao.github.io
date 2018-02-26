@@ -25,7 +25,6 @@
       {{BLOGPOST}}
     </section>
     <section class="related posts">
-      <h2 class="related-header">Related</h2>
       {{RELATED}}
     </section>
   </body>

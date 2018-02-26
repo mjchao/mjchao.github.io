@@ -56,19 +56,22 @@ for blogdir in blogdirs:
     for k in vars:
         post_html = post_html.replace("{{%s}}" %(k), "%s" %(vars[k]))
 
-    # add summaries of related posts to the bottom of the blog post
-    related_posts_html = ""
-    for related in related_posts:
-        if related not in blogdirs:
-            print ("ERR: %s in %s.RELATED is not a valid post. Ignoring..."
-                    %(related, blogdir))
-            continue
-        related_posts_html += (
-                "<div w3-include-html=\"%s.summary.html\"></div>\n"
-                %(os.path.join(CURDIR, related)))
+    if related_posts:
+        # add summaries of related posts to the bottom of the blog post
+        related_posts_html = "<h2 class=\"related-header\">Related</h2>\n"
+        for related in related_posts:
+            if related not in blogdirs:
+                print ("ERR: %s in %s.RELATED is not a valid post. Ignoring..."
+                        %(related, blogdir))
+                continue
+            related_posts_html += (
+                    "<div w3-include-html=\"%s.summary.html\"></div>\n"
+                    %(os.path.join(CURDIR, related)))
 
-    post_html = post_html.replace("{{%s}}" %(RELATED_POSTS_VAR),
-            related_posts_html)
+        post_html = post_html.replace("{{%s}}" %(RELATED_POSTS_VAR),
+                related_posts_html)
+    else:
+        post_html = post_html.replace("{{%s}}" %(RELATED_POSTS_VAR), "")
 
     with open("%s.html" %(blogdir), "w") as f:
         f.write(post_html.encode("utf-8"))
