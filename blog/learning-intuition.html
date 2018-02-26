@@ -80,7 +80,7 @@ In a typical machine learning course, you’ll learn how to build a decision tre
 			If you didn’t understand the intuition behind a decision tree, all you’ll have memorized is the algorithm for constructing a decision tree with discrete features. Then you despair over missing a question worth 5% of your final grade.
     </p>
     <p>
-			Why does the decision tree construction algorithm work for discrete features? It correctly partitions the features to maximize information gain (or another metric). Once we have this intuition, we realize that for continuous features, we just need to partition the continuous features as well Since we have finite training samples, we can bucket everything into ranges. Our splits become if-between-1.23-and-2.45, if-between-2.45-and-3.59, and so on.
+			Why does the decision tree construction algorithm work for discrete features? It correctly partitions the features to maximize information gain (or another metric). Once we have this intuition, we realize that for continuous features, we just need to partition the continuous features as well. Since we have finite training samples, we can bucket everything into ranges. Our splits become if-between-1.23-and-2.45, if-between-2.45-and-3.59, and so on.
     </p>
   </div>
 </div>
@@ -114,7 +114,7 @@ Suppose you’re taking your computer architecture final and you get a question 
 			If you didn’t understand the intuition behind processor instructions, you might simply say 7 bytes is less than 8, so it must be faster to copy 7 bytes… duh? And then you’re shocked when you get 0 points for that problem.
 		</p>
 		<p>
-			Why are speed-related concepts like cache eviction and branch prediction important in computer architecture? They’re important because they speed up common scenarios, but the drawback is they do worse on adversarial inputs. On this test question, 8 bytes (64-bit primitives) is common and 7 bytes is adversarial. We deduce there will be an assembly instruction for an 8-byte copy, but the 7-byte copy will probably take 4 instructions and is slower. Conveniently, no memorization of ARM of x86 instruction sets was required.
+			Why are speed-related concepts like cache eviction and branch prediction important in computer architecture? They’re important because they speed up common scenarios, but the drawback is they do worse on adversarial inputs. On this test question, 8 bytes (64-bit primitives) is common and 7 bytes is adversarial. We deduce there will be an assembly instruction for an 8-byte copy, but the 7-byte copy will probably take 4 instructions and is slower. Conveniently, no memorization of ARM or x86 instruction sets was required.
 		</p>
 	</div>
 </div>
