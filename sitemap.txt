@@ -8,7 +8,10 @@ https://mjchao.github.io/skills.html
 https://mjchao.github.io/about.html
 https://mjchao.github.io/blog/what-are-you-getting-into.html
 https://mjchao.github.io/blog/optimizing-your-workload.html
+https://mjchao.github.io/blog/learning-intuition.html
 https://mjchao.github.io/blog/optimizing-your-workload.summary.html
 https://mjchao.github.io/blog/what-are-you-getting-into.summary.html
+https://mjchao.github.io/blog/learning-intuition.summary.html
+https://mjchao.github.io/blog/learning-intuition/content.html
 https://mjchao.github.io/blog/what-are-you-getting-into/content.html
 https://mjchao.github.io/blog/optimizing-your-workload/content.html
