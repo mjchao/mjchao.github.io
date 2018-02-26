@@ -32,6 +32,13 @@ p, ul, ol {
   line-height: 1.7em;
 }
 
+code {
+  font-family: 'Courier';
+  display: block;
+  white-space: pre-wrap;
+  padding-left: 2em;
+}
+
 a.btn {
   font-size: 1.2em;
   text-decoration: none;

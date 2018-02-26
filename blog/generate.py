@@ -32,7 +32,7 @@ for blogdir in blogdirs:
     # and blogpost
     vars["BLOGDIR"] = os.path.join(CURDIR, blogdir)
     with open(os.path.join(blogdir, "content.html"), "r") as f:
-        vars["BLOGPOST"] = str(f.read())
+        vars["BLOGPOST"] = f.read().decode("utf-8")
 
     # Prevent substiting {{RELATED}} directly as a list. We want to
     # substitute in the actual summaries, so that requires some special logic
@@ -71,5 +71,5 @@ for blogdir in blogdirs:
             related_posts_html)
 
     with open("%s.html" %(blogdir), "w") as f:
-        f.write(post_html)
+        f.write(post_html.encode("utf-8"))
 

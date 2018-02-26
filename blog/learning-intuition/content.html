@@ -1,0 +1,102 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  $( function() {
+    $( ".accordion" ).accordion({
+      active: false,
+      collapsible: true,
+      heightStyle: "content",
+    });
+  } );
+</script>
+
+<p>
+Some people study lecture material thoroughly, but still don’t get As on the exams. It’s a frustrating feeling because you believe you did everything you were supposed to do but don’t get the grade that you deserve. This is a common result from paying attention to lectures, but only memorizing facts and procedures; instead, you should learn the intuition behind concepts.
+</p>
+<h2>
+Example of Not Learning Intuition
+</h2>
+<p>
+When the lecturer teaches a concept, most students pay attention to that one scenario. They won’t have the intuition to generalize the concept to new situations. Here is an example of failing to learn the intuition behind a concept. Suppose your lecturer shows you an example of a while loop and an example of a for loop:
+</p>
+<code>
+done = false;
+while not done:
+  done = am_i_done()
+
+for i in 1..10:
+  print i
+</code>
+<p>
+Someone who does not learn the intuition will look at this situation and say, “If I don’t know when to stop beforehand, I should use a while loop. If I know when to stop beforehand, I should use a for loop.” Then, the exam asks them to convert a for loop to a while loop and they say, “WTF, that question makes no sense.” They didn’t consider why the lecturer introduced multiple types of loops and simply memorized the situations in which they should use each one.
+</p>
+<h2>
+How Do I Learn Intuition?
+</h2>
+<p>
+You learn intuition by making sure you understand why each concept is being taught in the first place. Here are exploratory questions you can ask yourself: why did the lecturer introduce the while loop? Oh that’s because sometimes we need to do repetitive tasks. Why did the lecturer introduce the for loop as well? Oh that’s because it makes looping through a fixed range more convenient. After answering those questions, you’ll understand that the variety of loop options are there for convenience and readability; they all achieve the same goal of expressing a repetitive task in a compact manner. Then, on the exam, your intuition would show that you can still write a for loop with a while loop. 
+</p>
+<h2>
+More Examples
+</h2>
+<p>
+Here are some more examples that use harder computer science concepts. You can skip over them if you haven’t taken the relevant courses yet.
+</p>
+<h3>
+Decision Trees with Continuous Features
+</h3>
+<p>
+In a typical machine learning course, you’ll learn how to build a decision tree that outputs “Yes” or “No” to answer a question such as “Should I go outside?” when the features are discrete values like “January,” “Windy,” “Snowing.” Then, on the test, the question asks you to explain how to build a decision tree when the features are continuous values like 1.234 and 3.943.
+</p>
+<div class="accordion">
+  <a>Solution</a>
+  <div>
+    <p>
+			If you didn’t understand the intuition behind a decision tree, all you’ll have memorized is the algorithm for constructing a decision tree with discrete features. Then you despair over missing a question worth 5% of your final grade.
+    </p>
+    <p>
+			Why does the decision tree construction algorithm work for discrete features? It correctly partitions the features to maximize information gain (or another metric). Once we have this intuition, we realize that for continuous features, we just need to partition the continuous features as well Since we have finite training samples, we can bucket everything into ranges. Our splits become if-between-1.23-and-2.45, if-between-2.45-and-3.59, and so on.
+    </p>
+  </div>
+</div>
+<h3>
+Unintuitive Compression Algorithm
+</h3>
+<p>
+Some competitive programming problems force your intuition of data structures and algorithms into new situations. Here’s an example of a problem I really liked: <a href="http://codeforces.com/problemset/problem/436/C">Codeforces 436C</a>. The storyline involves compressing data. 
+</p>
+<div class="accordion">
+  <a>Solution</a>
+  <div>
+    <p>
+			If you didn’t understand the motivation for minimal spanning trees, then even if I suggested you convert this to a graph problem, you’d probably still be confused and incorrectly select Dijkstra’s algorithm just because there’s a graph.
+    </p>
+    <p>
+			What problem does a minimal spanning tree solve? It helps you connect new nodes into a master set of nodes while minimizing overall cost. In this scenario, each node is a level and the master set is the levels you have sent over. Don’t worry if this was too unintuitive; you might struggle a bit on competitive programming problems if you haven’t practiced for technical interview questions.
+    </p>
+  </div>
+</div>
+<h3>
+Are you sure 7 is less than 8?
+</h3>
+<p>
+Suppose you’re taking your computer architecture final and you get a question like this: You have an 8-byte struct that gets copied around a lot. You realize one of the bytes is redundant and you can get rid of it and make it a 7-byte struct. How does that affect your program’s runtime?
+</p>
+<div class="accordion">
+	<a>Solution</a>
+	<div>
+		<p>
+			If you didn’t understand the intuition behind processor instructions, you might simply say 7 bytes is less than 8, so it must be faster to copy 7 bytes… duh? And then you’re shocked when you get 0 points for that problem.
+		</p>
+		<p>
+			Why are speed-related concepts like cache eviction and branch prediction important in computer architecture? They’re important because they speed up common scenarios, but the drawback is they do worse on adversarial inputs. On this test question, 8 bytes (64-bit primitives) is common and 7 bytes is adversarial. We deduce there will be an assembly instruction for an 8-byte copy, but the 7-byte copy will probably take 4 instructions and is slower. Conveniently, no memorization of ARM of x86 instruction sets was required.
+		</p>
+	</div>
+</div>
+<h3>
+Summary
+</h3>
+<p>
+In lecture, you see how a variety of tools are applied to different problems. You want to study and understand the intuition: why each tool was used for each situation. Then, when a hard exam question asks you to extend your knowledge to a new situation, you’ll be prepared to select the appropriate tool.
+</p>
