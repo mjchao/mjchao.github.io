@@ -2,7 +2,7 @@
 @import url("blog-summary.css");
 
 body {
-  margin: 3em;
+  margin: 5em;
   /* No long nav, so we don't need to enforce min-width or min-height anymore */
   min-width: 0;
   min-height: 0;
@@ -10,6 +10,11 @@ body {
 
 header {
   text-align: center;
+}
+
+.blogpost {
+  max-width: 900px;
+  margin: auto;
 }
 
 .blogpost h2 {
@@ -42,6 +47,6 @@ nav a.home {
   height: 32px;
   background: url(../images/home.png) no-repeat 0 0;
   top: 10px;
-  left: 5px;
+  left: 10px;
 }
 

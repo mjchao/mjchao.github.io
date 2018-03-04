@@ -23,9 +23,10 @@
     </header>
     <section class="blogpost">
       {{BLOGPOST}}
-    </section>
-    <section class="related posts">
-      {{RELATED}}
+
+      <section class="related posts">
+        {{RELATED}}
+      </section>
     </section>
   </body>
   <script>
