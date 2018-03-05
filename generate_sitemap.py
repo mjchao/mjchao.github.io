@@ -10,7 +10,8 @@ for root, dirs, files in os.walk("."):
 
     for name in files:
         if name.endswith(".html"):
-            html_urls.append(os.path.join(WEBSITE_ROOT, root, name))
+            if "content.html" not in name and "summary.html" not in name:
+                html_urls.append(os.path.join(WEBSITE_ROOT, root, name))
 
 with open("sitemap.txt", "w") as f:
     for url in html_urls:
