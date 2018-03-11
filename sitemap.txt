@@ -7,6 +7,7 @@ https://mjchao.github.io/index.html
 https://mjchao.github.io/skills.html
 https://mjchao.github.io/about.html
 https://mjchao.github.io/blog/six-attributes-of-the-cs-major.html
+https://mjchao.github.io/blog/all-parts-of-grade-matter.html
 https://mjchao.github.io/blog/class-registration-tips.html
 https://mjchao.github.io/blog/optimizing-your-workload.html
 https://mjchao.github.io/blog/learning-intuition.html
