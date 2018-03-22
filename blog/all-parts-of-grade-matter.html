@@ -12,10 +12,58 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../css/blog-post.css">
 
     <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="../js/blog-nav.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $( function() {
+        $( ".accordion" ).accordion({
+          active: false,
+          collapsible: true,
+          heightStyle: "content",
+        });
+      } );
+
+</script>
   </script> 
   </head>
   <body>
-    <div w3-include-html="nav.html"></div>
+    <div>
+      <nav>
+  <a class="home" title="home" href="../blog.html">
+  </a>
+  <a href="#" class="expand-toc" title="table of contents"
+    onclick="ToggleShowTOC()">
+  </a>
+  <div class="toc">
+    <div class="accordion">
+      <a>College In General</a>
+      <div>
+        <a href="six-attributes-of-the-cs-major.html">
+          Six Attributes of the CS Major
+        </a>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <a>Computer Science Courses</a>
+      <div>
+
+      </div>
+    </div>
+
+    <div class="accordion">
+      <a>Job Search</a>
+      <div>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+    </div>
     <header>
       <h1>All Parts of The Grade Matter</h1>
       <h2>March 11, 2018</h2>

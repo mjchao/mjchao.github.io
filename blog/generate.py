@@ -34,6 +34,10 @@ for blogdir in blogdirs:
     with open(os.path.join(blogdir, "content.html"), "r") as f:
         vars["BLOGPOST"] = f.read().decode("utf-8")
 
+    # provide NAV as well
+    with open("nav.html", "r") as f:
+        vars["NAV"]  = f.read().decode("utf-8")
+
     # Prevent substiting {{RELATED}} directly as a list. We want to
     # substitute in the actual summaries, so that requires some special logic
     # later.

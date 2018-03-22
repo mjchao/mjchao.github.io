@@ -34,10 +34,21 @@ header {
 }
 
 nav {
+  position: fixed;
+  width: 50px;
+  height: 100%;
   top: 0;
   left: 0;
-  position: fixed;
   z-index: 9999;
+  transition: all .7s ease-in;
+}
+
+nav.toc-shown {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: all .7s ease-in;
+  background-color: rgba(64,64,64,0.99);
 }
 
 nav a.home {
@@ -47,6 +58,27 @@ nav a.home {
   height: 32px;
   background: url(../images/home.png) no-repeat 0 0;
   top: 10px;
+  left: 10px;
+}
+
+nav a.expand-toc {
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url(../images/menu.png) no-repeat 0 0;
+  top: 50px;
+  left: 10px;
+}
+
+nav div.toc {
+  display: none;
+}
+
+nav.toc-shown div.toc {
+  position: absolute;
+  display: block;
+  top: 80px;
   left: 10px;
 }
 
