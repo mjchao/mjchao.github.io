@@ -35,7 +35,7 @@ header {
 
 nav {
   position: fixed;
-  width: 50px;
+  width: 300px;
   height: 100%;
   top: 0;
   left: 0;
@@ -82,3 +82,7 @@ nav.toc-shown div.toc {
   left: 10px;
 }
 
+nav div.toc .ui-accordion-header {
+  padding-left: 1em;
+  padding-right: 6em;
+}

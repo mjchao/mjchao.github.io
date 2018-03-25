@@ -1,0 +1,33 @@
+<nav>
+  <a class="home" title="home" href="../blog.html">
+  </a>
+  <a href="#" class="expand-toc" title="table of contents"
+    onclick="ToggleShowTOC()">
+  </a>
+  <div class="toc">
+    <div class="about-this-blog">
+      <a href="about-this-blog.html" class="post-link">
+        About this Blog
+      </a>
+    </div>
+    <div class="accordion">
+      <a>College In General</a>
+      <div>
+        {{COLLEGE_IN_GENERAL}}
+      </div>
+    </div>
+
+    <div class="accordion">
+      <a>Computer Science Courses</a>
+      <div>
+        {{COMPUTER_SCIENCE_COURSES}}
+      </div>
+    </div>
+    <div class="accordion">
+      <a>Job Search</a>
+      <div>
+        Coming soon!
+      </div>
+    </div>
+  </div>
+</nav>

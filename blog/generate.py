@@ -1,12 +1,60 @@
+import collections
 import os
 import json
 
+# ========== File paths that may change ========= #
 ROOT = "/"
 CURDIR = os.path.join(ROOT, "blog")
 BLOG_POST_TEMPLATE = "post.template"
 BLOG_SUMMARY_TEMPLATE = "summary.template"
 RELATED_POSTS_VAR = "RELATED"
 
+NAV_TOC_LIST ="nav-toc.csv"
+NAV_TEMPLATE = "nav.template"
+NAV_HTML = "nav.html"
+# ============================================================================ #
+
+
+# ========== Generate table of contents in nav ========== #
+with open(NAV_TEMPLATE, "r") as f:
+    nav_template = f.read().decode("utf-8")
+
+category_to_blogdir = collections.defaultdict(list)
+with open(NAV_TOC_LIST, "r") as f:
+    for entry in f:
+        values = entry.rstrip("\n").split(",")
+        if len(values) != 2:
+            raise ValueError("Error parsing nav table of contents. " +
+                    "Expecting two values <blog dir> and <category> " +
+                    "but received %d values in entry \"%s\""
+                    %(len(values), entry))
+        blogdir = values[0]
+        category = values[1]
+        category_to_blogdir[category].append(blogdir)
+
+nav_html = nav_template
+for category in category_to_blogdir:
+    category_html = ""
+
+    for blogdir in category_to_blogdir[category]:
+        with open(os.path.join(blogdir, "vars.json")) as f:
+            vars = json.load(f)
+        category_html += (
+"""
+<div>
+  <a href="%s.html" class="post-link">
+    %s
+  </a>
+</div>
+"""
+        %(blogdir, vars["title"]))
+    nav_html = nav_html.replace("{{%s}}" %(category), category_html)
+
+with open(NAV_HTML, "w") as f:
+    f.write(nav_html.encode("utf-8"))
+# ============================================================================ #
+
+# ========== Generate blog post html files ========== #
 with open(BLOG_POST_TEMPLATE, "r") as f:
     post_template = f.read()
 
@@ -25,7 +73,7 @@ for x in os.walk("."):
     blogdirs.add(subdir)
 
 for blogdir in blogdirs:
-    with open("%s/vars.json" %(blogdir)) as f:
+    with open(os.path.join(blogdir, "vars.json")) as f:
         vars = json.load(f)
 
     # provide BLOGDIR and BLOGPOST variable by default, which is the directory
@@ -79,4 +127,5 @@ for blogdir in blogdirs:
 
     with open("%s.html" %(blogdir), "w") as f:
         f.write(post_html.encode("utf-8"))
+# ============================================================================ #
 
