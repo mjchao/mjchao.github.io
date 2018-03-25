@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<meta charset="UTF-8">
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113887707-1"></script>
+    <script src="../js/analytics.js"></script>
+
+    <meta http-equiv="Content-Type" context="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Taking Advantage of the Autograder</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/blog-post.css">
+
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+  </script> 
+  </head>
+  <body>
+    <nav>
+      <a class="home" title="home" href="../blog.html">
+      </a>
+    </nav>
+    <header>
+      <h1>Taking Advantage of the Autograder</h1>
+      <h2>March 25, 2018</h2>
+      <img src="/blog/taking-advantage-of-autograder/header.png"></img>
+    </header>
+    <section class="blogpost">
+      <p>
+Almost everyone who completes the computer science major has worked with an autograder several times. The autograder can be your best friend and it can be your worst nightmare. This post discusses how to make full use of the autograder and get a good score on your project.
+</p>
+<h2>
+What is an Autograder?
+</h2>
+<p>
+An autograder is a computer program that will give you 100% if your program passes all test cases. The nice aspect of an autograder is that the grading process is completely fair and there is absolutely no subjectivity, implicit bias, favoritism, etc. involved. You are given the spec, every point grades against that spec, and you get exact credit for what you implemented. The unfortunate aspect of an autograder is that putting in effort does not necessarily give you points. It feels awful when you work very hard but don’t pass many test cases and receive a low score. Let’s make sure that you get rewarded for your effort by looking at best practices for working with an autograder.
+</p>
+<h2>
+Suggested Development Process
+</h2>
+<p>
+At a high level, you should develop small features one at a time and submit to the autograder after you finish each part. Autograder projects tend to be large enough that you can’t debug every single feature at the same time. Take small steps, focus on each feature individually, and make sure it passses all tests before moving on. For example, if one part of your project wants you to use a depth-first search and another part wants you to use a breadth-first search, then you can do them one at a time. Implement the depth-first search first and get all those tests to pass on the autograder. Then move on to the breadth-first search. This lets you compartmentalize your work.
+</p>
+<p>
+The benefit of compartmentalizing your work is that when your new features break your old features, you will know immediately. If the test cases were passing before and now they are failing, you can back up and find your logic error before it gets entangled with your codebase and can’t be found anymore. If you don’t compartmentalize, you’ll never know if it’s the breadth first search that’s wrong, or if there’s a side-effect of your depth-first search impacting your breadth-first search, or something else. Taking small steps turns a huge, unmanageable project into small, easy-to-chew tasks.
+</p>
+<h2>
+Submit Your Code as Frequently as Possible
+</h2>
+<p>
+As you implement your features one-by-one, you should use all your submits before they expire, even if the feature you’re implementing isn’t complete yet. Autograders tend to come with limited submits that go to waste if they aren’t used. For example, you might have three submits per day that reset at midnight. Even if you aren’t fully done with your current feature, you can get it into a somewhat-working state and submit to see if you get any points. At worst, nothing useful happens, but in some cases, it might expose a bug in your half-finished feature or show that you accidentally broke a previous feature that used to pass. You might as well use all the submits you are given. 
+</p>
+<h2>
+Pass the Sample Cases Before Submitting
+</h2>
+<p>
+Although you should submit your code frequently, make sure you don’t totally waste your submits by ensuring your code passes all the relevant sample cases. At a high level, if your code doesn’t pass the sample case, the feedback from the autograder is going to be equivalent to what you could find out yourself with the sample case. Of course, if you haven’t finished implementing all the features, then you might not pass all sample cases. In that situation, make sure your code works on the sample case up until it hits a feature you have not yet implemented. It’s important to use all your submits, but don’t totally waste them.
+</p>
+<h2>
+“Debug Submits” to the Autograder
+</h2>
+<p>
+Usually, autograders hide the test cases and only tell you what’s wrong in the output, so debug submits can be used to glean more information from the autograder. For example, suppose you have some code:
+</p>
+<code>
+switch (situation) {
+case 0:
+  if (PossiblyWrongFunction0() == 1) {
+    cout << “1\n”;
+  } else {
+    cout << “2\n”;
+  }
+  break;
+case 1:
+  if (PossiblyWrongFunction1() == 1) {
+    cout << “1\n”;
+  } else {
+    cout << “2\n”;
+  }
+  break;
+case 2:
+  if (PossiblyWrongFunction2() == 1) {     
+    cout << “1\n”;
+  } else {
+    cout << “2\n”;
+  }
+  break;   
+}
+</code>
+<p>
+and the autograder says the output on line 23, character 0 should be “2”, but you outputted “1”. You’re not entirely sure which of the three cases has a bug in it, but you have a hunch that it might be case 1. Then you can edit your case 1 to be as follows:
+</p>
+<code>
+...
+case 1:
+  if (curr_line == 23) {
+    cout << “2\n”;
+  } else {
+    if (PossiblyWrongFunction1() == 1) {
+      cout << “1\n”;
+    } else {
+      cout << “2\n”;
+    }
+  }
+  break;
+...
+</code>
+<p>
+When you submit again, if the error is no longer on line 23 for that test case, then you know your bug is that PossiblyWrongFunction1() was returning “1” when it shouldn’t have, and you can start debugging that function. If you ever have an extra submit, you can spend it on this kind of debugging information.
+</p>
+<h2>
+Optimize Your Code Only After It’s Correct
+</h2>
+<p>
+If your autograder enforces time and memory limits, treat those as the final feature to implement and work on optimizations only after your code is correct. If you optimize wrong code, chances are your later corrections will erase those optimizations and you’ll have wasted your time. Furthermore, an inappropriate optimization can introduce bugs in your code. If the autograder tells you all your tests are correct, but some tests start failing after you add in an optimization, then you know your optimization is faulty. If your code isn’t correct yet, your optimization could be adding more bugs on top of current ones!
+</p>
+<h2>
+Key Takeaways
+</h2>
+<p>
+To do well on an autograder, you should follow a systematic process of developing one small feature at a time and then submitting it. The autograder will let you know if your implementation of that feature was acceptable. If so, you can move on, and if not, you can go back and fix that feature. Make sure that optimizations are the last “feature” you work on. Along the way, you can take advantage of the autograder for regression testing. If your new feature breaks old features whose tests were passing, then you know you recently added some incorrect code. Debug submits can also help you pinpoint erroneous parts of your program. Applying all these suggested tips can make your autograder development process much smoother.
+</p>
+
+
+      <section class="related posts">
+        
+      </section>
+    </section>
+  </body>
+  <script>
+    w3.includeHTML();
+  </script>
+</html

@@ -6,6 +6,7 @@ https://mjchao.github.io/googleeaa2272dacae1a25.html
 https://mjchao.github.io/index.html
 https://mjchao.github.io/skills.html
 https://mjchao.github.io/about.html
+https://mjchao.github.io/blog/taking-advantage-of-autograder.html
 https://mjchao.github.io/blog/six-attributes-of-the-cs-major.html
 https://mjchao.github.io/blog/all-parts-of-grade-matter.html
 https://mjchao.github.io/blog/class-registration-tips.html
