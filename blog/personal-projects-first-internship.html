@@ -12,13 +12,114 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../css/blog-post.css">
 
     <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="../js/blog-nav.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $( function() {
+        $( ".accordion" ).accordion({
+          active: false,
+          collapsible: true,
+          heightStyle: "content",
+        });
+      } );
+
+</script>
   </script> 
   </head>
   <body>
-    <nav>
-      <a class="home" title="home" href="../blog.html">
+    <div>
+      <nav>
+  <a class="home" title="home" href="../blog.html">
+  </a>
+  <a href="#" class="expand-toc" title="table of contents"
+    onclick="ToggleShowTOC()">
+  </a>
+  <div class="toc">
+    <div class="about-this-blog">
+      <a href="about-this-blog.html" class="post-link">
+        About this Blog
       </a>
-    </nav>
+    </div>
+    <div class="accordion">
+      <a>College In General</a>
+      <div>
+        
+<div>
+  <a href="optimizing-your-workload.html" class="post-link">
+    Is Your Workload Fully Optimized?
+  </a>
+</div>
+
+<div>
+  <a href="class-registration-tips.html" class="post-link">
+    Class Registration Tips and Hacks
+  </a>
+</div>
+
+<div>
+  <a href="all-parts-of-grade-matter.html" class="post-link">
+    All Parts of The Grade Matter
+  </a>
+</div>
+
+<div>
+  <a href="benefits-of-unlimited-meal-plan.html" class="post-link">
+    The Benefits of an Unlimited Meal Plan
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <div class="accordion">
+      <a>Computer Science Courses</a>
+      <div>
+        
+<div>
+  <a href="six-attributes-of-the-cs-major.html" class="post-link">
+    Six Attributes of the CS Major
+  </a>
+</div>
+
+<div>
+  <a href="learning-intuition.html" class="post-link">
+    Learning Intuition
+  </a>
+</div>
+
+<div>
+  <a href="taking-advantage-of-autograder.html" class="post-link">
+    Taking Advantage of the Autograder
+  </a>
+</div>
+
+      </div>
+    </div>
+    <div class="accordion">
+      <a>Job Search</a>
+      <div>
+        
+<div>
+  <a href="job-search-timeline.html" class="post-link">
+    The Job Search Timeline
+  </a>
+</div>
+
+<div>
+  <a href="personal-projects-first-internship.html" class="post-link">
+    Personal Projects & Your First Internship
+  </a>
+</div>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+    </div>
     <header>
       <h1>Personal Projects & Your First Internship</h1>
       <h2>April 8, 2018</h2>

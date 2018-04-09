@@ -26,7 +26,7 @@
     <div class="accordion">
       <a>Job Search</a>
       <div>
-        Coming soon!
+        {{JOB_SEARCH}}
       </div>
     </div>
   </div>
