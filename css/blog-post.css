@@ -6,6 +6,11 @@ body {
   /* No long nav, so we don't need to enforce min-width or min-height anymore */
   min-width: 0;
   min-height: 0;
+  transition: all .7s ease-in;
+}
+
+body.toc-shown {
+  margin-left: 310px;
 }
 
 header {
@@ -35,7 +40,7 @@ header {
 
 nav {
   position: fixed;
-  width: 300px;
+  width: 290px;
   height: 100%;
   top: 0;
   left: 0;
@@ -45,11 +50,11 @@ nav {
 }
 
 nav.toc-shown {
-  width: 100%;
+  width: 290px;
   height: 100%;
   transform: scale(1);
   transition: all .7s ease-in;
-  background-color: rgba(64,64,64,0.99);
+  background-color: rgba(64,64,64,0.5);
 }
 
 nav a.home {
@@ -74,23 +79,25 @@ nav div.toc {
 
 nav.toc-shown div.toc {
   display: block;
-  max-width: 400px;
+  width: 275px;
   max-height: 75%;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 nav div.toc .ui-accordion-header {
   padding-left: 1em;
-  padding-right: 6em;
 }
 
 nav div.toc div.post-link-div {
+  margin-left: -2em;
+  margin-right: -2em;
   margin-bottom: 10px;
 }
 
 nav div.toc div.post-link-div a.post-link {
   display: block;
-  padding: 1em 0 1em 1em;
+  padding: 1em;
   height: 100%;
 }
 
@@ -98,6 +105,7 @@ nav div.toc div.about-this-blog {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   background-color: #eeeeee;
+  margin-left: 0em;
 }
 
 nav div.toc div.about-this-blog a.post-link {
