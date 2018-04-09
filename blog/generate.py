@@ -41,7 +41,7 @@ for category in category_to_blogdir:
             vars = json.load(f)
         category_html += (
 """
-<div>
+<div class="post-link-div">
   <a href="%s.html" class="post-link">
     %s
   </a>
