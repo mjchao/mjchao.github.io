@@ -41,6 +41,7 @@ nav {
   left: 0;
   z-index: 9999;
   transition: all .7s ease-in;
+  padding: 10px 0 0 10px;
 }
 
 nav.toc-shown {
@@ -52,23 +53,19 @@ nav.toc-shown {
 }
 
 nav a.home {
-  position: absolute;
   display: block;
   width: 32px;
   height: 32px;
+  padding-bottom: 8px;
   background: url(../images/home.png) no-repeat 0 0;
-  top: 10px;
-  left: 10px;
 }
 
 nav a.expand-toc {
-  position: absolute;
   display: block;
   width: 32px;
   height: 32px;
+  padding-bottom: 8px;
   background: url(../images/menu.png) no-repeat 0 0;
-  top: 50px;
-  left: 10px;
 }
 
 nav div.toc {
@@ -76,11 +73,9 @@ nav div.toc {
 }
 
 nav.toc-shown div.toc {
-  position: absolute;
   display: block;
-  top: 80px;
-  left: 10px;
-  height: 100%;
+  max-width: 400px;
+  max-height: 75%;
   overflow-y: auto;
 }
 
@@ -88,3 +83,34 @@ nav div.toc .ui-accordion-header {
   padding-left: 1em;
   padding-right: 6em;
 }
+
+nav div.toc div.post-link-div {
+  margin-bottom: 10px;
+}
+
+nav div.toc div.post-link-div a.post-link {
+  display: block;
+  padding: 1em 0 1em 1em;
+  height: 100%;
+}
+
+nav div.toc div.about-this-blog {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-color: #eeeeee;
+}
+
+nav div.toc div.about-this-blog a.post-link {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav div.toc div.post-link-div:hover {
+  background-color: rgba(0,0,0,0.3);
+}
+
+nav div.toc div.about-this-blog:hover {
+  background-color: #dddddd;
+}
+
