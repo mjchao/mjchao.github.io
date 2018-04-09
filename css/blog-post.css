@@ -44,7 +44,6 @@ nav {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 9999;
   transition: all .7s ease-in;
   padding: 10px 0 0 10px;
 }
@@ -55,6 +54,7 @@ nav.toc-shown {
   transform: scale(1);
   transition: all .7s ease-in;
   background-color: rgba(64,64,64,0.5);
+  z-index: 9999;
 }
 
 nav a.home {
@@ -83,6 +83,10 @@ nav.toc-shown div.toc {
   max-height: 75%;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.ui-accordion-header {
+  margin-left: -310px;
 }
 
 nav div.toc .ui-accordion-header {
