@@ -126,3 +126,8 @@ nav div.toc div.about-this-blog:hover {
   background-color: #dddddd;
 }
 
+aside.summary h1.summary-title {
+  /* These properties get set too large for some unknown reason */
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+}
