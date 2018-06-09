@@ -180,7 +180,7 @@ In lecture, we learned the expression for the logistic loss function, its graph,
 </p>
 <center>
   <p>
-  $J(\theta) = \sum_{i=1}^{n}\left(y^{(i)}\log\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right) - \left(1 - y^{(i)}\right)\log\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right)\right)$
+  $J(\theta) = \sum_{i=1}^{n}\left(y^{(i)}\log\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right) - \left(1 - y^{(i)}\right)\log\left(1 - \frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right)\right)$
   </p>
 </center>
 <p>
@@ -218,7 +218,7 @@ And viola - the logistic loss function from lecture appeared:
 </p>
 <center>
   <p>
-    $\log(likelihood) = J(\theta) = \sum_{i=1}^{n}\left(y^{(i)}\log\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right) - \left(1 - y^{(i)}\right)\log\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right)\right)$
+    $\log(likelihood) = J(\theta) = \sum_{i=1}^{n}\left(y^{(i)}\log\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right) - \left(1 - y^{(i)}\right)\log\left(1 - \frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right)\right)$
   </p>
 </center>
 <p>
