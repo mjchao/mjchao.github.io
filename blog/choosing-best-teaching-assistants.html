@@ -180,7 +180,7 @@ In lecture, we learned the expression for the logistic loss function, its graph,
 </p>
 <center>
   <p>
-  $J(\theta) = \sum_{i=1}^{n}\left(y^{(i)}\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right) - \left(1 - y^{(i)}\right)\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right)\right)$
+  $J(\theta) = \sum_{i=1}^{n}\left(y^{(i)}\log\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right) - \left(1 - y^{(i)}\right)\log\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right)\right)$
   </p>
 </center>
 <p>
@@ -217,9 +217,9 @@ Then, because logistic regression uses the logistic (sigmoid) function as the pr
 And viola - the logistic loss function from lecture appeared:
 </p>
 <center>
-<p>
-$\log(likelihood) = J(\theta) = \sum_{i=1}^{n}\left(y^{(i)}\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right) - \left(1 - y^{(i)}\right)\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right)\right)$
-</p>
+  <p>
+    $\log(likelihood) = J(\theta) = \sum_{i=1}^{n}\left(y^{(i)}\log\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right) - \left(1 - y^{(i)}\right)\log\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right)\right)$
+  </p>
 </center>
 <p>
 Since $\theta$ is a many-dimensional vector with a ton of variables, we can’t take the derivative and set it to 0. Instead, to minimize $J$, we take take the gradient and apply small updates in the opposite direction - the same conclusion stated in lecture.
