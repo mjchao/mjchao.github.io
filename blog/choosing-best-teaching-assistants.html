@@ -180,7 +180,7 @@ In lecture, we learned the expression for the logistic loss function, its graph,
 </p>
 <center>
   <p>
-  $J(\theta) = \sum_{i=1}^{n}\left(y^{(i)}\log\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right) - \left(1 - y^{(i)}\right)\log\left(1 - \frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right)\right)$
+  $J(\theta) = -\sum_{i=1}^{n}\left(y^{(i)}\log\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right) - \left(1 - y^{(i)}\right)\log\left(1 - \frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right)\right)$
   </p>
 </center>
 <p>
@@ -199,7 +199,7 @@ where $P$ is the probability of heads given by our model and $y(i)$ is 1 if coin
 </p>
 <center>
   <p>
-		$\log(likelihood) = J = \sum_{i=1}^{n}\left(y^{(i)}\log(P) + \left(1 - y^{(i)}\right)\log(1 - P)\right)$
+		$\log(likelihood) = \sum_{i=1}^{n}\left(y^{(i)}\log(P) + \left(1 - y^{(i)}\right)\log(1 - P)\right)$
   </p>
 </center>
 <p>
@@ -214,15 +214,15 @@ Then, because logistic regression uses the logistic (sigmoid) function as the pr
   </p>
 </center>
 <p>
-And viola - the logistic loss function from lecture appeared:
+And viola - the logistic loss function (minus a negative sign in front) from lecture appeared:
 </p>
 <center>
   <p>
-    $\log(likelihood) = J(\theta) = \sum_{i=1}^{n}\left(y^{(i)}\log\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right) - \left(1 - y^{(i)}\right)\log\left(1 - \frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right)\right)$
+    $\log(likelihood) = \sum_{i=1}^{n}\left(y^{(i)}\log\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right) - \left(1 - y^{(i)}\right)\log\left(1 - \frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right)\right)$
   </p>
 </center>
 <p>
-Since $\theta$ is a many-dimensional vector with a ton of variables, we can’t take the derivative and set it to 0. Instead, to minimize $J$, we take take the gradient and apply small updates in the opposite direction - the same conclusion stated in lecture.
+Since $\theta$ is a many-dimensional vector with a ton of variables, we can’t take the derivative and set it to 0. Instead, to minimize $J = -\log(likelihood)$, which is equivalent to maximizing the likelihood, we follow the gradient.
 </p>
 <p>
 This wasn’t a coincidence - this was an intuitive way of using a simple coin toss scenario to connect logistic regression and maximum likelihood estimation. Although the connection might seem “obvious” after the fact, it was definitely not elementary while trying to keep up with all the other concepts in the course.
