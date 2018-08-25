@@ -7,9 +7,12 @@ header {
   margin-top: 100px;
 }
 
+header img.hero-img {
+  margin-right: 2em;
+}
+
 header div.hero {
   display: inline-block;
-  width: 500px;
 }
 
 header div.hero h1 {
