@@ -2,12 +2,12 @@
 @import url("nav.css");
 @import url("blog-summary.css");
 
-nav ul li.blog::before {
-  content: '\25b6';
-  color: #ffd700;
-  position: relative;
-  left: 20px;
-  top: -2px;
+nav ul li.blog {
+  background-color: #808080;
+}
+
+nav ul li.blog a {
+  color: gold;
 }
 
 nav ul li.blog a {

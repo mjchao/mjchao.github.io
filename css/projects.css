@@ -7,12 +7,12 @@ h3 {
   margin: 10px;
 }
 
-nav ul li.projects::before {
-  content: '\25b6';
-  color: #ffd700;
-  position: relative;
-  left: 20px;
-  top: -2px;
+nav ul li.projects {
+  background-color: #808080;
+}
+
+nav ul li.projects a {
+  color: gold;
 }
 
 nav ul li.projects a {

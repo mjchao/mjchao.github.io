@@ -28,23 +28,45 @@ nav ul {
   position: absolute;
   top: 17px;
   left: 110px;
-  width: 100%;
-}
-
-nav ul li:hover {
-  background-color: #808080;
 }
 
 nav > ul > li {
   float: left;
-  width: 20%;
+  height: 50px;
+  margin: 0 10px 0 0;
+}
+
+nav > ul > li.collapsed-menu {
+  display: none;
 }
 
 nav ul li a {
   display: inline-block;
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 50px;
   text-decoration: none;
   position: relative;
   width: 100%;
+}
+
+/* Make nav mobile friendly */
+@media screen and (max-width: 600px) {
+
+  nav > ul > li {
+    display: none;
+  }
+
+  nav > ul > li.collapsed-menu {
+    display: block;
+  }
+
+  nav.collapsed-showing > ul > li {
+    float: none;
+    display: block;
+    background-color: #C0C0C0;
+  }
+}
+
+nav ul li:hover {
+  background-color: #808080;
 }

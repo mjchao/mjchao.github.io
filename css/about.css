@@ -1,12 +1,12 @@
 @import url("general.css");
 @import url("nav.css");
 
-nav ul li.about::before {
-  content: '\25b6';
-  color: #ffd700;
-  position: relative;
-  left: 20px;
-  top: -2px;
+nav ul li.about {
+  background-color: #808080;
+}
+
+nav ul li.about a {
+  color: gold;
 }
 
 nav ul li.about a {
