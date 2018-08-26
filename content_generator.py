@@ -106,8 +106,9 @@ class ContentGenerator(object):
         """
         self._root_dir = root_dir
         self._topic_dir = topic_dir
-        self._content_template = content_template
+        self._overview_template = overview_template
         self._summary_template = summary_template
+        self._content_template = content_template
         self._additional_vars = additional_vars
 
     @staticmethod
@@ -203,7 +204,8 @@ class ContentGenerator(object):
             # load in {{CONTENT}} from the content.html file.
             content_file = os.path.join(content_dir,
                     ContentGenerator.CONTENT_FILENAME)
-            vars[ContentGenerator.CONTENT_VAR] = ReadFile(content_file)
+            vars[ContentGenerator.CONTENT_VAR] = ContentGenerator.ReadFile(
+                    content_file)
 
             # Pass additional vars second so that the user is allowed to
             # override the variables that the content generator thinks should
@@ -215,7 +217,7 @@ class ContentGenerator(object):
             content_html = ContentGenerator.FillTemplate(self._content_template,
                     content_vars)
             content_page = os.path.join(self._topic_dir, "%s.html" %(d))
-            WriteFile(content_page, content_html)
+            ContentGenerator.WriteFile(content_page, content_html)
 
             # Create the summary
             summary_html = ContentGenerator.FillTemplate(self._summary_template,
@@ -224,7 +226,7 @@ class ContentGenerator(object):
 
         # Generate the overview page
         topic_vars_file = os.path.join(self._root_dir, self._topic_dir,
-                ContentGenerator.VAR_FILE)
+                ContentGenerator.VAR_FILENAME)
         topic_vars = ContentGenerator.ReadVarsFile(topic_vars_file)
         if ContentGenerator.CONTENT_ORDERING_VAR not in topic_vars:
             raise ValueError(
@@ -237,7 +239,7 @@ class ContentGenerator(object):
 
         combined_summary_html = ""
         for content_name in content_summary_ordering:
-            if content_name not in summary_div_html:
+            if content_name not in summary_htmls:
                 raise ValueError(
                         "In the topic var.json file \"%s\", the content \"%s\" "
                         "does not exist. You must create a directory \"%s\" "
@@ -246,12 +248,13 @@ class ContentGenerator(object):
                                 content_name)))
             combined_summary_html += (summary_htmls[content_name] + "\n")
 
-        overview_vars = {
-            ContentGenerator.SUMMARIES_VAR: combined_summary_html
-            }
+        overview_vars = ContentGenerator.ConcatVars(
+                {ContentGenerator.SUMMARIES_VAR: combined_summary_html},
+                self._additional_vars
+                )
         overview_html = ContentGenerator.FillTemplate(self._overview_template,
             overview_vars)
         overview_page = os.path.join(self._root_dir,
             "%s.html" %(self._topic_dir))
-        WriteFile(overview_page, over_html)
+        ContentGenerator.WriteFile(overview_page, overview_html)
 

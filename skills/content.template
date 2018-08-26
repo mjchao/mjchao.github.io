@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<meta charset="UTF-8">
 <html>
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -7,14 +8,16 @@
 
     <meta http-equiv="Content-Type" context="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tips for Success in College Computer Science</title>
+    <title>{{title}}</title>
     <link rel="stylesheet" type="text/css" media="screen" href="/css/skills.css">
     <script src="/js/nav.js"></script>
   </head>
   <body>
     {{NAV}}
-    <section class="main">
-      {{SUMMARIES}}
+    <h1>{{title}}</h1>
+    <img src="/{{ROOT_DIR}}/{{TOPIC_DIR}}/{{CONTENT_DIR}}/header.png"></img>
+    <section class="blogpost">
+      {{CONTENT}}
     </section>
   </body>
 </html>

@@ -39,9 +39,10 @@ ContentGenerator.WriteFile(ABOUT_HTML, about_html)
 # ==== Generate skills pages and skills.html  ===== #
 skills_generator = ContentGenerator(
         ROOT,
-        SKILLS_DIR
+        SKILLS_DIR,
         ContentGenerator.ReadFile(os.path.join(SKILLS_DIR, "overview.template")),
         ContentGenerator.ReadFile(os.path.join(SKILLS_DIR, "summary.template")),
-        ContentGenerator.ReadFile(os.path.join(SKILLS_DIR, "content.template")))
+        ContentGenerator.ReadFile(os.path.join(SKILLS_DIR, "content.template")),
+        global_vars)
 skills_generator.Generate()
 
