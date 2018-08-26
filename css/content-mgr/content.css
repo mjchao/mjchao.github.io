@@ -1,0 +1,133 @@
+@import url("general.css");
+@import url("blog-summary.css");
+
+body {
+  margin: 5em;
+  /* No long nav, so we don't need to enforce min-width or min-height anymore */
+  min-width: 0;
+  min-height: 0;
+  transition: all .7s ease-in;
+}
+
+body.toc-shown {
+  margin-left: 310px;
+}
+
+header {
+  text-align: center;
+}
+
+.blogpost {
+  max-width: 900px;
+  margin: auto;
+}
+
+.blogpost h2 {
+  padding-top: 0.5em;
+  margin-bottom: -0.3em;
+}
+
+.blogpost h3 {
+  padding-top: 0.5em;
+  margin-bottom: -0.3em;
+  font-style: italic;
+}
+
+.related .related-header {
+  padding-top: 0.5em;
+  margin-bottom: -0.3em;
+}
+
+nav {
+  position: fixed;
+  width: 290px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all .7s ease-in;
+  padding: 10px 0 0 10px;
+}
+
+nav.toc-shown {
+  width: 290px;
+  height: 100%;
+  transform: scale(1);
+  transition: all .7s ease-in;
+  background-color: rgba(64,64,64,0.5);
+  z-index: 9999;
+}
+
+nav a.home {
+  display: block;
+  width: 32px;
+  height: 32px;
+  padding-bottom: 8px;
+  background: url(../images/home.png) no-repeat 0 0;
+}
+
+nav a.expand-toc {
+  display: block;
+  width: 32px;
+  height: 32px;
+  padding-bottom: 8px;
+  background: url(../images/menu.png) no-repeat 0 0;
+}
+
+nav div.toc {
+  display: none;
+}
+
+nav.toc-shown div.toc {
+  display: block;
+  width: 275px;
+  max-height: 75%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.ui-accordion-header {
+  margin-left: -310px;
+}
+
+nav div.toc .ui-accordion-header {
+  padding-left: 1em;
+}
+
+nav div.toc div.post-link-div {
+  margin-left: -2em;
+  margin-right: -2em;
+  margin-bottom: 10px;
+}
+
+nav div.toc div.post-link-div a.post-link {
+  display: block;
+  padding: 1em;
+  height: 100%;
+}
+
+nav div.toc div.about-this-blog {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-color: #eeeeee;
+  margin-left: 0em;
+}
+
+nav div.toc div.about-this-blog a.post-link {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav div.toc div.post-link-div:hover {
+  background-color: rgba(0,0,0,0.3);
+}
+
+nav div.toc div.about-this-blog:hover {
+  background-color: #dddddd;
+}
+
+aside.summary h1.summary-title {
+  /* These properties get set too large for some unknown reason */
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113887707-1"></script>
+    <script src="/js/analytics.js"></script>
+
+    <meta http-equiv="Content-Type" context="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tips for Success in College Computer Science</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/content-mgr/overview.css">
+    <script src="/js/nav.js"></script>
+  </head>
+  <body>
+    <section class="main">
+      {{SUMMARIES}}
+    </section>
+  </body>
+</html>

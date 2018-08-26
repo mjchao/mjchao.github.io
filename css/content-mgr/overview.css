@@ -1,0 +1,38 @@
+@import url("/css/general.css");
+@import url("/css/nav.css");
+@import url("/css/content-mgr/summary.css");
+
+nav ul li.blog {
+  background-color: #808080;
+}
+
+nav ul li.blog a {
+  color: gold;
+}
+
+nav ul li.blog a {
+  width: 60%;
+}
+
+section.main {
+  position: absolute;
+  top: 75px;
+}
+
+section.main > h1 {
+  text-align: center;
+}
+
+section.main aside.intro {
+  padding: 1em 2em 0 2em;
+}
+
+section.main aside.intro h2 {
+  padding-top: 0.5em;
+  margin-bottom: -0.3em;
+}
+
+section.main div.posts {
+  padding: 0 1em 0 1em;
+}
+
