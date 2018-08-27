@@ -1,3 +1,6 @@
+<!-- This is essentially a summary with just the title and icon and no
+     description. Can be used when the content is short enough that no
+     summary is needed. -->
 <aside class="summary">
   <a class="summary-link" href="/{{ROOT_DIR}}/{{TOPIC_DIR}}/{{CONTENT_DIR}}.html">
     <span></span>

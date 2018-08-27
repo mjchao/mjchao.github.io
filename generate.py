@@ -7,6 +7,7 @@ import os
 # ========= File paths ======= #
 ROOT = "."
 TEMPLATES_DIR = os.path.join(ROOT, "templates")
+CONTENT_GEN_TEMPLATES_DIR = os.path.join(TEMPLATES_DIR, "content-generator")
 
 NAV_HTML = os.path.join(ROOT, "nav.html")
 
@@ -42,9 +43,12 @@ ContentGenerator.WriteFile(ABOUT_HTML, about_html)
 skills_generator = ContentGenerator(
         ROOT,
         SKILLS_DIR,
-        ContentGenerator.ReadFile(os.path.join(SKILLS_DIR, "overview.template")),
-        ContentGenerator.ReadFile(os.path.join(SKILLS_DIR, "summary.template")),
-        ContentGenerator.ReadFile(os.path.join(SKILLS_DIR, "content.template")),
+        ContentGenerator.ReadFile(os.path.join(CONTENT_GEN_TEMPLATES_DIR,
+            "overview.template")),
+        ContentGenerator.ReadFile(os.path.join(CONTENT_GEN_TEMPLATES_DIR,
+            "cover.template")),
+        ContentGenerator.ReadFile(os.path.join(CONTENT_GEN_TEMPLATES_DIR,
+            "content.template")),
         global_vars)
 skills_generator.Generate()
 
@@ -52,9 +56,12 @@ skills_generator.Generate()
 projects_generator = ContentGenerator(
         ROOT,
         PROJECTS_DIR,
-        ContentGenerator.ReadFile(os.path.join(PROJECTS_DIR, "overview.template")),
-        ContentGenerator.ReadFile(os.path.join(PROJECTS_DIR, "summary.template")),
-        ContentGenerator.ReadFile(os.path.join(PROJECTS_DIR, "content.template")),
+        ContentGenerator.ReadFile(os.path.join(CONTENT_GEN_TEMPLATES_DIR,
+            "overview.template")),
+        ContentGenerator.ReadFile(os.path.join(CONTENT_GEN_TEMPLATES_DIR,
+            "cover.template")),
+        ContentGenerator.ReadFile(os.path.join(CONTENT_GEN_TEMPLATES_DIR,
+            "content.template")),
         global_vars)
 projects_generator.Generate()
 
