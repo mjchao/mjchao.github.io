@@ -1,7 +1,8 @@
 section.main {
   display: grid;
   text-align: center;
-  width: 100%;
+  width: 99%;
+  padding-bottom: 5em;
 }
 
 aside.summary {
@@ -9,6 +10,7 @@ aside.summary {
   border: 1px solid black;
   float: left;
   margin: 1em;
+  padding: 0.5em;
   position: relative;
   text-align: center;
 }
