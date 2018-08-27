@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<meta charset="UTF-8">
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113887707-1"></script>
+    <script src="/js/analytics.js"></script>
+
+    <meta http-equiv="Content-Type" context="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>3D Graphing Calculator</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/./projects/content.css">
+    <script src="/js/nav.js"></script>
+  </head>
+  <body>
+    <script src="/js/nav.js"></script>
+<nav>
+  <a class="logo" title="Mickey Chao" href="/index.html"></a>
+  <ul>
+    <li class="collapsed-menu">
+      <a href="#" class="icon" onclick="return toggleCollapsedMenu()">Menu</a>
+    </li>
+    <li class="about">
+      <a title="About" href="/about.html">About</a>
+    </li>
+    <li class="skills">
+      <a title="Skills" href="/skills.html">Skills</a>
+    </li>
+    <li class="projects">
+      <a title="Projects" href="/projects.html">Projects</a>
+    </li>
+    <li class="blog">
+      <a title="Blog" href="/blog.html">Blog</a>
+    </li>
+  </ul>
+</nav>
+
+    <section class="main">
+      <div class="heading">
+        <h1>3D Graphing Calculator</h1>
+        <img src="/././projects/graph3d/header.png"></img>
+      </div>
+      <div class="content">
+                    <p>A calculator is a pretty standard project when you're short on
+              ideas. Back in my high school days, I created a variety of
+              calculators, from algebraic manipulators to this 3D graphing
+              calculator. The software graphed plotted functions f(x, y) and
+              parametrics (x(t), y(t), z(t)).</p>
+            <p>I started the project a few months after Java 8 was first
+              released to try out the new 3D image rendering. Basically,
+              surfaces and lines were groups of small rectangles bunched
+              together. This was a logical extension from 2D graphing were
+              curves are groups of small line segments bunched together. In
+              the 3D graph, you can move forward/backward and turn left/right
+              with the WASD keys, rotate counter-clockwise and clockwise with
+              QE and shift up/down with the up/down arrow keys. Moving around
+              lets you observe the graph from multiple perspectives.</p>
+            <p>The project code is available on
+              <a href="https://github.com/mjchao/3D-Graphing-Calculator"
+                target="_blank">Github</a>
+              and there is an executable jar file available. However, I never
+              included rigorous error checking, so you will need to use it with
+              care. For example, if your x_inc is negative, the program will
+              never stop graphing. And if your increment is too small, the
+              program will take a very long time. But if all the inputs are
+              valid and your computer has enough memory and computational
+              power, the graphing will succeed.</p>
+
+      </div>
+    </section>
+  </body>
+</html>

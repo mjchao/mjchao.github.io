@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<meta charset="UTF-8">
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113887707-1"></script>
+    <script src="/js/analytics.js"></script>
+
+    <meta http-equiv="Content-Type" context="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Word Vectors for Shopping Ads</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/./projects/content.css">
+    <script src="/js/nav.js"></script>
+  </head>
+  <body>
+    <script src="/js/nav.js"></script>
+<nav>
+  <a class="logo" title="Mickey Chao" href="/index.html"></a>
+  <ul>
+    <li class="collapsed-menu">
+      <a href="#" class="icon" onclick="return toggleCollapsedMenu()">Menu</a>
+    </li>
+    <li class="about">
+      <a title="About" href="/about.html">About</a>
+    </li>
+    <li class="skills">
+      <a title="Skills" href="/skills.html">Skills</a>
+    </li>
+    <li class="projects">
+      <a title="Projects" href="/projects.html">Projects</a>
+    </li>
+    <li class="blog">
+      <a title="Blog" href="/blog.html">Blog</a>
+    </li>
+  </ul>
+</nav>
+
+    <section class="main">
+      <div class="heading">
+        <h1>Word Vectors for Shopping Ads</h1>
+        <img src="/././projects/word2vec/header.png"></img>
+      </div>
+      <div class="content">
+                    <p>If we want a computer to recommend products for a customer to buy
+            given his/her query, the computer needs to understand the
+            similarities between words. That way, it can match descriptions of
+            products to the customer's query.</p>
+            <p>Unfortunately, when you give words to a computer, it doesn't
+            really have a great way of determining how similar they are. Words
+            on a computer are just a bunch of characters and the individual
+            characters don't tell much about the meaning of the word. But we
+            can try representing words with something that better expresses
+            similarity: vectors.</p>
+            <p>For this project, my goal was to represent words in Google's
+            product data with vectors to express similarity with words
+            that might also be in customer queries. We assume that similar words
+            are used in similar contexts. Then, the general idea is to learn
+            a set of vectors to represent words and a neural network to
+            take a word's vector representation and predict its likely context
+            words. For example, in the phrase "the cat sat," we'd
+            want the network to predict "the" and "sat" when given the word
+            vector for "cat". The training data consisted of billions of
+            (target, context) pairs of words built from a database of product
+            data.</p>
+            <p>After these word vectors were learned, we could see, for example,
+            that words like "king" and "queen" were closely related to
+            "mattress". These vectors were then used as pre-trained data for a
+            sophisticated pipeline that combined features of paragraphs and
+            images in product data to recommend to shoppers.</p>
+
+
+      </div>
+    </section>
+  </body>
+</html>

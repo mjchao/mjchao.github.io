@@ -1,0 +1,27 @@
+            <p>If we want a computer to recommend products for a customer to buy
+            given his/her query, the computer needs to understand the
+            similarities between words. That way, it can match descriptions of
+            products to the customer's query.</p>
+            <p>Unfortunately, when you give words to a computer, it doesn't
+            really have a great way of determining how similar they are. Words
+            on a computer are just a bunch of characters and the individual
+            characters don't tell much about the meaning of the word. But we
+            can try representing words with something that better expresses
+            similarity: vectors.</p>
+            <p>For this project, my goal was to represent words in Google's
+            product data with vectors to express similarity with words
+            that might also be in customer queries. We assume that similar words
+            are used in similar contexts. Then, the general idea is to learn
+            a set of vectors to represent words and a neural network to
+            take a word's vector representation and predict its likely context
+            words. For example, in the phrase "the cat sat," we'd
+            want the network to predict "the" and "sat" when given the word
+            vector for "cat". The training data consisted of billions of
+            (target, context) pairs of words built from a database of product
+            data.</p>
+            <p>After these word vectors were learned, we could see, for example,
+            that words like "king" and "queen" were closely related to
+            "mattress". These vectors were then used as pre-trained data for a
+            sophisticated pipeline that combined features of paragraphs and
+            images in product data to recommend to shoppers.</p>
+

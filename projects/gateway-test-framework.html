@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<meta charset="UTF-8">
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113887707-1"></script>
+    <script src="/js/analytics.js"></script>
+
+    <meta http-equiv="Content-Type" context="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gateway Test Framework</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/./projects/content.css">
+    <script src="/js/nav.js"></script>
+  </head>
+  <body>
+    <script src="/js/nav.js"></script>
+<nav>
+  <a class="logo" title="Mickey Chao" href="/index.html"></a>
+  <ul>
+    <li class="collapsed-menu">
+      <a href="#" class="icon" onclick="return toggleCollapsedMenu()">Menu</a>
+    </li>
+    <li class="about">
+      <a title="About" href="/about.html">About</a>
+    </li>
+    <li class="skills">
+      <a title="Skills" href="/skills.html">Skills</a>
+    </li>
+    <li class="projects">
+      <a title="Projects" href="/projects.html">Projects</a>
+    </li>
+    <li class="blog">
+      <a title="Blog" href="/blog.html">Blog</a>
+    </li>
+  </ul>
+</nav>
+
+    <section class="main">
+      <div class="heading">
+        <h1>Gateway Test Framework</h1>
+        <img src="/././projects/gateway-test-framework/header.png"></img>
+      </div>
+      <div class="content">
+                    <p>In algorithmic trading, a gateway is an important piece of
+              software that submits orders to exchanges and keeps track of
+              the status of all its orders. Errors in the gateway could be
+              catastrophic. For example, losing track of a big order means you
+              could lose a lot of money when the market moves and you don't
+              realize you need to clear your position. One of my internship
+              projects at Jump Trading involved designing and implementing a
+              regression testing framework for a specific gateway.</p>
+            <p>I created a simple language with a few commands for performing
+              operations such as buying/selling and assertions. It also
+              included features for more-complicated tests, such as killing
+              the gateway process and asserting that it restored its orders
+              upon restart. Finally, a test driver would find and run every
+              test. The framework was also quite extenible and new commands
+              could be easily added independent of the other commands.</p>
+
+      </div>
+    </section>
+  </body>
+</html>

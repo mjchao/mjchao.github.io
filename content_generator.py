@@ -249,7 +249,10 @@ class ContentGenerator(object):
             combined_summary_html += (summary_htmls[content_name] + "\n")
 
         overview_vars = ContentGenerator.ConcatVars(
-                {ContentGenerator.SUMMARIES_VAR: combined_summary_html},
+                {
+                    ContentGenerator.SUMMARIES_VAR: combined_summary_html,
+                    ContentGenerator.ROOT_DIR_VAR: self._root_dir,
+                    ContentGenerator.TOPIC_DIR_VAR: self._topic_dir,},
                 self._additional_vars
                 )
         overview_html = ContentGenerator.FillTemplate(self._overview_template,

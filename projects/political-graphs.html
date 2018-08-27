@@ -9,7 +9,7 @@
     <meta http-equiv="Content-Type" context="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Political Graphs</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/skills/content.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/./projects/content.css">
     <script src="/js/nav.js"></script>
   </head>
   <body>
@@ -41,37 +41,40 @@
         <img src="/././projects/political-graphs/header.png"></img>
       </div>
       <div class="content">
-                    <p>You've probably been tempted to copy someone's work while you
-            were back in school, but you were deterred by the threat of
-            plagiarism checkers! If you go back a few hundred years before the
-            existence of computers and automated plagiarism checkers, how
-            likely do you think it was that authors stole ideas from each other?
-            Apparently there were a lot of dishonorable people!</p>
-            <p>For this project at ProQuest, I created a machine learning
-            pipeline to analyze hundreds of thousands of works of literature
-            over several centuries and flag pairs of documents that contained
-            similar passages. Furthermore, the pipeline identified the exact
-            phrases that were too-similar.</p>
-            <p>Some challenges that I addressed included
-              <ol>
-                <li>Having billions of pairs of documents that need to be
-                  checked</li>
-                <li>Accounting for paraphrases and variations of English
-                  ("tis ain't symple!")</li>
-                <li>Showing copied narrative structure in cases of major
-                  plagiarism</li>
-              </ol>
+                    <p>Suppose you hold liberal views and you vote for a representative
+            with liberal views and she conveniently gets elected. You are happy
+            that she votes on the bills you also support. You conclude that your
+            representative is all-so-noble and works for you because you voted
+            for her. The system works! ... Well can we definitely conclude that?
             </p>
-            <p>This was a pretty successful project, but the results are
-            not free for the public :p. As a vague example, when I read the
-            Wikipedia page praising an author for his brilliant works of
-            literature, all I could say was "No duh. He just renamed all the
-            characters from another reknowned author's work." These discoveries
-            are expected to be useful for researchers at universities across the
-            country.</p>
-          </div>
-        </div>
-
+            <p>Statistically speaking, all you can say is that your
+            representative's political beliefs are highly-correlated to your
+            district majority's beliefs. This is always the case, because the
+            winner always has the majority of the votes. But you don't have
+            proof, other than her word, that the way she acts in Congress is
+            actually <i>caused</i> by the fact that she wanted your support. It
+            could just be coincidence that your views and her secret agenda
+            align.</p>
+            <p>In this project, my group presented another variable that is
+            highly-correlated to a legislator's political beliefs. We trained a
+            neural network to help identify the political affiliation of a
+            legislator based on his/her corporate donors. We separated
+            Democrats from Republicans in various session of Congress  with an
+            entropy score ranging from 0.2 to 0.35 (which is very accurate).
+            Most of the mistakes were semi-liberal Republicans and
+            semi-conservative Democrats. We were surprised to conclude
+            that corporate donations are also highly correlated to legislators'
+            political affiliations (and also their importance in Congress!).
+            </p>
+            <p>Now you know that company donations are also just as good
+            an indicator of political affiliation as your vote. So do you still
+            have absolute faith in our system? Are you absolutely sure your
+            representative works for your vote? Just stirring the mud here...
+            don't take it too far. Our code was not that polished as we were
+            trying to meet a class deadline but we have written up results in a
+            very rough paper
+              <a href="https://github.com/mjchao/Political-Graph-Analysis/blob/master/final_paper.pdf" 
+                  target="_blank">here</a>.</p>
 
       </div>
     </section>
