@@ -12,10 +12,10 @@ CONTENT_GEN_TEMPLATES_DIR = os.path.join(TEMPLATES_DIR, "content-generator")
 NAV_HTML = os.path.join(ROOT, "nav.html")
 
 INDEX_HTML = os.path.join(ROOT, "index.html")
-INDEX_TEMPLATE = os.path.join(TEMPLATES_DIR, "index.template.html")
+INDEX_TEMPLATE = os.path.join(TEMPLATES_DIR, "index.template")
 
 ABOUT_HTML = os.path.join(ROOT, "about.html")
-ABOUT_TEMPLATE = os.path.join(TEMPLATES_DIR, "about.template.html")
+ABOUT_TEMPLATE = os.path.join(TEMPLATES_DIR, "about.template")
 
 SKILLS_DIR = os.path.join(ROOT, "skills")
 
