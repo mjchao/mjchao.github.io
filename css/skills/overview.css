@@ -1,17 +1,7 @@
-@import url("general.css");
-@import url("nav.css");
-
-nav ul li.skills {
-  background-color: #808080;
-}
-
-nav ul li.skills a {
-  color: gold;
-}
+@import url("/css/skills/common.css");
+@import url("/css/skills/summary.css");
 
 section.main {
-  position: absolute;
-  top: 75px;
   display: grid;
   text-align: center;
   width: 100%;

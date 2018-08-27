@@ -9,15 +9,19 @@
     <meta http-equiv="Content-Type" context="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{title}}</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/skills.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/skills/content.css">
     <script src="/js/nav.js"></script>
   </head>
   <body>
     {{NAV}}
-    <h1>{{title}}</h1>
-    <img src="/{{ROOT_DIR}}/{{TOPIC_DIR}}/{{CONTENT_DIR}}/header.png"></img>
-    <section class="blogpost">
-      {{CONTENT}}
+    <section class="main">
+      <div class="heading">
+        <h1>{{title}}</h1>
+        <img src="/{{ROOT_DIR}}/{{TOPIC_DIR}}/{{CONTENT_DIR}}/header.png"></img>
+      </div>
+      <div class="content">
+        {{CONTENT}}
+      </div>
     </section>
   </body>
 </html>

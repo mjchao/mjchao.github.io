@@ -1,0 +1,15 @@
+@import url("/css/skills/common.css");
+
+section.main {
+  width: 99%;
+}
+
+section.main .heading {
+  text-align: center;
+}
+
+section.main .content {
+  max-width: 600px;
+  margin: auto;
+}
+
