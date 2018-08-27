@@ -1,0 +1,17 @@
+section.main {
+  width: 99%;
+}
+
+section.main .heading {
+  text-align: center;
+}
+
+section.main .heading img {
+  max-height: 300px;
+}
+
+section.main .content {
+  max-width: 600px;
+  margin: auto;
+  padding-bottom: 5em;
+}

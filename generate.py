@@ -18,6 +18,8 @@ ABOUT_TEMPLATE = os.path.join(TEMPLATES_DIR, "about.template.html")
 
 SKILLS_DIR = os.path.join(ROOT, "skills")
 
+PROJECTS_DIR = os.path.join(ROOT, "projects")
+
 # ===== Load Nav HTML ==== #
 global_vars = {}
 
@@ -36,7 +38,7 @@ about_vars = ContentGenerator.ConcatVars(global_vars)
 about_html = ContentGenerator.FillTemplate(about_template, about_vars)
 ContentGenerator.WriteFile(ABOUT_HTML, about_html)
 
-# ==== Generate skills pages and skills.html  ===== #
+# ===== Generate skills pages and skills.html  ===== #
 skills_generator = ContentGenerator(
         ROOT,
         SKILLS_DIR,
@@ -45,4 +47,14 @@ skills_generator = ContentGenerator(
         ContentGenerator.ReadFile(os.path.join(SKILLS_DIR, "content.template")),
         global_vars)
 skills_generator.Generate()
+
+# ===== Generate projects pages and projects.html ===== #
+projects_generator = ContentGenerator(
+        ROOT,
+        PROJECTS_DIR,
+        ContentGenerator.ReadFile(os.path.join(PROJECTS_DIR, "overview.template")),
+        ContentGenerator.ReadFile(os.path.join(PROJECTS_DIR, "summary.template")),
+        ContentGenerator.ReadFile(os.path.join(PROJECTS_DIR, "content.template")),
+        global_vars)
+projects_generator.Generate()
 

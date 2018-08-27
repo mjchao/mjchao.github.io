@@ -3,221 +3,67 @@
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113887707-1"></script>
-    <script src="js/analytics.js"></script>
+    <script src="/js/analytics.js"></script>
 
     <meta http-equiv="Content-Type" context="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mickey Chao - Projects</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/projects.css">
-
-    <script src="https://www.w3schools.com/lib/w3.js"></script>
-    <script src="js/nav.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/projects/overview.css">
+    <script src="/js/nav.js"></script>
   </head>
   <body>
-    <header>
-      <div w3-include-html="nav.html"></div>
-    </header>
+    <script src="/js/nav.js"></script>
+<nav>
+  <a class="logo" title="Mickey Chao" href="/index.html"></a>
+  <ul>
+    <li class="collapsed-menu">
+      <a href="#" class="icon" onclick="return toggleCollapsedMenu()">Menu</a>
+    </li>
+    <li class="about">
+      <a title="About" href="/about.html">About</a>
+    </li>
+    <li class="skills">
+      <a title="Skills" href="/skills.html">Skills</a>
+    </li>
+    <li class="projects">
+      <a title="Projects" href="/projects.html">Projects</a>
+    </li>
+    <li class="blog">
+      <a title="Blog" href="/blog.html">Blog</a>
+    </li>
+  </ul>
+</nav>
 
-    <section class="main animated zoomIn">
-      <aside class="row1 col1">
-        <div class="text-reuse">
-          <h3>Text Reuse Detection</h3>
-          <img src="images/text-reuse.png"></img>
-          <div class="content">
-            <p>You've probably been tempted to copy someone's work while you
-            were back in school, but you were deterred by the threat of
-            plagiarism checkers! If you go back a few hundred years before the
-            existence of computers and automated plagiarism checkers, how
-            likely do you think it was that authors stole ideas from each other?
-            Apparently there were a lot of dishonorable people!</p>
-            <p>For this project at ProQuest, I created a machine learning
-            pipeline to analyze hundreds of thousands of works of literature
-            over several centuries and flag pairs of documents that contained
-            similar passages. Furthermore, the pipeline identified the exact
-            phrases that were too-similar.</p>
-            <p>Some challenges that I addressed included
-              <ol>
-                <li>Having billions of pairs of documents that need to be
-                  checked</li>
-                <li>Accounting for paraphrases and variations of English
-                  ("tis ain't symple!")</li>
-                <li>Showing copied narrative structure in cases of major
-                  plagiarism</li>
-              </ol>
-            </p>
-            <p>This was a pretty successful project, but the results are
-            not free for the public :p. As a vague example, when I read the
-            Wikipedia page praising an author for his brilliant works of
-            literature, all I could say was "No duh. He just renamed all the
-            characters from another reknowned author's work." These discoveries
-            are expected to be useful for researchers at universities across the
-            country.</p>
-          </div>
-        </div>
-      </aside>
-      <aside class="row1 col2">
-        <div class="political-graphs">
-          <h3>Analyzing Donor Graphs in US Politics</h3>
-          <img src="images/political-graph-analysis.png"></img>
-          <div class="content">
-            <p>Suppose you hold liberal views and you vote for a representative
-            with liberal views and she conveniently gets elected. You are happy
-            that she votes on the bills you also support. You conclude that your
-            representative is all-so-noble and works for you because you voted
-            for her. The system works! ... Well can we definitely conclude that?
-            </p>
-            <p>Statistically speaking, all you can say is that your
-            representative's political beliefs are highly-correlated to your
-            district majority's beliefs. This is always the case, because the
-            winner always has the majority of the votes. But you don't have
-            proof, other than her word, that the way she acts in Congress is
-            actually <i>caused</i> by the fact that she wanted your support. It
-            could just be coincidence that your views and her secret agenda
-            align.</p>
-            <p>In this project, my group presented another variable that is
-            highly-correlated to a legislator's political beliefs. We trained a
-            neural network to help identify the political affiliation of a
-            legislator based on his/her corporate donors. We separated
-            Democrats from Republicans in various session of Congress  with an
-            entropy score ranging from 0.2 to 0.35 (which is very accurate).
-            Most of the mistakes were semi-liberal Republicans and
-            semi-conservative Democrats. We were surprised to conclude
-            that corporate donations are also highly correlated to legislators'
-            political affiliations (and also their importance in Congress!).
-            </p>
-            <p>Now you know that company donations are also just as good
-            an indicator of political affiliation as your vote. So do you still
-            have absolute faith in our system? Are you absolutely sure your
-            representative works for your vote? Just stirring the mud here...
-            don't take it too far. Our code was not that polished as we were
-            trying to meet a class deadline but we have written up results in a
-            very rough paper
-              <a href="https://github.com/mjchao/Political-Graph-Analysis/blob/master/final_paper.pdf" 
-                  target="_blank">here</a>.</p>
-          </div>
-        </div>
-      </aside>
-      <aside class="row1 col3">
-        <div class="word2vec">
-          <h3>Word Vectors for Shopping Ads</h3>
-          <img src="images/word2vec.png"></img>
-          <div class="content">
-            <p>If we want a computer to recommend products for a customer to buy
-            given his/her query, the computer needs to understand the
-            similarities between words. That way, it can match descriptions of
-            products to the customer's query.</p>
-            <p>Unfortunately, when you give words to a computer, it doesn't
-            really have a great way of determining how similar they are. Words
-            on a computer are just a bunch of characters and the individual
-            characters don't tell much about the meaning of the word. But we
-            can try representing words with something that better expresses
-            similarity: vectors.</p>
-            <p>For this project, my goal was to represent words in Google's
-            product data with vectors to express similarity with words
-            that might also be in customer queries. We assume that similar words
-            are used in similar contexts. Then, the general idea is to learn
-            a set of vectors to represent words and a neural network to
-            take a word's vector representation and predict its likely context
-            words. For example, in the phrase "the cat sat," we'd
-            want the network to predict "the" and "sat" when given the word
-            vector for "cat". The training data consisted of billions of
-            (target, context) pairs of words built from a database of product
-            data.</p>
-            <p>After these word vectors were learned, we could see, for example,
-            that words like "king" and "queen" were closely related to
-            "mattress". These vectors were then used as pre-trained data for a
-            sophisticated pipeline that combined features of paragraphs and
-            images in product data to recommend to shoppers.</p>
-          </div>
-        </div>
-      </aside>
-      <aside class="row2 col1">
-        <div class="food-sharing-backend">
-          <h3>Food Sharing App Backend</h3>
-          <img src="images/food-sharing.png"></img>
-          <div class="content">
-            <p>My team in my mobile apps and entrepreneurship class was required
-              to come up with an app and business idea. We looked around at
-              problems we faced day-to-day and determined that some people had
-              extra food and some people were very lazy about cooking. We chose
-              to build a platform to facilitate food sharing (truthfully, it's
-              not a great business idea given all the legal issues involved,
-              but we had to do something!).</p>
-            <p>I built the backend server that provided a RESTful API to which
-              buy and sell offers could be submitted and viewed. It interfaced
-              with the Facebook API for login and acquiring information about
-              users. I also developed the unit tests for to ensure that the
-              backend was robust.</p>
-            <p>You can view my team's project on
-              <a href="https://github.com/chernamy/food4friends"
-                target="_blank">Github</a>
-              but we probably will not be continuing any further with the
-              project because the legal issues are simply too immense. Although
-              the idea was not practical given the legal aspects, the business
-              model and coding was solid and I did well in the class.</p>
-          </div>
-        </div>
-      </aside>
-      <aside class="row2 col2">
-        <div class="gateway-test-framework">
-          <h3>Gateway Test Framework</h3>
-          <img src="images/gateway-test-framework.png"></img>
-          <div class="content">
-            <p>In algorithmic trading, a gateway is an important piece of
-              software that submits orders to exchanges and keeps track of
-              the status of all its orders. Errors in the gateway could be
-              catastrophic. For example, losing track of a big order means you
-              could lose a lot of money when the market moves and you don't
-              realize you need to clear your position. One of my internship
-              projects at Jump Trading involved designing and implementing a
-              regression testing framework for a specific gateway.</p>
-            <p>I created a simple language with a few commands for performing
-              operations such as buying/selling and assertions. It also
-              included features for more-complicated tests, such as killing
-              the gateway process and asserting that it restored its orders
-              upon restart. Finally, a test driver would find and run every
-              test. The framework was also quite extenible and new commands
-              could be easily added independent of the other commands.</p>
-          </div>
-        <div>
-      </aside>
-      <aside class="row2 col3">
-        <div class="graph3d">
-          <h3>3D Graphing Calculator</h3>
-          <img src="images/graph3d.png"></img>
-          <div class="content">
-            <p>A calculator is a pretty standard project when you're short on
-              ideas. Back in my high school days, I created a variety of
-              calculators, from algebraic manipulators to this 3D graphing
-              calculator. The software graphed plotted functions f(x, y) and
-              parametrics (x(t), y(t), z(t)).</p>
-            <p>I started the project a few months after Java 8 was first
-              released to try out the new 3D image rendering. Basically,
-              surfaces and lines were groups of small rectangles bunched
-              together. This was a logical extension from 2D graphing were
-              curves are groups of small line segments bunched together. In
-              the 3D graph, you can move forward/backward and turn left/right
-              with the WASD keys, rotate counter-clockwise and clockwise with
-              QE and shift up/down with the up/down arrow keys. Moving around
-              lets you observe the graph from multiple perspectives.</p>
-            <p>The project code is available on
-              <a href="https://github.com/mjchao/3D-Graphing-Calculator"
-                target="_blank">Github</a>
-              and there is an executable jar file available. However, I never
-              included rigorous error checking, so you will need to use it with
-              care. For example, if your x_inc is negative, the program will
-              never stop graphing. And if your increment is too small, the
-              program will take a very long time. But if all the inputs are
-              valid and your computer has enough memory and computational
-              power, the graphing will succeed.</p>
-          </div>
-        </div>
-      </aside>
+    <section class="main">
+      <aside class="summary">
+  <a class="summary-link" href="/././projects/text-reuse.html">
+    <span></span>
+  </a>
+  <div class="summary-content">
+    <h1 class="summary-title">
+      Text Reuse
+    </h1>
+  </div>
+  <div class="summary-image">
+    <img src="/././projects/text-reuse/header.png"></img> 
+  </div>
+</aside>
+
+<aside class="summary">
+  <a class="summary-link" href="/././projects/political-graphs.html">
+    <span></span>
+  </a>
+  <div class="summary-content">
+    <h1 class="summary-title">
+      Political Graphs
+    </h1>
+  </div>
+  <div class="summary-image">
+    <img src="/././projects/political-graphs/header.png"></img> 
+  </div>
+</aside>
+
+
     </section>
   </body>
-
-  <script>w3.includeHTML();</script>
-  <script src="js/gridlayout.js"></script>
 </html>
-
