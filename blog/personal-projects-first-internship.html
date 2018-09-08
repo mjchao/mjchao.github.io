@@ -31,168 +31,39 @@
   </head>
   <body>
     <div>
-      <nav>
-  <a class="home" title="home" href="../blog.html">
-  </a>
-  <a href="#" class="expand-toc" title="table of contents"
-    onclick="ToggleShowTOC(event)">
-  </a>
-  <div class="toc">
-    <div class="about-this-blog post-link-div">
-      <a href="about-this-blog.html" class="post-link">
-        About this Blog
-      </a>
-    </div>
-    <div class="accordion">
-      <h1>College In General</h1>
-      <div>
-        
-<div class="post-link-div">
-  <a href="optimizing-your-workload.html" class="post-link">
-    Is Your Workload Fully Optimized?
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="class-registration-tips.html" class="post-link">
-    Class Registration Tips and Hacks
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="all-parts-of-grade-matter.html" class="post-link">
-    All Parts of The Grade Matter
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="benefits-of-unlimited-meal-plan.html" class="post-link">
-    The Benefits of an Unlimited Meal Plan
-  </a>
-</div>
-
-      </div>
-    </div>
-
-    <div class="accordion">
-      <h1>Computer Science Courses</h1>
-      <div>
-        
-<div class="post-link-div">
-  <a href="six-attributes-of-the-cs-major.html" class="post-link">
-    Six Attributes of the CS Major
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="learning-intuition.html" class="post-link">
-    Learning Intuition
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="taking-advantage-of-autograder.html" class="post-link">
-    Taking Advantage of the Autograder
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="choosing-best-teaching-assistants.html" class="post-link">
-    Choosing the Best Teaching Assistants
-  </a>
-</div>
-
-      </div>
-    </div>
-
-    <div class="accordion">
-      <h1>Job Search</h1>
-      <div>
-        
-<div class="post-link-div">
-  <a href="job-search-timeline.html" class="post-link">
-    The Job Search Timeline
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="personal-projects-first-internship.html" class="post-link">
-    Personal Projects & Your First Internship
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="complete-solid-personal-project.html" class="post-link">
-    Completing a Solid Personal Project
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="embellishing-your-resume.html" class="post-link">
-    Embellishing Your Resume
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="behavioral-interviewing.html" class="post-link">
-    Behavioral Interviewing
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="career-fair.html" class="post-link">
-    Career Fair
-  </a>
-</div>
-
-      </div>
-    </div>
-  </div>
+      <script src="/js/nav.js"></script>
+<nav>
+  <a class="logo" title="Mickey Chao" href="/index.html"></a>
+  <ul>
+    <li class="collapsed-menu">
+      <a href="#" class="icon" onclick="return toggleCollapsedMenu()">Menu</a>
+    </li>
+    <li class="about">
+      <a title="About" href="/about.html">About</a>
+    </li>
+    <li class="skills">
+      <a title="Skills" href="/skills.html">Skills</a>
+    </li>
+    <li class="projects">
+      <a title="Projects" href="/projects.html">Projects</a>
+    </li>
+    <li class="blog">
+      <a title="Blog" href="/blog.html">Blog</a>
+    </li>
+  </ul>
 </nav>
 
     </div>
     <header>
       <h1>Personal Projects & Your First Internship</h1>
       <h2>April 8, 2018</h2>
-      <img src="/blog/personal-projects-first-internship/header.png"></img>
+      <img src="{{BLOGDIR}}/header.png"></img>
     </header>
     <section class="blogpost">
-      <p>
-The job search journey begins before career fairs, emailing recruiters, or even writing your resume. When you apply for your first internship, you have no prior job experience and need to prove you’ll be a skilled, hardworking contributor. Personal projects are a straightforward way to demonstrate your worth. Once you have experience from personal projects, you can successfully compete for opportunities from reputable employers.
-</p>
-<h2>
-Personal Projects Prove You Have Experience
-</h2>
-<p>
-You can always show a potential employer the code you wrote for your personal project to prove your worth. Usually, an interviewer will ask about things you did at past jobs to gauge what you’re capable of. If you haven’t held any work positions, you won’t have much to talk about; however, if you have personal projects, you can bring those up. This assumes your projects aren’t crappy, and a subsequent blog post will describe how to make an interesting product. Given that your personal projects are impressive, they are a perfect substitute for work experience.
-</p>
-<h2>
-Personal Projects Don’t Have to be Revolutionary
-</h2>
-<p>
-One concern from people is that they don’t feel confident in the greatness of their personal project to talk about it or post it on Github; the truth is, nobody expects a college student to build the next Google or Facebook. In an interview, you’ll maybe have ten minutes to talk about each personal project and nobody has enough information to “shit” on your work. Furthermore, nobody is going to read your code or check if the style is good or confirm it works perfectly. A personal project is simply something you use to back up your skills when you have no job experience. It doesn’t have to be very sophisticated: just something that you built that solves a problem. As an example, I’ll describe how I got my very first internship offer by relying on my personal projects.
-</p>
-<h2>
-Personal Projects Got Me My First Software Internship Offer
-</h2>
-<p>
-I received my first software internship offer thanks to my personal projects. In October of my freshman year, I interviewed with a technical manager. My one month of sitting in an “Intro to C++” course wasn’t exactly a hot topic of discussion, but I was able to describe the variety of personal projects I had worked on, such as a collaborative digital whiteboard and a 3D graphing calculator. The manager seemed engaged as I talked about how I implemented each tool. I doubt he ever verified my work or read my code on Github; simply having confidence while talking about my projects was convincing enough. A week later, I had my first offer. My experience from personal projects allowed me to secure an internship offer in just over one month of college.
-</p>
-<h2>
-Personal Projects are a Reliable Method of Proving Your Worth
-</h2>
-<p>
-When you search for your first job, you have no job background to prove your worth, but you can always work on a personal project to “manufacture” experience. Personal projects essentially substitute for missing job experience and they were definitely a critical factor when I received my first software internship offer. And even when you do have job experience, personal projects never “expire” and you can always use them to impress people during interviews.
-</p>
-<p>
-Since you’re reading this blog post, you have all the required resources for working on a personal project: a computer and internet connection. In the next post, I’ll provide some tips on building a successful and impressive personal project.
-</p>
-
+      {{BLOGPOST}}
 
       <section class="related posts">
-        <h2 class="related-header">Related</h2>
-<div w3-include-html="/blog/complete-solid-personal-project.summary.html"></div>
-
+        [u'complete-solid-personal-project']
       </section>
     </section>
   </body>

@@ -68,14 +68,13 @@ projects_generator = ContentGenerator(
 projects_generator.Generate()
 
 # ===== Generate blog pages and blog.html ===== #
-"""
 blog_generator = ContentGenerator(
         ROOT,
         BLOG_DIR,
-        ContentGenerator.ReadFile(os.path.join(BLOG_DIR, "post.template")),
-        ContentGenerator.ReadFile(os.path.join(BLOG_DIR, "summary.template")),
+        ContentGenerator.ReadFile(os.path.join(TEMPLATES_DIR, "blog.template")),
+        ContentGenerator.ReadFile(os.path.join(CONTENT_GEN_TEMPLATES_DIR,
+            "summary.template")),
         ContentGenerator.ReadFile(os.path.join(BLOG_DIR, "post.template")),
         global_vars)
 blog_generator.Generate()
-"""
 

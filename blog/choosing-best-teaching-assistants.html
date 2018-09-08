@@ -31,263 +31,39 @@
   </head>
   <body>
     <div>
-      <nav>
-  <a class="home" title="home" href="../blog.html">
-  </a>
-  <a href="#" class="expand-toc" title="table of contents"
-    onclick="ToggleShowTOC(event)">
-  </a>
-  <div class="toc">
-    <div class="about-this-blog post-link-div">
-      <a href="about-this-blog.html" class="post-link">
-        About this Blog
-      </a>
-    </div>
-    <div class="accordion">
-      <h1>College In General</h1>
-      <div>
-        
-<div class="post-link-div">
-  <a href="optimizing-your-workload.html" class="post-link">
-    Is Your Workload Fully Optimized?
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="class-registration-tips.html" class="post-link">
-    Class Registration Tips and Hacks
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="all-parts-of-grade-matter.html" class="post-link">
-    All Parts of The Grade Matter
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="benefits-of-unlimited-meal-plan.html" class="post-link">
-    The Benefits of an Unlimited Meal Plan
-  </a>
-</div>
-
-      </div>
-    </div>
-
-    <div class="accordion">
-      <h1>Computer Science Courses</h1>
-      <div>
-        
-<div class="post-link-div">
-  <a href="six-attributes-of-the-cs-major.html" class="post-link">
-    Six Attributes of the CS Major
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="learning-intuition.html" class="post-link">
-    Learning Intuition
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="taking-advantage-of-autograder.html" class="post-link">
-    Taking Advantage of the Autograder
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="choosing-best-teaching-assistants.html" class="post-link">
-    Choosing the Best Teaching Assistants
-  </a>
-</div>
-
-      </div>
-    </div>
-
-    <div class="accordion">
-      <h1>Job Search</h1>
-      <div>
-        
-<div class="post-link-div">
-  <a href="job-search-timeline.html" class="post-link">
-    The Job Search Timeline
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="personal-projects-first-internship.html" class="post-link">
-    Personal Projects & Your First Internship
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="complete-solid-personal-project.html" class="post-link">
-    Completing a Solid Personal Project
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="embellishing-your-resume.html" class="post-link">
-    Embellishing Your Resume
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="behavioral-interviewing.html" class="post-link">
-    Behavioral Interviewing
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="career-fair.html" class="post-link">
-    Career Fair
-  </a>
-</div>
-
-      </div>
-    </div>
-  </div>
+      <script src="/js/nav.js"></script>
+<nav>
+  <a class="logo" title="Mickey Chao" href="/index.html"></a>
+  <ul>
+    <li class="collapsed-menu">
+      <a href="#" class="icon" onclick="return toggleCollapsedMenu()">Menu</a>
+    </li>
+    <li class="about">
+      <a title="About" href="/about.html">About</a>
+    </li>
+    <li class="skills">
+      <a title="Skills" href="/skills.html">Skills</a>
+    </li>
+    <li class="projects">
+      <a title="Projects" href="/projects.html">Projects</a>
+    </li>
+    <li class="blog">
+      <a title="Blog" href="/blog.html">Blog</a>
+    </li>
+  </ul>
 </nav>
 
     </div>
     <header>
       <h1>Choosing the Best Teaching Assistants</h1>
       <h2>June 4, 2018</h2>
-      <img src="/blog/choosing-best-teaching-assistants/header.png"></img>
+      <img src="{{BLOGDIR}}/header.png"></img>
     </header>
     <section class="blogpost">
-      <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script type="text/javascript"
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<p>
-You usually attend lectures taught by a professor and recitations (a.k.a discussions) taught by a teaching assistant (TA). Not all TAs are equally skilled, however. If you interact with the best TAs, you’ll get your problems resolved more efficiently and learn the material better. This post discusses what qualities to avoid and what qualities to look for in a TA.
-</p>
-<h2>
-Why Recitation Is Important
-</h2>
-<p>
-Recitation is an important supplement to lecture; when taught properly, recitation is great for clarifying points of confusion and discovering new perspectives on the material. When I was a student, many people didn’t attend recitations either due to laziness or being fed up with low-quality TAs. That’s understandable, but in some cases, they missed out on extremely useful concepts. The best TAs have their unique perspectives to share with you and prepare great lessons for recitation. They provide new ideas that the professor didn’t think of and help nail down the intuition behind your lecture material. In the next section, I’ll describe a fantastic recitation I attended.
-</p>
-<h2>
-</p>
-Positive Example: Augmenting Lecture with an Intuitive Example
-</h2>
-<p>
-My machine learning TA was one of the best TAs I’ve encountered because he’d always have new and intuitive examples to illustrate the concepts in class. In machine learning, you want to predict the outputs from inputs. Your model is some mathematical function of the input values. For example, if you are predicting the cost of a house given its square footage, your guess might be
-</p>
-<center>
-  <p>
-    $f(x) = 100000 + 30x + 0.3x^2$
-  </p>
-</center>
-<p>
-Then, you find a ton of historical inputs (i.e. square footage of a house that was sold) and historical outputs (i.e. price the house sold at). You feed the inputs into your model and compare the model outputs with the historical outputs. The outputs of your model and the correct historical outputs are sent to a loss function, which outputs a high value when the model is very wrong and a low value when the model is almost correct. Finally, you compute the gradient of the loss function with respect to the training data and update the model parameters (100000, 30, and 0.3) in the direction that minimizes the loss function.
-</p>
-<p>
-In lecture, we learned the expression for the logistic loss function, its graph, and its benefits compared to other loss functions. The formulation of the logistic regression objective function to minimize was presented as
-</p>
-<center>
-  <p>
-  $J(\theta) = -\sum_{i=1}^{n}\left(y^{(i)}\log\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right) - \left(1 - y^{(i)}\right)\log\left(1 - \frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right)\right)$
-  </p>
-</center>
-<p>
-where $\theta$ is the model parameters, $x^{(i)}$ are the features of a historical training input, and $y^{(i)}$ is the historical training output, which must be between 0 and 1. We also took the gradient to determine how to update the model parameters based on the training samples. After lecture, I knew how to update parameters on my own; however, I didn’t have a great idea of what this logistic loss function was doing to the parameters.
-</p>
-<p>
-In recitation, my TA brought up the problem of approximating how biased an unfair coin was given the results (heads or tails) of many tosses. He wrote out an expression for how likely it was for a coin to be biased to heads given the observed heads and tails. It’s
-</p>
-<center>
-  <p>
-		$Likelihood = \prod_{i=1}^{n}\left(P\right)^{y(i)}\left(1-P\right)^{(1 - y(i))}$
-  </p>
-</center>
-<p>
-where $P$ is the probability of heads given by our model and $y(i)$ is 1 if coin toss $i$ resulted in heads and 0 if the toss resulted in tails. After taking the log of both sides, we got
-</p>
-<center>
-  <p>
-		$\log(likelihood) = \sum_{i=1}^{n}\left(y^{(i)}\log(P) + \left(1 - y^{(i)}\right)\log(1 - P)\right)$
-  </p>
-</center>
-<p>
-After taking the derivative and setting it to 0, we found the most likely bias to be $P = (\# heads)/(\# tosses)$, which made perfect sense.
-</p>
-<p>
-Then, because logistic regression uses the logistic (sigmoid) function as the probability of the positive output (i.e. heads),  he suggested we substitute the sigmoid function for the coin toss binomial probabilities. We simply set
-</p>
-<center>
-  <p>
-		$P = \sigma(x) = \frac{1}{1 + e^{-\theta^Tx^{(i)}}}$
-  </p>
-</center>
-<p>
-And viola - the logistic loss function (minus a negative sign in front) from lecture appeared:
-</p>
-<center>
-  <p>
-    $\log(likelihood) = \sum_{i=1}^{n}\left(y^{(i)}\log\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right) - \left(1 - y^{(i)}\right)\log\left(1 - \frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right)\right)$
-  </p>
-</center>
-<p>
-Since $\theta$ is a many-dimensional vector with a ton of variables, we can’t take the derivative and set it to 0. Instead, to minimize $J = -\log(likelihood)$, which is equivalent to maximizing the likelihood, we follow the gradient.
-</p>
-<p>
-This wasn’t a coincidence - this was an intuitive way of using a simple coin toss scenario to connect logistic regression and maximum likelihood estimation. Although the connection might seem “obvious” after the fact, it was definitely not elementary while trying to keep up with all the other concepts in the course.
-</p>
-<p>
-My machine learning TA presented the lecture material from a fresh, new perspective. In lecture, I learned how to use logistic regression; it was very practical but missing some conceptual ideas. From recitation, I learned the ideas from which logistic regression stemmed so that I was no longer blindly applying an arbitrary loss function to a problem. Instead of summarizing the lecture material, my machine learning TA augmented the lecture by helping me understand the connection between logistic regression and maximum likelihood estimation. My peers who skipped this recitation missed out on a very important concept.
-</p>
-<h2>
-Why Teaching Assistant Quality Has High Variance
-</h2>
-<p>
-The majority of TAs I encountered had a long way to go to match my machine learning TA’s skill at presenting material. One common reason so many people skip recitation is because most of the time, the TA just repeats lecture material in a sloppier manner than the professor. Attending an even-worse version of the lecture is a waste of time. You want to find the TAs who, like my machine learning TA, <i>augment</i> the lecture. You don’t want to miss out on the TAs who lead solid recitations.
-</p>
-<p>
-Unfortunately, professors don’t vet TAs on teaching ability; they hire TAs based on grades, whether they know the TA in person, and a variety of other reasons not related to teaching. Furthermore, as computer science enrollment skyrockets, more TAs need to be hired at higher hourly rates. Whenever you have a ton of well-paying jobs and an incorrect barrier for entry, you end up with many low-quality hires. If you don’t believe me, I’ll provide two horror stories.
-</p>
-<h2>
-Negative Example #1: Not Prepared for Recitation
-</h2>
-<p>
-For my data structures and algorithms class, my recitation leader never prepared anything. The professor would send him slides and he would read them for the first time as he presented in recitation. While he recited the slides, he’d spontaneously bring up his own incorrect examples. For instance, in one class he proposed an algorithm of “trying all possible passcodes to unlock a phone” and claimed it was a greedy algorithm because “you could get it right on the first try” (it’s actually a brute force algorithm). In another instance, someone asked the same TA to go over one of the multiple choice midterm questions. My TA had the answer key, but could not produce the appropriate steps to arrive at the correct answer. I couldn’t believe I was paying tuition for this $%!@.
-</p>
-<h2>
-Negative Example #2: Not Knowledgeable
-</h2>
-<p>
-A few semesters later in my information systems class, the professors trusted a TA to design a project involving client-server socket networking. The TA wrote autograder tests to validate our clients against his server and our servers against his client. Unfortunately for the class, our TA was learning on-the-job about how to use sockets.
-</p>
-<p>
-I could not successfully validate my client against his server or my server against his client because we followed different protocols. I used the standard industry practice of sending multiple messages per connection, but the “instructor solution” assumed one message per connection. Furthermore, the TA wasn’t aware you could send multiple messages with one socket so he didn’t acknowledge the discrepancy on the project specifications and couldn’t understand my test failures. I met with another TA who had been helpful on the class forums. When he couldn’t figure out the issue either, he let me look through the autograder code and I was very surprised to discover the root incompatibility. Then I wasted more time downgrading my code to work with the ridiculous instructor solution. Furthermore, the majority of the class learned to use sockets the wrong way and the professors started writing the projects after that semester. In this scenario, an incompetent TA taught not just a recitation section, but an entire class, the wrong material.
-</p>
-<h2>
-Shopping for the Best TAs
-</h2>
-<p>
-Finding the best TA takes effort and it’s like shopping around for the best deal when sellers are trying to scam you. At the beginning of the semester, you should attend multiple recitations after the same lecture to gauge differences among TAs. It’s fine if you can’t attend a recitation due to a schedule conflict, but do try making time if you hear there’s a really talented TA and you can’t make his/her section.
-</p>
-<p>
-In recitation, there are several things you can do to judge how knowledgeable and prepared a TA is, but never assume that a TA is qualified just because s/he got the position. First, listen to what ideas s/he talks about. Check if they are augmenting lecture with new ideas (as opposed to summarizing the lecture). Second, if you understood the lecture but have trouble following the TA’s logic, then that’s a sign the TA is unknowledgeable or unprepared. Similarly, if a TA stumbles and backtracks a lot while presenting, then s/he is usually unprepared. Finally, if you have an idea about extending a concept to a new scenario, be sure to ask if it makes any sense. Someone knowledgeable of the material will give you a direct answer or be able to do coherent reasoning on the spot to arrive at a conclusion. Someone uncomfortable with the material will stumble, be less confident, and maybe answer the wrong question or brush it aside.
-</p>
-<p>
-Here are other indicators of a TA’s quality. If nobody attends a TA’s recitation, then the recitation is either at a bad time, or more likely, the TA does not do a good job. People who have taken the class before you might also have reviews. If your peers who took the class have negative things to say about a TA, then you should probably avoid him/her. Finally, PhD students tend to do a much better job than masters and undergraduates. If a PhD student leads a recitation related to his/her research, s/he will almost certainly be knowledgeable and dedicated to the teaching job. I did have undergraduate friends who were great TAs, but they were very few. Most computer science upper-level electives are at the senior or masters level so it makes less sense that an undergraduate or masters student would be qualified; letting people teach at or above their level is generally a bad idea, but it happens when nobody more-qualified wants to fill the position. 
-</p>
-<h2>
-Summary
-</h2>
-<p>
-There are a lot of bad TAs and some good TAs. Finding a good TA can significantly improve your understanding of the material. If you aspire to do well in your courses, it’s important to choose the right TAs. In the best case, you should look for TAs who go beyond summarizing lectures and actually <i>augment</i> them with their own ideas. If that’s not possible, at a minimum, you should find TAs who are knowledgeable about the course material and prepare for recitations. You can search for the best TAs by attending multiple recitations at the beginning of the semester and actively judging the presentations. Other variables correlated to a TA’s quality include how full their classroom is, your peers’ opinions, and the TA’s education level.
-</p>
-
+      {{BLOGPOST}}
 
       <section class="related posts">
-        
+        []
       </section>
     </section>
   </body>

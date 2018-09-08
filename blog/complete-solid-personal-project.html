@@ -31,238 +31,39 @@
   </head>
   <body>
     <div>
-      <nav>
-  <a class="home" title="home" href="../blog.html">
-  </a>
-  <a href="#" class="expand-toc" title="table of contents"
-    onclick="ToggleShowTOC(event)">
-  </a>
-  <div class="toc">
-    <div class="about-this-blog post-link-div">
-      <a href="about-this-blog.html" class="post-link">
-        About this Blog
-      </a>
-    </div>
-    <div class="accordion">
-      <h1>College In General</h1>
-      <div>
-        
-<div class="post-link-div">
-  <a href="optimizing-your-workload.html" class="post-link">
-    Is Your Workload Fully Optimized?
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="class-registration-tips.html" class="post-link">
-    Class Registration Tips and Hacks
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="all-parts-of-grade-matter.html" class="post-link">
-    All Parts of The Grade Matter
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="benefits-of-unlimited-meal-plan.html" class="post-link">
-    The Benefits of an Unlimited Meal Plan
-  </a>
-</div>
-
-      </div>
-    </div>
-
-    <div class="accordion">
-      <h1>Computer Science Courses</h1>
-      <div>
-        
-<div class="post-link-div">
-  <a href="six-attributes-of-the-cs-major.html" class="post-link">
-    Six Attributes of the CS Major
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="learning-intuition.html" class="post-link">
-    Learning Intuition
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="taking-advantage-of-autograder.html" class="post-link">
-    Taking Advantage of the Autograder
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="choosing-best-teaching-assistants.html" class="post-link">
-    Choosing the Best Teaching Assistants
-  </a>
-</div>
-
-      </div>
-    </div>
-
-    <div class="accordion">
-      <h1>Job Search</h1>
-      <div>
-        
-<div class="post-link-div">
-  <a href="job-search-timeline.html" class="post-link">
-    The Job Search Timeline
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="personal-projects-first-internship.html" class="post-link">
-    Personal Projects & Your First Internship
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="complete-solid-personal-project.html" class="post-link">
-    Completing a Solid Personal Project
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="embellishing-your-resume.html" class="post-link">
-    Embellishing Your Resume
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="behavioral-interviewing.html" class="post-link">
-    Behavioral Interviewing
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="career-fair.html" class="post-link">
-    Career Fair
-  </a>
-</div>
-
-      </div>
-    </div>
-  </div>
+      <script src="/js/nav.js"></script>
+<nav>
+  <a class="logo" title="Mickey Chao" href="/index.html"></a>
+  <ul>
+    <li class="collapsed-menu">
+      <a href="#" class="icon" onclick="return toggleCollapsedMenu()">Menu</a>
+    </li>
+    <li class="about">
+      <a title="About" href="/about.html">About</a>
+    </li>
+    <li class="skills">
+      <a title="Skills" href="/skills.html">Skills</a>
+    </li>
+    <li class="projects">
+      <a title="Projects" href="/projects.html">Projects</a>
+    </li>
+    <li class="blog">
+      <a title="Blog" href="/blog.html">Blog</a>
+    </li>
+  </ul>
 </nav>
 
     </div>
     <header>
       <h1>Completing a Solid Personal Project</h1>
       <h2>April 14, 2018</h2>
-      <img src="/blog/complete-solid-personal-project/header.png"></img>
+      <img src="{{BLOGDIR}}/header.png"></img>
     </header>
     <section class="blogpost">
-      <p>
-A personal project is a long endeavour and it’s important to produce a neat product. When I say neat, I mean both clean and cool-looking. Doing proper planning and following the best practices of software engineering make the development process smoother and the final product better. In this post, I’ll provide some best practices of software engineering and offer some personal project ideas. 
-</p>
-<h2>
-Development Process and Pitfalls
-</h2>
-<p>
-First, let’s understand the development process. When you start work on a personal project, it’s not much different from a project you might do at work. The primary differences are that you don’t necessarily have to deal with other people’s code and you don’t get paid. Other than that, you’re still producing a decent-sized software system that’s prone to all the common mistakes in industry such as poor design, bugs everywhere, unreadable code, and the list goes on. With more experience, you’ll make fewer mistakes and notice them earlier; if you haven’t had as much experience, I’ll discuss some of the best practices that you can follow to avoid common pitfalls.
-</p>
-<h3>
-Requirements
-</h3>
-<p>
-One devastating mistake is to start coding without knowing what your project is: that’s called skipping the requirements gathering phase. For example, suppose you decide to create your own blog. You shouldn’t just start typing in your index.html file. You should draw sketches of what you want it to look like beforehand. You should diagram the interactions users can have, such as what happens when they click this button or what happens if they hover over this icon. It’s impossible to know everything beforehand, but you can make your best effort to plan ahead. When you realize one layout of the blog isn’t going to work, it’s much easier to erase lines on a whiteboard than to throw away and rewrite code. Run through the general idea of how your product will work on paper before dedicating time to coding it; you want to discover and fix flaws on paper instead of discarding hundreds of lines of code and hours of work.
-</p>
-<h3>
-Prototypes
-</h3>
-<p>
-Suppose you’ve generated some requirements, but you aren’t exactly sure how to implement a feature; rather than praying it will turn out well, you can prototype it up front. Prototyping involves making a small, separate proof of concept in a short period of time. Suppose you don’t know how to make a drop-down menu yet. Then you can prototype it by making use of online resources and hacking a drop-down menu together in a separate project. In your prototype, you experiment with the cleanest way to design the menu and hit any pitfalls before you put it into the bulk of the code for your blog. Once you’re comfortable building drop-down menus, you throw away your prototype (or put it aside for reference) and add the drop-down menu into your blog code. The benefit of prototyping is that you do all the dirty work in an isolated environment and none of the dirty side-effects get mixed up with your clean blog code. Prototyping features with a lot of uncertainty helps keep your main codebase clean and maintainable.
-</p>
-<h3>
-Architecture
-</h3>
-<p>
-If your personal project contains complicated interactions between different subcomponents, then you’ll want to draw out those interactions in an architecture diagram. This is probably what comes to mind when I say “architecture:”
-</p>
-<center>
-<img src="complete-solid-personal-project/uml.png">
-</img>
-</center>
-<p>
-It doesn’t have to be that overkill and sometimes it’s not necessary. For example, a blog doesn’t really need an architecture diagram because the posts won’t interact with each other. In another case, if you’re building an autograder, there might be a code submission interface that interacts with a test runner interface that is watched by a guard interface making sure the submission doesn’t hack into the autograder. Then, you’ll want to plan how the different parts of your code work together on paper before committing to code. The architecture diagram for the autograder is analogous to stepping through user interactions with the website in the “Requirements” section. In certain situations, it’s important to use an architecture diagram to anticipate the interactions within your own code.
-</p>
-<h3>
-Language Agnostic Coding Style
-</h3>
-<p>
-After you’re prepared with your requirements and architecture, you’re ready to code. When you are coding, there are plenty of style pitfalls and I’ll discuss three basic, language-agnostic concepts here: comments, naming, and modularity.
-</p>
-<p>
-First, comment your code. Perhaps it’s arguable that self-documenting code exists, but there is no such thing as a self-documenting software system. Whenever you pause to think about how to implement something, that probably means you should add a comment about why you wrote the code you did. It’s a reminder to yourself when you revisit it later. It’s also good practice for your future job because you’ll be writing code that other people need to understand as well.
-</p>
-<p>
-Second, use good names. When there are ten different variable names flying around named x, y, z, a, b, c, etc. it’s hard to remember what each one refers to. Never abbreviate with first letters and leave the unreadable stuff like “movaps” (MOVe-Aligned-Packed-Single [precision value]) for assembly language where names used to have length restrictions. If you had a function for that in a higher-level programming language, just name it moveAlignedPackedSingle so that anyone with the appropriate context instantly knows what it means.
-</p>
-<p>
-Third, focus on keeping your code modular. Each file should deal with one specific part that you can describe in a few sentences and you should avoid having one file encompass multiple parts of the software. If you have functions/methods, they should only have one responsibility. If you have classes, they should only handle one abstraction. Splitting your code into small parts keeps it easy to understand and modularity also makes it easier to write test cases, which are discussed in the next section.
-</p>
-<h3>
-Testing
-</h3>
-<p>
-If your software is complex and contains many interactions, you should consider testing your code - before you’ve finished writing all of it. When you implement a function or a class, you should verify it works by writing and running some test code. At a basic level, test cases are usually just some assert statements that will fail if the test subject behaves incorrectly. If you make a change that breaks previous features, running all your previous tests will notify you immediately of what broke. You want test cases that you can run and rerun at any time and will pass if everything is okay and fail if you’ve made any changes that broke existing functionality. This lets you detect and correct erroneous code as soon as you introduce it and ensures your product is not buggy.
-</p>
-<h3>
-Source Control
-</h3>
-<p>
-During the entire coding process, you should consider using source control. Source control backs up your progress and lets you revert any serious mistakes you made. It’s an undo button, which lets you code worry-free: if the current feature you’re implementing doesn’t work out, you can just undo and try again. I’d recommend using Github.
-</p>
-<h3>
-Final Notes on Development Process
-</h3>
-<p>
-The only way to avoid more pitfalls is to gain more experience coding. As with most activities, the more errors you make in your projects and the more you read about people’s designs, the better you’ll get at programming. You’ll hit many uncomfortable situations in your first few attempts and there’s not much you can do about it. By applying the suggestions described previously, you can reduce the number of screw-ups. There’s a ton of literature on software engineering best
-practices that I’ll also be mentioning in a subsequent blog post. Your personal projects will get better and better as you learn from your mistakes and from reading about other people’s mistakes.
-</p>
-<h2>
-Examples of Personal Projects
-</h2>
-<p>
-Now that you have an idea of how to develop a personal project, you need to make sure you choose an interesting project. An easy way to fail is to lose interest in your personal project and stop working on it. Make sure you choose a project that you’ll be passionate about and seems engaging to you.
-</p>
-<p>
-Here are some general ideas if you’re having trouble coming up with something you’d like to create:
-
-  <ul>
-    <li>Personal website or blog</li>
-    <li>Chatroom</li>
-    <li>Computer game (e.g. online tic-tac-toe, online two-player poker, text-based role-playing game)</li>
-    <li>Implement and test data structures and algorithms</li>
-    <li>Autograder</li>
-    <li>Graphing calculator</li>
-    <li>Create your own programming language and interpreter (like a simplified Python)</li>
-  </ul>
-</p>
-<p>
-Another idea is to create a hack, bot, or cheat for a computer game you enjoy. For example, when I was younger, I created a program that would click on rocks in a game called Runescape and make my character mine them while I did other stuff.
-</p>
-<p>
-You could also consider a project involving hardware. I once built an “animatronic” hand that could mimic the movements you made with your fingers. Besides the cost of the arduino microprocessor (which you can reuse and reprogram), it only cost about $30 in additional parts and materials.
-</p>
-<h2>
-Next Steps
-</h2>
-<p>
-Once you’ve decided on a personal project idea, review the discussion under the “Development Process and Pitfalls” section and apply the concepts as you develop your project. Just remember that your goal is to gain as much experience as possible and that it’s okay if the product doesn’t turn out perfect. As discussed in a previous post, you’ll bring up your project during interviews to show you have experience, but no interviewer is going to thoroughly pick through every blemish. Good luck!
-</p>
-
+      {{BLOGPOST}}
 
       <section class="related posts">
-        <h2 class="related-header">Related</h2>
-<div w3-include-html="/blog/personal-projects-first-internship.summary.html"></div>
-<div w3-include-html="/blog/embellishing-your-resume.summary.html"></div>
-
+        [u'personal-projects-first-internship', u'embellishing-your-resume']
       </section>
     </section>
   </body>

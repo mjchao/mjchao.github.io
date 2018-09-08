@@ -31,230 +31,39 @@
   </head>
   <body>
     <div>
-      <nav>
-  <a class="home" title="home" href="../blog.html">
-  </a>
-  <a href="#" class="expand-toc" title="table of contents"
-    onclick="ToggleShowTOC(event)">
-  </a>
-  <div class="toc">
-    <div class="about-this-blog post-link-div">
-      <a href="about-this-blog.html" class="post-link">
-        About this Blog
-      </a>
-    </div>
-    <div class="accordion">
-      <h1>College In General</h1>
-      <div>
-        
-<div class="post-link-div">
-  <a href="optimizing-your-workload.html" class="post-link">
-    Is Your Workload Fully Optimized?
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="class-registration-tips.html" class="post-link">
-    Class Registration Tips and Hacks
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="all-parts-of-grade-matter.html" class="post-link">
-    All Parts of The Grade Matter
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="benefits-of-unlimited-meal-plan.html" class="post-link">
-    The Benefits of an Unlimited Meal Plan
-  </a>
-</div>
-
-      </div>
-    </div>
-
-    <div class="accordion">
-      <h1>Computer Science Courses</h1>
-      <div>
-        
-<div class="post-link-div">
-  <a href="six-attributes-of-the-cs-major.html" class="post-link">
-    Six Attributes of the CS Major
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="learning-intuition.html" class="post-link">
-    Learning Intuition
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="taking-advantage-of-autograder.html" class="post-link">
-    Taking Advantage of the Autograder
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="choosing-best-teaching-assistants.html" class="post-link">
-    Choosing the Best Teaching Assistants
-  </a>
-</div>
-
-      </div>
-    </div>
-
-    <div class="accordion">
-      <h1>Job Search</h1>
-      <div>
-        
-<div class="post-link-div">
-  <a href="job-search-timeline.html" class="post-link">
-    The Job Search Timeline
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="personal-projects-first-internship.html" class="post-link">
-    Personal Projects & Your First Internship
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="complete-solid-personal-project.html" class="post-link">
-    Completing a Solid Personal Project
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="embellishing-your-resume.html" class="post-link">
-    Embellishing Your Resume
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="behavioral-interviewing.html" class="post-link">
-    Behavioral Interviewing
-  </a>
-</div>
-
-<div class="post-link-div">
-  <a href="career-fair.html" class="post-link">
-    Career Fair
-  </a>
-</div>
-
-      </div>
-    </div>
-  </div>
+      <script src="/js/nav.js"></script>
+<nav>
+  <a class="logo" title="Mickey Chao" href="/index.html"></a>
+  <ul>
+    <li class="collapsed-menu">
+      <a href="#" class="icon" onclick="return toggleCollapsedMenu()">Menu</a>
+    </li>
+    <li class="about">
+      <a title="About" href="/about.html">About</a>
+    </li>
+    <li class="skills">
+      <a title="Skills" href="/skills.html">Skills</a>
+    </li>
+    <li class="projects">
+      <a title="Projects" href="/projects.html">Projects</a>
+    </li>
+    <li class="blog">
+      <a title="Blog" href="/blog.html">Blog</a>
+    </li>
+  </ul>
 </nav>
 
     </div>
     <header>
       <h1>Embellishing Your Resume</h1>
       <h2>May 13, 2018</h2>
-      <img src="/blog/embellishing-your-resume/header.png"></img>
+      <img src="{{BLOGDIR}}/header.png"></img>
     </header>
     <section class="blogpost">
-      <p>
-When you’re searching for your first software work experience, you submit resumes to companies and professors in hopes of getting contacted for interviews. There are plenty of resources regarding how to write a resume. If you have no idea how resumes work, I’ll provide a few links to external resources that explain the basics. In this post, I assume you understand the fundamentals of resumes and are planning to apply for your first software position. Early on in your career, you will have fewer technical qualifications; I’ll explain how to embellish nontechnical experiences on your resume to maximize your chances of being contacted for interviews.
-</p>
-<h2>
-If You Don’t Know Anything About Resumes
-</h2>
-<p>
-If you’re making your first resume and don’t know how to build one, there are many online tutorials. You can Google them yourself, or check out these links:
-</p>
-<ul>
-	<li>
-		<a href="https://www.thebalancecareers.com/job-resumes-4161923">The BalanceCareers</a> has a good overview of what a resume is.
-	</li>
-	<li>
-		<a href="https://www.thebalancecareers.com/easy-steps-to-build-a-resume-4122296">The BalanceCareers</a> also has a tutorial on building a resume.
-	</li>
-	<li>
-		<a href="https://www.careercup.com/resume">CareerCup</a> has an excellent resume layout. I follow that layout and I’d recommend it too.
-	</li>
-</ul>
-<p>
-After you understand what should go on a resume, this post can help you make the content more convincing.
-</p>
-<h2>
-Embellishing versus Lying
-</h2>
-<p>
-Embellishing your resume is not the same as lying on your resume. Adding fake work experiences and rounding up your GPA are both lying. Describing your real experiences with overly-positive verbs and adjectives is normal. This post discusses the importance of using embellishing words to improve people’s perspective of your nontechnical experiences.
-</p>
-
-<p>
-Note that later in your career, this post is not as relevant for you. When you are experienced, embellishing technical qualifications can actually hurt you in the interviews. I’ll be making a subsequent post on resumes for when you have lots of experience.
-</p>
-<h2>
-Realistic Goals
-</h2>
-<p>
-When you apply for your first software work experience, ensure that your goal is realistic. I assume you haven’t been programming for many years already so your first work experience probably won’t be a software engineering internship at a top-tier company. That’s because the application processes at top-tier companies are highly technical and you don’t have many technical experiences yet. Realistically, your first software work experience will be somewhere less well-known and there will probably be little competition. Furthermore, it will probably be with a professor or a small company and you will primarily obtain the position from subjectivity and non-technical experiences.
-</p>
-<h2>
-Subjectivity and Non-technical Experiences
-</h2>
-<p>
-When you have no work experience and little technical background, you depend on subjectivity to get you hired. Essentially, you lack the relevant technical experiences so you instead convince the hirer that you are a fantastic person. For example, if you aren’t an expert in C++ and the job requires C++, then you can convince the hirer that you can learn it on the job. By showing that you are a fast learner, you make up for your lack of C++ experience. This is the kind of subjectivity you would rely on to get your first software position.
-</p>
-<p>
-You use nontechnical experiences to convince the hirer of your subjective attributes. Think back to anything you were proud of and you can probably relate that to some kind of positive attribute. For example, if you won a computer game competition, maybe you had great communication skills with your teammates. If you had a 4.0 GPA in high school, maybe you were hard-working and detail-oriented. Also think back to anything you’ve been paid to do. If you worked as a cashier, maybe you were efficient at getting all the customers through checkout. Your goal is to embellish your experiences by connecting them to positive attributes.
-</p>
-<h2>
-Embellishing the Facts on Your Resume
-</h2>
-<p>
-How you describe experiences on your resume can improve people’s perception of you. The harsh reality is that most people’s experiences are pretty crappy. The people who get interviews are the ones who don’t say they are crappy. And if you’re applying for a position without much competition, once you get the interview, you’ll probably get the job; therefore, it’s even more important to embellish on your resume so that you get the interview.
-</p>
-<p>
-There is nothing wrong with embellishing statements within reason. As an example, I once reviewed a resume for a freshman research position in college. The author mentioned work experience at a fast food restaurant and described it with “attend to cash register” and “fill orders.” Since this was the author’s first research experience, s/he had to rely on non-technical work experience. I suggested an embellished phrase like “maintained the highest possible customer satisfaction.” Although what constituted “highest possible customer satisfaction” is debatable, nobody could dispute the author’s opinion. Furthermore, the phrase implied the author was great at following instructions and nice to be around, two qualities of someone you’d want working for you. S/he was soon hired for the research position. In fact, I supervised a group of twelve freshmen and my group was the first of all eight other groups to have everyone accepted to a research position.
-</p>
-<p>
-Describing yourself in the best possible manner is crucial because it shows confidence and competence. A common mistake is downplaying one’s own accomplishments. Even if your sole work experience is as a cashier, you didn’t just “collect money from people” - you “maintained the highest possible customer satisfaction and ensured the checkout process was accurate and efficient.” When you describe facts on your resume, you should think like a salesman and sell yourself to the person reading your resume.
-</p>
-<p>
-<b>Warning:</b> It’s okay to skew the subjectivity in your favor, but you should never fabricate. It’s okay to call yourself an efficient cashier when you actually worked as slowly as possible because “efficient” is a subjective adjective. On the other hand, you should never make up a work experience because a phone call to the alleged employer exposes your lie - there’s nothing subjective to debate there.
-</p>
-<h2>
-Editing Your Resume
-</h2>
-<p>
-Now that you understand the importance of embellishing and putting yourself in the best possible light, you should review your resume and embellish anything lackluster. Start your bullets with vibrant verbs and remove any negative words such as “failed,” or “incomplete.” If something sounds boring like “filled orders,” see if you can reframe it in an exciting way. You will appear as a confident and competent job applicant even if you haven’t met all the desired technical qualifications.
-</p>
-<h2>
-Other Things to Remember
-</h2>
-<p>
-This post primarily discussed embellishment as a way to overcome the lack of technical experience. There are other critical aspects to keep in mind when writing resumes. Here is a brief, non-exhaustive list:
-</p>
-<ul>
-	<li>
-		Ensure there are no typos, grammar errors, etc.
-	</li>
-	<li>
-		Ensure names of companies, schools, etc. are spelled correctly
-	</li>
-	<li>
-		Ensure the layout is organized and intuitive
-	</li>
-	<li>
-		Submit different resumes for different jobs if they’re very different from each other
-	</li>
-	<li>
-		Remove totally irrelevant things that don’t promote your image (e.g. winning the “most likely to be arrested” joke award in your student organization is not going to help)
-	</li>
-</ul>
-
+      {{BLOGPOST}}
 
       <section class="related posts">
-        <h2 class="related-header">Related</h2>
-<div w3-include-html="/blog/behavioral-interviewing.summary.html"></div>
-
+        [u'behavioral-interviewing']
       </section>
     </section>
   </body>

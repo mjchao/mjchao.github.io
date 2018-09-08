@@ -1,0 +1,31 @@
+@import url("/css/general.css");
+@import url("/css/nav.css");
+@import url("/css/content-generator/default-overview-gridlayout.css");
+
+nav ul li.blog {
+  background-color: #808080;
+}
+
+nav ul li.blog a {
+  color: gold;
+}
+
+div.all {
+  position: absolute;
+  top: 75px;
+}
+
+section.intro {
+  margin-bottom: 3em;
+}
+
+section.intro h1 {
+  text-align: center;
+}
+
+section.intro p {
+  max-width: 800px;
+  margin: auto;
+}
+
+

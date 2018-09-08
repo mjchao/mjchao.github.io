@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<meta charset="UTF-8">
 <html>
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -7,64 +8,24 @@
 
     <meta http-equiv="Content-Type" context="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tips for Success in College Computer Science</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/blog.css">
-
-    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <title>{{TITLE}}</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/blog/overview.css">
     <script src="js/nav.js"></script>
   </head>
   <body>
-    <header>
-      <div w3-include-html="nav.html"></div>
-    </header>
-    <section class="main">
-      <h1>Tips for Success in College Computer Science</h1> 
-      <aside class="intro">
+    {{NAV}}
+
+    <div class="all">
+      <section class="intro">
+        <h1>College Computer Science Tips</h1> 
         <p>
-					Thinking about studying computer science in college? Or maybe you've
-					already committed to it? This blog discusses ways to perform well in
-					your computer science classes. In addition, we'll explore ways to
-					effectively pitch your abilities to companies and get valuable
-					internship experiences and competitive full-time offers. Studying
-					computer science leads to a lot of opportunities and when you succeed
-					in the major, you unlock even more! 
-				</p>
-      </aside>
-      <div class="posts">
-        <div w3-include-html="blog/about-this-blog.summary.html">
-        </div>
-        <div w3-include-html="blog/six-attributes-of-the-cs-major.summary.html">
-        </div>
-        <div w3-include-html="blog/optimizing-your-workload.summary.html">
-        </div>
-        <div w3-include-html="blog/learning-intuition.summary.html">
-        </div>
-        <div w3-include-html="blog/class-registration-tips.summary.html">
-        </div>
-        <div w3-include-html="blog/all-parts-of-grade-matter.summary.html">
-        </div>
-        <div w3-include-html="blog/benefits-of-unlimited-meal-plan.summary.html">
-        </div>
-        <div w3-include-html="blog/taking-advantage-of-autograder.summary.html">
-        </div>
-        <div w3-include-html="blog/job-search-timeline.summary.html">
-        </div>
-        <div w3-include-html="blog/personal-projects-first-internship.summary.html">
-        </div>
-        <div w3-include-html="blog/complete-solid-personal-project.summary.html">
-        </div>
-        <div w3-include-html="blog/embellishing-your-resume.summary.html">
-        </div>
-        <div w3-include-html="blog/choosing-best-teaching-assistants.summary.html">
-        </div>
-        <div w3-include-html="blog/behavioral-interviewing.summary.html">
-        </div>
-        <div w3-include-html="blog/career-fair.summary.html">
-        </div>
-      </div>
-    </section>
+        Thinking about studying computer science in college? Or maybe you’ve already committed to it? This blog discusses ways to perform well in your computer science classes. In addition, we’ll explore ways to effectively pitch your abilities to companies and get valuable internship experiences and competitive full-time offers. Studying computer science leads to a lot of opportunities and when you succeed in the major, you unlock even more!
+        </p>
+      </section>
+
+      <section class="main">
+        {{SUMMARIES}}
+      </section>
+    </div>
   </body>
-  <script>
-    w3.includeHTML();
-  </script>
 </html>
