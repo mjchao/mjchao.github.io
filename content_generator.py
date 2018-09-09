@@ -183,12 +183,13 @@ class ContentGenerator(object):
                 content_dirs.add(x)
         return content_dirs
 
-    def EditContentVars(self, conent_vars, content_dir):
+    def EditContentVars(self, content_vars, content_name):
         """Edits any variables before generating the content.
 
         Args:
             content_vars: (dict) The current content variables
-            content_dir: (string) The directory containing the content data.
+            content_name: (string) The name of the directory containing the
+                content data. This is not the path to the directory.
         """
         pass
 
@@ -221,7 +222,7 @@ class ContentGenerator(object):
             # be used.
             content_vars = ContentGenerator.ConcatVars(vars,
                     self._additional_vars)
-            self.EditContentVars(content_vars, content_dir)
+            self.EditContentVars(content_vars, d)
 
             # Create the content page
             content_html = ContentGenerator.FillTemplate(self._content_template,

@@ -37,9 +37,11 @@
       </div>
       <div class="content">
         {{CONTENT}}
-      </div>
-      <div class="related">
-        {{RELATED}}
+
+        <h2>Related</h2>
+        <div class="related">
+          {{RELATED}}
+        </div>
       </div>
     </section>
   </body>

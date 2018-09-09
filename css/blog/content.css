@@ -1,7 +1,9 @@
 @import url("/css/general.css");
 @import url("/css/content-generator/default-content-layout.css");
-
+@import url("/css/blog/content-related-summary.css");
 
 section.main .content {
-  max-width: 800px;
+  max-width: 900px;
+  margin: auto;
 }
+

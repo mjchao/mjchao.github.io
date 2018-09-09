@@ -1,0 +1,21 @@
+@import url("/css/content-generator/default-summary-layout.css");
+
+div.related {
+  display: grid;
+}
+
+div.related aside.summary {
+  max-width: 400px;
+}
+
+@media screen and (max-width: 700px) {
+  div.related {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width: 701px) {
+  div.related {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
