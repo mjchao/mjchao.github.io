@@ -1,2 +1,7 @@
+@import url("/css/general.css");
 @import url("/css/content-generator/default-content-layout.css");
 
+
+section.main .content {
+  max-width: 800px;
+}

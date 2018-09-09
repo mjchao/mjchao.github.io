@@ -1,6 +1,7 @@
 @import url("/css/general.css");
 @import url("/css/nav.css");
 @import url("/css/content-generator/default-overview-gridlayout.css");
+@import url("/css/content-generator/default-summary-layout.css");
 
 nav ul li.blog {
   background-color: #808080;

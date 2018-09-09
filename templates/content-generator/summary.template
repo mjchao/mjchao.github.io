@@ -2,12 +2,15 @@
   <a class="summary-link" href="/{{ROOT_DIR}}/{{TOPIC_DIR}}/{{CONTENT_DIR}}.html">
     <span></span>
   </a>
+  <div class="summary-image">
+    <img src="/{{ROOT_DIR}}/{{TOPIC_DIR}}/{{CONTENT_DIR}}/header.png"></img> 
+  </div>
   <div class="summary-content">
     <h1 class="summary-title">
       {{title}}
     </h1>
-  </div>
-  <div class="summary-image">
-    <img src="/{{ROOT_DIR}}/{{TOPIC_DIR}}/{{CONTENT_DIR}}/header.png"></img> 
+    <p class="summary-content">
+      {{summary}}
+    </p>
   </div>
 </aside>

@@ -2,6 +2,7 @@
 skills and projects subpages.
 """
 from content_generator import ContentGenerator
+from blog_generator import BlogGenerator
 import os
 
 # ========= File paths ======= #
@@ -68,13 +69,14 @@ projects_generator = ContentGenerator(
 projects_generator.Generate()
 
 # ===== Generate blog pages and blog.html ===== #
-blog_generator = ContentGenerator(
+blog_generator = BlogGenerator(
         ROOT,
         BLOG_DIR,
         ContentGenerator.ReadFile(os.path.join(TEMPLATES_DIR, "blog.template")),
         ContentGenerator.ReadFile(os.path.join(CONTENT_GEN_TEMPLATES_DIR,
             "summary.template")),
-        ContentGenerator.ReadFile(os.path.join(BLOG_DIR, "post.template")),
+        ContentGenerator.ReadFile(os.path.join(TEMPLATES_DIR,
+            "blog-post.template")),
         global_vars)
 blog_generator.Generate()
 
