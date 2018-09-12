@@ -183,6 +183,14 @@ class ContentGenerator(object):
                 content_dirs.add(x)
         return content_dirs
 
+    def EditTopicVars(self, topic_vars):
+        """Edits any variables before generating the topic.
+
+        Args:
+            topic_vars: (dict) The current topic vars
+        """
+        pass
+
     def EditContentVars(self, content_vars, content_name):
         """Edits any variables before generating the content.
 
@@ -196,7 +204,22 @@ class ContentGenerator(object):
     def Generate(self):
         """Generates all content pages, summaries, and the overview page.
         """
-        # Maps the content name to the html for its summary div
+
+        # read in topic variables so that they can be used in content variables
+        # as well.
+        topic_vars_file = os.path.join(self._root_dir, self._topic_dir,
+                ContentGenerator.VAR_FILENAME)
+        topic_vars = ContentGenerator.ReadVarsFile(topic_vars_file)
+        self.EditTopicVars(topic_vars)
+        if ContentGenerator.CONTENT_ORDERING_VAR not in topic_vars:
+            raise ValueError(
+                    "%s is not a valid topic var.json file. It is required to "
+                    "define a %s variable that indicates the ordering in which "
+                    "content summaries should appear." %(topic_vars_file,
+                        ContentGenerator.CONTENT_ORDERING_VAR))
+
+        # Maps the content name to the html for its summary div. We'll need the
+        # summaries for when we generate the overview page.
         summary_htmls = {}
 
         content_dirs = self.DiscoverContentDirs()
@@ -220,7 +243,7 @@ class ContentGenerator(object):
             # Pass additional vars second so that the user is allowed to
             # override the variables that the content generator thinks should
             # be used.
-            content_vars = ContentGenerator.ConcatVars(vars,
+            content_vars = ContentGenerator.ConcatVars(topic_vars, vars,
                     self._additional_vars)
             self.EditContentVars(content_vars, d)
 
@@ -236,15 +259,6 @@ class ContentGenerator(object):
             summary_htmls[d] = summary_html
 
         # Generate the overview page
-        topic_vars_file = os.path.join(self._root_dir, self._topic_dir,
-                ContentGenerator.VAR_FILENAME)
-        topic_vars = ContentGenerator.ReadVarsFile(topic_vars_file)
-        if ContentGenerator.CONTENT_ORDERING_VAR not in topic_vars:
-            raise ValueError(
-                    "%s is not a valid topic var.json file. It is required to "
-                    "define a %s variable that indicates the ordering in which "
-                    "content summaries should appear." %(topic_vars_file,
-                        ContentGenerator.CONTENT_ORDERING_VAR))
         content_summary_ordering = topic_vars[
                 ContentGenerator.CONTENT_ORDERING_VAR]
 

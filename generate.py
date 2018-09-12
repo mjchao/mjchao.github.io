@@ -23,6 +23,7 @@ SKILLS_DIR = os.path.join(ROOT, "skills")
 PROJECTS_DIR = os.path.join(ROOT, "projects")
 
 BLOG_DIR = os.path.join(ROOT, "blog")
+BLOG_TEMPLATES_DIR = os.path.join(TEMPLATES_DIR, "blog")
 
 # ===== Load Nav HTML ==== #
 global_vars = {}
@@ -72,11 +73,14 @@ projects_generator.Generate()
 blog_generator = BlogGenerator(
         ROOT,
         BLOG_DIR,
-        ContentGenerator.ReadFile(os.path.join(TEMPLATES_DIR, "blog.template")),
+        ContentGenerator.ReadFile(os.path.join(BLOG_TEMPLATES_DIR,
+            "blog.template")),
         ContentGenerator.ReadFile(os.path.join(CONTENT_GEN_TEMPLATES_DIR,
             "summary.template")),
-        ContentGenerator.ReadFile(os.path.join(TEMPLATES_DIR,
+        ContentGenerator.ReadFile(os.path.join(BLOG_TEMPLATES_DIR,
             "blog-post.template")),
+        ContentGenerator.ReadFile(os.path.join(BLOG_TEMPLATES_DIR,
+            "nav.template")),
         global_vars)
 blog_generator.Generate()
 

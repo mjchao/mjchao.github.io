@@ -16,5 +16,30 @@
   "behavioral-interviewing",
   "career-fair"
 ],
-"TITLE": "College Computer Science Tips"
+"TITLE": "College Computer Science Tips",
+"CATEGORIES": [
+  ["College in General", [
+      "optimizing-your-workload",
+      "class-registration-tips",
+      "all-parts-of-grade-matter",
+      "benefits-of-unlimited-meal-plan"
+    ]
+  ],
+  ["Computer Science Courses", [
+      "six-attributes-of-the-cs-major",
+      "learning-intuition",
+      "taking-advantage-of-autograder",
+      "choosing-best-teaching-assistants"
+    ]
+  ],
+  ["The Job Search", [
+      "job-search-timeline",
+      "personal-projects-first-internship",
+      "complete-solid-personal-project",
+      "embellishing-your-resume",
+      "behavioral-interviewing",
+      "career-fair"
+    ]
+  ]
+]
 }
