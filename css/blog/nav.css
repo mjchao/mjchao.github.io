@@ -73,10 +73,29 @@ nav div.toc {
 
 nav.toc-shown div.toc {
 	display: block;
+  background-color: #B0B0B0;
   position: relative;
   top: 64px;
 }
 
 nav div.blog-nav-category {
 	display: inline-block;
+  padding: 0 1em;
+  vertical-align: top;
+  padding-bottom: 3em;
+}
+
+nav div.blog-nav-category h3 {
+  font-size: 1.2em;
+  margin-bottom: 0.2em;
+}
+
+nav div.blog-nav-category div.blog-nav-article:hover {
+  background-color: #808080;
+}
+
+nav div.blog-nav-category div.blog-nav-article a.blog-nav-article-link {
+  display: inline-block;
+  position: relative;
+  padding: 10px 5px 0 5px;
 }

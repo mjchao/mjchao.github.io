@@ -41,11 +41,12 @@ class BlogGenerator(ContentGenerator):
             category_html = (
 """
 <div class="blog-nav-category">
+<h3>%s</h3>
 %s
 </div>
 
 """
-                %(articles_html))
+                %(category, articles_html))
             categories_html += category_html
 
         # overwrite the nav variable for a blog-specific nav.

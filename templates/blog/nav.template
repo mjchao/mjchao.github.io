@@ -2,16 +2,16 @@
 <nav>
    <ul>
     <li>
-     <a class="home" title="home" href="/blog.html">
+     <a class="home" title="Home" href="/blog.html">
       </a>
     </li>
     <li>
-      <a href="about-this-blog.html" class="post-link">
+      <a href="about-this-blog.html" title="About this Blog" class="post-link">
         About
       </a>
     </li>
     <li>
-      <a href="#" class="expand-toc" title="table of contents"
+      <a href="#" class="expand-toc" title="Table of Contents"
         onclick="ToggleShowTOC(event)">
         More <i class="arrow down"></i> 
       </a>
