@@ -1,16 +1,23 @@
 <script src="/js/blog-nav.js"></script>
 <nav>
-  <a class="home" title="home" href="/blog.html">
-  </a>
-  <a href="#" class="expand-toc" title="table of contents"
-    onclick="ToggleShowTOC(event)">
-  </a>
-  <div class="toc">
-    <div class="about-this-blog post-link-div">
-      <a href="about-this-blog.html" class="post-link">
-        About this Blog
+   <ul>
+    <li>
+     <a class="home" title="home" href="/blog.html">
       </a>
-    </div>
+    </li>
+    <li>
+      <a href="about-this-blog.html" class="post-link">
+        About
+      </a>
+    </li>
+    <li>
+      <a href="#" class="expand-toc" title="table of contents"
+        onclick="ToggleShowTOC(event)">
+        More <i class="arrow down"></i> 
+      </a>
+    </li>
+  </ul>
+  <div class="toc"> 
     {{CATEGORIES}}
   </div>
 </nav>
