@@ -79,6 +79,7 @@ nav.toc-shown div.toc {
   background-color: #B8B8B8;
   overflow-y: auto;
   z-index: 9997;
+	text-align: center;
 }
 
 nav div.blog-nav-category {
@@ -86,6 +87,7 @@ nav div.blog-nav-category {
   padding: 0 1em;
   vertical-align: top;
   padding-bottom: 3em;
+	text-align: left;
 }
 
 nav div.blog-nav-category h3 {
