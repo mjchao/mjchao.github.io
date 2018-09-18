@@ -6,7 +6,8 @@ function ToggleShowTOC(e) {
   var nav = document.querySelector("nav");
   nav.classList.toggle("toc-shown");
 
-  var body = document.querySelector("body");
-  body.classList.toggle("toc-shown");
+  var toc = document.querySelector(".toc");
+  toc.style.maxHeight = (window.innerHeight - 64) + "px";
+  console.log(toc.style.maxHeight);
 }
 
