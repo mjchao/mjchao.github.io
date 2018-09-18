@@ -56,7 +56,8 @@ class BlogGenerator(ContentGenerator):
 
     def EditContentVars(self, content_vars, content_name):
         content_vars["NAV"] = self._content_nav
-        if BlogGenerator.RELATED_POSTS_VAR in content_vars:
+        if (BlogGenerator.RELATED_POSTS_VAR in content_vars and
+            len(content_vars[BlogGenerator.RELATED_POSTS_VAR]) > 0):
             related_posts = content_vars[BlogGenerator.RELATED_POSTS_VAR]
             if type(related_posts) is not list:
                 raise ValueError(
@@ -80,5 +81,14 @@ class BlogGenerator(ContentGenerator):
                 related_summary = ContentGenerator.FillTemplate(
                     self._summary_template, related_vars)
                 related_posts_html += related_summary + "\n"
-            content_vars[BlogGenerator.RELATED_POSTS_VAR] = related_posts_html
+            content_vars[BlogGenerator.RELATED_POSTS_VAR] = (
+"""
+<h2>Related</h2>
+<div class="related">
+%s
+</div>
+"""
+            %(related_posts_html))
+        else:
+            content_vars[BlogGenerator.RELATED_POSTS_VAR] = ""
 
