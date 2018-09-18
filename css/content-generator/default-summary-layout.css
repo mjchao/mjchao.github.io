@@ -1,5 +1,9 @@
 @import url("/css/content-generator/default-cover-layout.css");
 
+aside.summary div.summary-image {
+  height: 200px;
+}
+
 aside.summary div.summary-content p.summary-content {
   text-align: left;
   padding-left: 0.5em;
