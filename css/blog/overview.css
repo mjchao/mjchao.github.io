@@ -29,4 +29,14 @@ section.intro p {
   margin: auto;
 }
 
+section.main aside.summary div.summary-content h1.summary-title {
+  font-size: 1.6em;
+}
+
+
+@media screen and (max-width: 700px) {
+  section.main aside.summary {
+    max-width: 400px;
+  }
+}
 
