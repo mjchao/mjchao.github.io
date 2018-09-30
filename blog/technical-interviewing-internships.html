@@ -1,0 +1,335 @@
+<!DOCTYPE HTML>
+<meta charset="UTF-8">
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113887707-1"></script>
+    <script src="/js/analytics.js"></script>
+
+    <meta http-equiv="Content-Type" context="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Technical Interviewing (Intern-Level)</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/blog/content.css">
+    <script src="/js/blog-nav.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+      $( function() {
+        $( ".accordion" ).accordion({
+          active: false,
+          collapsible: true,
+          heightStyle: "content",
+        });
+      } );
+    </script>
+
+  </head>
+  <body>
+    <script src="/js/blog-nav.js"></script>
+<nav>
+   <ul>
+    <li>
+     <a class="home" title="Home" href="/blog.html">
+      </a>
+    </li>
+    <li>
+      <a href="about-this-blog.html" title="About this Blog" class="post-link">
+        About
+      </a>
+    </li>
+    <li>
+      <a href="#" class="expand-toc" title="Table of Contents"
+        onclick="ToggleShowTOC(event)">
+        All Posts <i class="arrow down"></i> 
+      </a>
+    </li>
+  </ul>
+  <div class="toc"> 
+    
+<div class="blog-nav-category">
+<h3>College in General</h3>
+
+  <div class="blog-nav-article">
+    <a href="/blog/optimizing-your-workload.html" class="blog-nav-article-link">
+      Is Your Workload Fully Optimized?
+    </a>
+  </div>
+
+
+  <div class="blog-nav-article">
+    <a href="/blog/class-registration-tips.html" class="blog-nav-article-link">
+      Class Registration Tips and Hacks
+    </a>
+  </div>
+
+
+  <div class="blog-nav-article">
+    <a href="/blog/all-parts-of-grade-matter.html" class="blog-nav-article-link">
+      All Parts of The Grade Matter
+    </a>
+  </div>
+
+
+  <div class="blog-nav-article">
+    <a href="/blog/benefits-of-unlimited-meal-plan.html" class="blog-nav-article-link">
+      The Benefits of an Unlimited Meal Plan
+    </a>
+  </div>
+
+
+</div>
+
+
+<div class="blog-nav-category">
+<h3>Computer Science Courses</h3>
+
+  <div class="blog-nav-article">
+    <a href="/blog/six-attributes-of-the-cs-major.html" class="blog-nav-article-link">
+      Six Attributes of the CS Major
+    </a>
+  </div>
+
+
+  <div class="blog-nav-article">
+    <a href="/blog/learning-intuition.html" class="blog-nav-article-link">
+      Learning Intuition
+    </a>
+  </div>
+
+
+  <div class="blog-nav-article">
+    <a href="/blog/taking-advantage-of-autograder.html" class="blog-nav-article-link">
+      Taking Advantage of the Autograder
+    </a>
+  </div>
+
+
+  <div class="blog-nav-article">
+    <a href="/blog/choosing-best-teaching-assistants.html" class="blog-nav-article-link">
+      Choosing the Best Teaching Assistants
+    </a>
+  </div>
+
+
+</div>
+
+
+<div class="blog-nav-category">
+<h3>The Job Search</h3>
+
+  <div class="blog-nav-article">
+    <a href="/blog/job-search-timeline.html" class="blog-nav-article-link">
+      The Job Search Timeline
+    </a>
+  </div>
+
+
+  <div class="blog-nav-article">
+    <a href="/blog/personal-projects-first-internship.html" class="blog-nav-article-link">
+      Personal Projects & Your First Internship
+    </a>
+  </div>
+
+
+  <div class="blog-nav-article">
+    <a href="/blog/complete-solid-personal-project.html" class="blog-nav-article-link">
+      Completing a Solid Personal Project
+    </a>
+  </div>
+
+
+  <div class="blog-nav-article">
+    <a href="/blog/embellishing-your-resume.html" class="blog-nav-article-link">
+      Embellishing Your Resume
+    </a>
+  </div>
+
+
+  <div class="blog-nav-article">
+    <a href="/blog/behavioral-interviewing.html" class="blog-nav-article-link">
+      Behavioral Interviewing
+    </a>
+  </div>
+
+
+  <div class="blog-nav-article">
+    <a href="/blog/career-fair.html" class="blog-nav-article-link">
+      Career Fair
+    </a>
+  </div>
+
+
+  <div class="blog-nav-article">
+    <a href="/blog/technical-interviewing-internships.html" class="blog-nav-article-link">
+      Technical Interviewing (Intern-Level)
+    </a>
+  </div>
+
+
+</div>
+
+
+  </div>
+</nav>
+
+    <section class="main">
+      <div class="heading">
+        <h1>Technical Interviewing (Intern-Level)</h1>
+        <img src="/././blog/technical-interviewing-internships/header.png"></img>
+      </div>
+      <div class="content">
+        <p>
+The only thing that stands between you and an internship offer is a few technical interviews. For internships, technical interviews are pretty much in your hands: if you correctly solve and explain your answers to the technical questions, you will likely get the offer. If you can’t solve the questions or can’t explain your reasoning, then you will likely be rejected. The technical questions are usually reasonable, and with proper preparation, you can ace them.
+</p>
+<h2>
+What Happens During an Interview?
+</h2>
+<p>
+A technical interview is a very straightforward process. An engineer (or multiple engineers) sit with you in a room with a whiteboard and ask you a programming problem. It could be “please implement mergesort” or a more-interesting problem. Usually, you have thirty minutes to an hour to write your solution on the board and explain the code as you write it. You are primarily scored based on whether or not you solved the problem and how clear your explanation was.
+</p>
+<h2>
+What Kind of Problems Will I Get?
+</h2>
+<p>
+For internship interviews, the only technical topics you should expect to be tested on are ones you’ve covered in standard computer science coursework. In general, interviewers primarily focus on one course: data structures and algorithms. They ask programming problems where the optimal runtime and memory complexity can be achieved by one or a combination of data structures and algorithms. If you paid attention in class and practice enough, you should not have any problems.
+</p>
+<h2>
+Practice Makes Perfect
+</h2>
+<p>
+I’m probably not the first nor will I be the last to tell you this: doing more and more practice interview problems greatly improves your chances of success. Consider the following analogy to arithmetic: when you were in grade school, you probably struggled with adding numbers, but if anyone asked you to add numbers in an interview today, you’d get through it in a breeze. That’s because you’ve done so much addition in your lifetime that it’s become second nature to you. Practicing programming interview questions is no different from practicing arithmetic.
+</p>
+<p>
+If you do anything enough times, it becomes second nature to you and you breeze through it. My coworkers once interviewed a candidate who had done well in international programming competitions. To perform at the international level, you spend years solving problem after problem using the elementary concepts you’d learn in a data structures and algorithms class and many more harder concepts that don’t appear until upper-level courses. As I predicted, he finished the interviews very quickly: practically within fifteen of the alloted forty-five minutes. And the interview questions definitely weren’t trivial for an undergraduate.
+</p>
+<p>
+Of course, you don’t have to reach a level where you’re finishing interview problems in one-third of the allocated time. All you have to do is solve enough problems so that when you hear an interview problem, you already have a good hunch about how to solve it. You want to be at a point where given any random question of appropriate difficulty, you can think about it for ten or so minutes and discover the appropriate data structure(s) and/or algorithm(s) to achieve the optimal runtime and memory complexity. Once you reach that level, you will become consistent in your interviews and be able to ace them.
+</p>
+<p>
+To get to the level where you can think up of a solution within a few minutes, you have to keep doing programming problem after programming problem. At the beginning, you might not be able to solve many. That’s okay! Get help or read the answer and then code it up yourself without referencing the sample solution. As you code more solutions applying data structures and algorithms, things will start making more sense and you’ll start to recognize patterns that make future problems more intuitive to solve. It’s a time consuming but sure process for getting comfortable with your data structures and algorithms.
+</p>
+<p>
+You can find plenty of problems on sites like <a href="https://leetcode.com/" target="_blank">Leetcode</a>, <a href="http://codeforces.com/" target="_blank">Codeforces</a>, or the <a href="http://usaco.org/" target="_blank">USA Computing Olympiad (USACO)</a>. I personally gained most of my comfort with data structures and algorithms via USACO. Their <a href="http://train.usaco.org/" target="_blank">training pages</a> have instructional texts and problems in increasing difficulty. You will be able to access them after registering for an account. There are also <a href="http://usaco.org/index.php?page=contests" target="_blank">USACO contests</a> that are good practice, but the results only count for high schoolers. Many problems will be harder than typical interview questions so you don’t have to be able to solve all of them, but there are particular concepts you should be comfortable with.
+</p>
+<h2>
+Data Structures and Algorithms Concepts
+</h2>
+<p>
+Here’s a list of concepts you should be familiar with from your data structures and algorithms classes. You should be able to implement the algorithms, know how to use the data structures, and have a general idea of how each data structure is implemented.
+</p>
+<ul>
+	<li>Search algorithms
+		<ul>
+			<li>Depth-first</li>
+			<li>Breadth-first</li>
+			<li>Binary search</li>
+		</ul>
+	</li>
+	<li>Sorting algorithms
+		<ul>
+			<li>Mergesort</li>
+			<li>Quicksort</li>
+			<li>Insertion sort</li>
+		</ul>
+	</li>
+	<li>Dynamic programming</li>
+	<li>Lists
+		<ul>
+			<li>Array lists</li>
+			<li>Linked lists</li>
+		</ul>
+	</li>
+	<li>Stacks</li>
+	<li>Queues</li>
+	<li>Priority queues</li>
+	<li>Hashmaps</li>
+	<li>Balanced binary trees</li>
+</ul>
+<p>
+On Leetcode, you should be able to do most of the hard problems. On the USACO training pages, you should get through the first two chapters. On the USACO contests, you should be able to do the silver division problems. And on Codeforces, you should be able to complete problems that have been solved by a few thousand people or more (usually up to C difficulty). I also hear that <a href="https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/098478280X" target="_blank">Cracking the Coding Interview</a> is a great resource. Personally, I haven’t read it, but it may provide a more streamlined process for studying by giving you problems that are very similar to what you’d get in a technical interview.
+</p>
+<h2>
+Communication During The Interview
+</h2>
+<p>
+In addition to being able to solve programming problems, communicating your solution and how you arrive at it is the other essential aspect of technical interviewing. If the problem is straightforward and you know how to solve it right away, you can immediately tell your interviewer how you will code up the solution. If it takes you a few minutes to think of the solution, you can walk through your thoughts or go through a sample case with the interviewer. The interviewer might also provide hints if you stray off track, so it can’t hurt to speak your mind. If the problem statement is vague, be sure to ask for clarification. In fact, some interviewers intentionally keep the question ambiguous to see if you’ll notice before you start coding. 
+</p>
+<p>
+When you start writing your code on the whiteboard, explain what the purpose of each line is doing. If you declare a variable, tell the interviewer what it keeps track of. If you perform a check, tell the interviewer what the check accomplishes and how it relates to the problem. Imagine the interviewer is unfamiliar with the problem and you’re trying to explain your steps to an inexperienced colleague. Or pretend you’re presenting your solution to a class of students. You want to be talking for the majority of the interview.
+</p>
+<h2>
+Interview Scoring
+</h2>
+<p>
+As you’re talking through the interview, keep in mind these points that you’ll get graded on:
+</p>
+<ul>
+  <li>Did you solve all the parts of the problem with the correct runtime and memory complexity?</li>
+  <li>Did you explain your steps?</li>
+  <li>Did you ask for clarification on ambiguous parts of the problem?</li>
+  <li>Is your code clean and organized?</li>
+</ul>
+<p>
+Personally, I score candidates in the above order, but different interviewers have different preferences and you should try to address all of them anyways. After your interview, you’ll likely hear back within a few days regarding whether or not you will continue in the process.
+</p>
+<h2>
+Beyond Data Structures and Algorithms
+</h2>
+<p>
+Previously, I mentioned that interviews target data structures and algorithms; however, if your internship focuses on a specific area of computer science such as artificial intelligence or computer security, you may get some questions from those areas of study. However, it would be unreasonable for an interviewer to expect you to have expertise in those areas if you’re only a sophomore or junior. Many students don’t even have the prerequisites to take courses on artificial intelligence or computer security until later in their junior year. I will discuss these advanced topics in a later post for experienced technical interviewing.
+</p>
+<h2>
+Summary
+</h2>
+<p>
+For your first or second internship, the technical interviews should be predictable: expect to be grilled on your knowledge of data structures and algorithms. You can prepare for technical interviews by doing tons of problems on sites like Leetcode or USACO. When the actual interview takes place, you can spend your first ten or so minutes analyzing the problem and coming up with the solution. Then you can code it up. Throughout the entire process, you should speak your mind and explain your code as if you were presenting the solution to a group of inexperienced students. The interviewer will judge your solution and explanations against the criteria s/he values the most, and in a few days, you’ll hear back regarding whether you get to move on in the process.
+</p>
+
+        
+<h2>Related</h2>
+<div class="related">
+<aside class="summary">
+  <a class="summary-link" href="/././blog/career-fair.html">
+    <span></span>
+  </a>
+  <div class="summary-image">
+    <img src="/././blog/career-fair/header.png"></img> 
+  </div>
+  <div class="summary-content">
+    <h1 class="summary-title">
+      Career Fair
+    </h1>
+    <p class="summary-content">
+      There are a lot of companies and a lot of competition from other students at career fairs. Learn how to prepare and efficiently use your time.
+    </p>
+  </div>
+</aside>
+
+<aside class="summary">
+  <a class="summary-link" href="/././blog/behavioral-interviewing.html">
+    <span></span>
+  </a>
+  <div class="summary-image">
+    <img src="/././blog/behavioral-interviewing/header.png"></img> 
+  </div>
+  <div class="summary-content">
+    <h1 class="summary-title">
+      Behavioral Interviewing
+    </h1>
+    <p class="summary-content">
+      Learn how to prepare the best content and presentation for subjective behavioral interviews.
+    </p>
+  </div>
+</aside>
+
+
+</div>
+
+      </div>
+    </section>
+  </body>
+</html>
