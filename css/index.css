@@ -33,11 +33,9 @@ section.main {
   margin-top: 40px;
   margin-bottom: 30px;
   padding-bottom: 3em;
-  /* Can't get the blue fill entire horizontal space with width=100% :/ */
-  width: 101.75%;
+  width: 100%;
   background-color: #87ceeb;
   position: relative;
-  left: -1%;
 }
 
 section.main .content {

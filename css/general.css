@@ -1,13 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:700|Passion+One|Merriweather|Raleway:700');
 
-#page {
-  margin: 0 0;
-  position: relative;
-}
-
 body {
   font-size: 16px;
   min-height: 430px;
+  width: 100%;
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {

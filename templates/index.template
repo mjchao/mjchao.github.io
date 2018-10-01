@@ -13,56 +13,54 @@
 
   </head>
   <body>
-    <div id="page">
-      {{NAV}}
-      <header>
-        <img class="hero-img" src="images/banner.png"></img>
-        <div class="hero">
-          <h1>Mickey Chao</h1>
-          <h2>Intelligent Software Engineering</h2>
+    {{NAV}}
+    <header>
+      <img class="hero-img" src="images/banner.png"></img>
+      <div class="hero">
+        <h1>Mickey Chao</h1>
+        <h2>Intelligent Software Engineering</h2>
+      </div>
+    </header>
+
+    <section class="main">
+      <aside>
+        <div class="content">
+          <h3>About Me</h3>
+          <p>Hi, I’m Mickey. I always enjoyed programming the computer to do
+             smart tasks, such as graphing math functions and detecting hidden
+             bits of plagiarism. I also put a lot of emphasis on clean and
+             maintainable code. My goal is to produce intelligent software
+             with intelligent designs.</p>
+            
+          <a class="btn" title="Learn More" href="about.html#">Learn More</a>
         </div>
-      </header>
+      </aside>
+      <aside>
+        <div class="content">
+          <h3>Skills</h3>
+            <p>I have strong algorithmic thinking abilities and experience
+               designing entire projects that are tens of thousands of lines
+               of code. Furthermore, I put a lot of emphasis on documenting
+               and presenting my work concisely. I also offer a lot more
+               beyond these general skills.</p>
 
-      <section class="main">
-        <aside>
-          <div class="content">
-            <h3>About Me</h3>
-            <p>Hi, I’m Mickey. I always enjoyed programming the computer to do
-               smart tasks, such as graphing math functions and detecting hidden
-               bits of plagiarism. I also put a lot of emphasis on clean and
-               maintainable code. My goal is to produce intelligent software
-               with intelligent designs.</p>
-              
-            <a class="btn" title="Learn More" href="about.html#">Learn More</a>
-          </div>
-        </aside>
-        <aside>
-          <div class="content">
-            <h3>Skills</h3>
-              <p>I have strong algorithmic thinking abilities and experience
-								 designing entire projects that are tens of thousands of lines
-								 of code. Furthermore, I put a lot of emphasis on documenting
-								 and presenting my work concisely. I also offer a lot more
-								 beyond these general skills.</p>
+            <a class="btn" title="Learn more" href="skills.html">Learn More</a>
+        </div>
+      </aside>
+      <aside>
+        <div class="content">
+          <h3>Projects</h3>
+          <p>I gain plenty of practical experience from projects. By devoting
+             significant time and energy to writing software that interests
+             me, I get to hone my skills and have plenty of fun. Want to see
+             some of my accomplishments?</p>
 
-              <a class="btn" title="Learn more" href="skills.html">Learn More</a>
-          </div>
-        </aside>
-        <aside>
-          <div class="content">
-            <h3>Projects</h3>
-						<p>I gain plenty of practical experience from projects. By devoting
-							 significant time and energy to writing software that interests
-							 me, I get to hone my skills and have plenty of fun. Want to see
-							 some of my accomplishments?</p>
-
-            <a class="btn" title="Learn more" href="projects.html">Learn More</a>
-          </div>
-        </aside>
-      </section>
-      <footer>
-        &copy; Mickey Chao
-      </footer>
-    </div>
+          <a class="btn" title="Learn more" href="projects.html">Learn More</a>
+        </div>
+      </aside>
+    </section>
+    <footer>
+      &copy; Mickey Chao
+    </footer>
   </body>
 </html>
