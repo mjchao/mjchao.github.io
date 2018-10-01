@@ -1,6 +1,10 @@
 @import url("general.css");
 @import url("nav.css");
 
+body {
+  margin: 0;
+}
+
 header {
   text-align: center;
   position: relative;
