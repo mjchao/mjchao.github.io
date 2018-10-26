@@ -2,6 +2,7 @@
 "CONTENT_ORDERING": [
   "about-this-blog",
   "six-attributes-of-the-cs-major",
+  "incentives-for-declaring-cs",
   "optimizing-your-workload",
   "learning-intuition",
   "class-registration-tips",
@@ -28,6 +29,7 @@
   ],
   ["Computer Science Courses", [
       "six-attributes-of-the-cs-major",
+      "incentives-for-declaring-cs",
       "learning-intuition",
       "taking-advantage-of-autograder",
       "choosing-best-teaching-assistants"
