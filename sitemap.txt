@@ -13,6 +13,7 @@ https://mjchao.github.io/blog/career-fair.html
 https://mjchao.github.io/blog/choosing-best-teaching-assistants.html
 https://mjchao.github.io/blog/class-registration-tips.html
 https://mjchao.github.io/blog/complete-solid-personal-project.html
+https://mjchao.github.io/blog/course-planning.html
 https://mjchao.github.io/blog/embellishing-your-resume.html
 https://mjchao.github.io/blog/incentives-for-declaring-cs.html
 https://mjchao.github.io/blog/job-search-timeline.html

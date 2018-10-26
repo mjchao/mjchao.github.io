@@ -3,6 +3,7 @@
   "about-this-blog",
   "six-attributes-of-the-cs-major",
   "incentives-for-declaring-cs",
+  "course-planning",
   "optimizing-your-workload",
   "learning-intuition",
   "class-registration-tips",
@@ -21,6 +22,7 @@
 "TITLE": "College Computer Science Tips",
 "CATEGORIES": [
   ["College in General", [
+      "course-planning",
       "optimizing-your-workload",
       "class-registration-tips",
       "all-parts-of-grade-matter",
