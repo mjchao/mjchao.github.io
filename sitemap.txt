@@ -20,7 +20,7 @@ https://mjchao.github.io/blog/optimizing-your-workload.html
 https://mjchao.github.io/blog/personal-projects-first-internship.html
 https://mjchao.github.io/blog/six-attributes-of-the-cs-major.html
 https://mjchao.github.io/blog/taking-advantage-of-autograder.html
-https://mjchao.github.io/blog/technical-interviewing.html
+https://mjchao.github.io/blog/technical-interviewing-internships.html
 https://mjchao.github.io/projects/food-sharing.html
 https://mjchao.github.io/projects/gateway-test-framework.html
 https://mjchao.github.io/projects/graph3d.html
