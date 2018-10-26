@@ -33,6 +33,7 @@
     <section class="main">
       <div class="heading">
         <h1>{{title}}</h1>
+        <h2>{{date}}</h2>
         <img src="/{{ROOT_DIR}}/{{TOPIC_DIR}}/{{CONTENT_DIR}}/header.png"></img>
       </div>
       <div class="content">

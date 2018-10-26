@@ -3,12 +3,12 @@
 @import url("/css/blog/nav.css");
 @import url("/css/blog/content-related-summary.css");
 
-section.main h2 {
+section.main .content h2 {
   padding-top: 0.5em;
   margin-bottom: -0.3em;
 }
 
-section.main h3 {
+section.main .content h3 {
   padding-top: 0.5em;
   margin-bottom: -0.3em;
   font-style: italic;
