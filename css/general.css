@@ -25,6 +25,7 @@ h3 {
 p, ul, ol {
   font-family: 'Merriweather', serif;
   line-height: 1.7em;
+  margin-bottom: 2.2em;
 }
 
 code {
@@ -32,6 +33,7 @@ code {
   display: block;
   white-space: pre-wrap;
   padding-left: 2em;
+  margin-bottom: 2.2em;
 }
 
 a.btn {
