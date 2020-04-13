@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<meta charset="UTF-8">
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113887707-1"></script>
+    <script src="/js/analytics.js"></script>
+
+    <meta http-equiv="Content-Type" context="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profiling Market Data Ingestion</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/./projects/content.css">
+    <script src="/js/nav.js"></script>
+  </head>
+  <body>
+    <script src="/js/nav.js"></script>
+<nav>
+  <a class="logo" title="Mickey Chao" href="/index.html"></a>
+  <ul>
+    <li class="collapsed-menu">
+      <a href="#" class="icon" onclick="return toggleCollapsedMenu()">Menu</a>
+    </li>
+    <li class="about">
+      <a title="About" href="/about.html">About</a>
+    </li>
+    <li class="skills">
+      <a title="Skills" href="/skills.html">Skills</a>
+    </li>
+    <li class="projects">
+      <a title="Projects" href="/projects.html">Projects</a>
+    </li>
+    <li class="blog">
+      <a title="Blog" href="/blog.html">Blog</a>
+    </li>
+  </ul>
+</nav>
+
+    <section class="main">
+      <div class="heading">
+        <h1>Profiling Market Data Ingestion</h1>
+        <img src="/././projects/profiling-market-data/header.png"></img>
+      </div>
+      <div class="content">
+        <p>
+In general, bigger packets require more time to read and process; however, in algorithmic trading, not all of the data in a packet is important. One software team developed a way to extract the “important” parts from a market data feed and advertised their abbreviated method as significantly faster than the standard method of processing the entire packet. Some trading teams confirmed the speedup, while other trading teams with the same configuration reported subpar results and sometimes a latency penalty. My task was to discover the source of the slowdown.
+</p>
+
+<p>
+The first property I noticed was that hosts with worse latency were running two market data ingestion processes: the standard method and the abbreviated method. On the other hand, the hosts with normal latency were only running the abbreviated method. I suspected this discrepancy would explain the slowdown, except the network card vendor had a convincing explanation for why multiple processes could read from the network card without interference.
+</p>
+
+<p>
+I created numerous heatmaps to visualize how many packets of a particular size had a particular latency (x-axis is size, y-axis is processing latency, color is number of packets). I started removing pieces of code from the standard ingestion method and seeing how it affected the abbreviated method’s latencies. Ultimately the heatmaps conclusively pointed to the standard method reading data from the network card as the culprit slowing down the abbreviated method.
+</p>
+
+<p>
+As I tried to create a minimal working example to demonstrate the slowdown, I discovered that the choice of processor to which each process was bound had an impact on the latency of reading from the network card. After trying out different core bindings, I realized that in our cpus, data transfers from a source processor to a destination processor caused extra data access delays in the source processor. Because the networking card was attached to the abbreviated method’s processor and the standard method ran on a different processor, the setup unintuitively delayed the abbreviated method’s access to the network data.
+</p>
+
+<p>
+My profiling explained around 10% of the tick-to-trade latency in the suboptimal setups and we were able to advise the trading teams of the appropriate tradeoffs they could make for reconfiguring their setup.
+</p>
+
+
+      </div>
+    </section>
+  </body>
+</html>
