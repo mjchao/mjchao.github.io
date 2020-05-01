@@ -27,6 +27,8 @@ section.intro h1 {
 section.intro p {
   max-width: 800px;
   margin: auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 section.main aside.summary div.summary-content h1.summary-title {

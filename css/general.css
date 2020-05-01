@@ -3,7 +3,11 @@
 body {
   font-size: 16px;
   min-height: 430px;
-  width: 100%;
+}
+
+p, ul, ol, h1, h2, h3, h4, h5, h6, li {
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,6 +30,11 @@ p, ul, ol {
   font-family: 'Merriweather', serif;
   line-height: 1.7em;
   margin-bottom: 2.2em;
+}
+
+/* Don't put extra spaces at the end of nested lists */
+li > ul, li > ol {
+  margin-bottom: 0;
 }
 
 code {
