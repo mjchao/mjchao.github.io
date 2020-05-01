@@ -13,6 +13,7 @@ https://mjchao.github.io/blog/career-fair.html
 https://mjchao.github.io/blog/choosing-best-teaching-assistants.html
 https://mjchao.github.io/blog/class-registration-tips.html
 https://mjchao.github.io/blog/complete-solid-personal-project.html
+https://mjchao.github.io/blog/convincing-your-child-to-study-cs.html
 https://mjchao.github.io/blog/course-planning.html
 https://mjchao.github.io/blog/embellishing-your-resume.html
 https://mjchao.github.io/blog/incentives-for-declaring-cs.html
@@ -26,7 +27,9 @@ https://mjchao.github.io/blog/technical-interviewing-internships.html
 https://mjchao.github.io/projects/food-sharing.html
 https://mjchao.github.io/projects/gateway-test-framework.html
 https://mjchao.github.io/projects/graph3d.html
+https://mjchao.github.io/projects/hardware-cost-saving.html
 https://mjchao.github.io/projects/political-graphs.html
+https://mjchao.github.io/projects/profiling-market-data.html
 https://mjchao.github.io/projects/text-reuse.html
 https://mjchao.github.io/projects/word2vec.html
 https://mjchao.github.io/skills/ai.html
