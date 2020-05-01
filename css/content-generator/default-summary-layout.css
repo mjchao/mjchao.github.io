@@ -1,5 +1,10 @@
 @import url("/css/content-generator/default-cover-layout.css");
 
+aside.summary {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
 aside.summary div.summary-image {
   height: 200px;
 }
