@@ -1,0 +1,160 @@
+<p>
+In the part 1 of the internship series, we talked about three important aspects on which interns are evaluated: technical ability, personality, and work ethic. While I don’t have much more to add for personality and work ethic, this post provides an in-depth look at how to do the technical portion of your internship properly and how to showcase your technical ability to those evaluating you.
+</p>
+<h2>
+General Software Engineering Process
+</h2>
+<p>
+You pretty much follow the same software engineering process for an internship as you would a personal project. In <a href="complete-solid-personal-project.html">Completing a Solid Personal Project</a>, I wrote about requirements, architecture, coding, and testing. The primary difference in an internship is you won’t be able to complete your project without help from your mentor, but otherwise, the same steps still apply in your internship.
+</p>
+<h2>
+Requirements
+</h2>
+<p>
+The requirements stage is probably the most critical part you need to get as close to “right” as possible before you start any major coding. Pretty much all interns at the end of their internship agree on one thing: “Dang if only I had realization X during week 1. Then I wouldn’t have wasted Y weeks coding feature Z incorrectly.” It happens to everyone - even full-time employees like me when I work on projects. To reduce the possibility of a disaster, you want to make sure you understand your project as much as you can so that you do have as many of those “realizations” as you can on week 1.
+</p>
+<p>
+Your mentor can help you understand your project fully. Pay close attention to what s/he has to say, and always ask questions when you don’t understand something. See if you can re-explain what s/he tells you in your own words. An easy way to “re-explain” and generate your requirements is by writing stories describing what a user does. Here’s an example:
+<ol>
+	<li>User searches for an item “jacket”</li>
+	<li>User finds a “jacket” on the browse page that s/he wants</li>
+	<li>User clicks on “jacket” and gets taken to the item-specific page with jacket’s description and price</li>
+	<li>User clicks the buy button and gets taken to the checkout page</li>
+	<li>User enters credit card info and clicks purchase. The transaction is done securely and user gets an email saying their purchase was successful</li>
+	<li>We send a notification to the fulfillment department to mail the jacket to the user</li>
+</ol>
+</p>
+<p>
+Write a user story for every scenario you can think of. Save those scenarios in a document because the document will be a valuable reference after you start coding.
+</p>
+<p>
+If you don’t like user stories, you can use whatever method you prefer to generate requirements. <b>Just don’t skip the requirements!</b> As you make progress on your requirements, you can ask your mentor to review them to make sure you are still on track.
+</p>
+<h2>
+Architecture
+</h2>
+<p>
+Once you generate the requirements and understand what problem you’ve been assigned to solve during your internship, you need to plan out the technical details. Your code will almost certainly be interacting with code that your mentor and team wrote, so make sure you attempt to understand how their code works. Ask around for any documentation or tutorials. Try to trace through their code by hand starting from the main function. Or step through their code with a debugger. When you understand how their code works, you’ll understand how your project fits into the big picture.
+</p>
+<p>
+Once you understand the big picture, start planning the interactions within your code and between your code and the bigger system. Diagram the components and interactions with boxes and arrows. Then take your entire list of requirements and manually step through every scenario with your diagram to ensure the system you designed can handle all the requirements. If you catch something missing, then congratulations: it’s much easier to add or erase a box on a diagram then it is to rip out a hundred lines of code. Once you think your architecture captures all the requirements, you can move on to the coding.
+</p>
+<h2>
+Coding
+</h2>
+<p>
+Coding follows a straightforward process:
+<ol>
+	<li>Write your code</li>
+	<li>Submit your code for review by your mentor and other team members</li>
+	<li>Address all comments from your reviewers</li>
+	<li>Go back to step 2 unless your reviewers have no further comments</li>
+	<li>Once your reviewers have no further comments, your code gets added to the codebase</li>
+</ol>
+</p>
+<p>
+Here are a few tips for getting through the coding process.
+</p>
+<p>
+<b>Follow your team’s style.</b> In an ideal codebase, you can’t tell who wrote what; everything is identical and follows the same style guidelines. For example, if your team prefers limiting functions to thirty lines, then adhere to that rule - otherwise you’ll waste time rewriting your function during code review.
+</p>
+<p>
+<b>Pay attention to repeated comments in your code reviews.</b> The first few times someone points out one mistake you consistently make, take care to stop doing that in the future. It reflects poorly on your work ethic if you keep making the same mistake over and over.
+</p>
+<p>
+<b>Keep your code reviews small and frequent.</b> You don’t have to finish your project in a single code review. Submit code reviews frequently so that your mentor can catch any major problems in your code early on. Keep your code reviews small so that your mentor doesn’t have to sit down for a whole day trying to understand what you’ve written. If you’re using git, it helps to put all your reviewed code in a main branch and all your unreviewed code in a dev branch. Then, you can frequently ask your mentor to review the diff between “main” and “dev”.
+</p>
+<p>
+<b>Comment your code.</b> Self documenting code is highly unlikely - and self documenting code written by an intern is even less probable. Save your mentor a headache by adding helpful code-free English comments anywhere you have to think about the code you were writing. Document what all your non-trivial functions do - even the helper functions.
+</p>
+<p>
+<b>Test your code.</b> Write automated unit, integration, and system tests for all your code. If you have to make massive changes during code review, you will be relieved to find that you can just run the unit tests to ensure your colossal rewrite didn’t completely break your code. The best testing is adversarial, so intentionally introduce silly errors into your code, such as off-by-one, uninitialized variables, or removing an important function call. Then confirm that your tests break. If your tests don’t break, that illuminates you need to do better on your testing.
+</p>
+<p>
+<b>Test all your requirements.</b> If you generated your requirements properly, then you should be able to write test cases for every requirement. In fact, if you wrote user stories, then those stories themselves become your test cases. As you test every requirement, you can check it off a master list.
+</p>
+<p>
+<b>Think about your “users.”</b> Customers are the obvious “user” of your code, but there’s another user you should keep in mind: your team members. As you code, ask yourself, “if I were someone else, would I be able to use this code easily?” If you can’t answer with a definite yes, that means you should consider rewriting your code. People will not reuse convoluted or buggy code. And if people do not use your code, then your project is a waste. Keep your team members in mind because they will be the ones having to maintain your code.
+</p>
+<h2>
+Documentation
+</h2>
+<p>
+Your internship project doesn’t end with you delivering code; you also need to deliver documentation. Write up a tutorial on how to use your project. Write up a high level architecture diagram describing the interactions in your code. If karma exists, you may even get hired full-time and end up working with your intern code a year later. In that case, you’d definitely want a document refreshing you about everything you did during your internship. Having appropriate documentation means that other people can use your code and they will think highly of you when your code is easy to use.
+</p>
+<h2>
+Presentation
+</h2>
+<p>
+Towards the end of your internship, you may be asked to present your project to upper-level management; the oral presentation is your opportunity to impress important people with your accomplishments. Unfortunately, I usually see powerpoint slides with blocks of technical text, which is a sure way to give your audience a headache trying to follow along. This is the wrong approach because oral presentations are inefficient for communicating nitty-gritty technical details. Ensure your presentations are “dumbed down,” easy to understand, and make heavy use of visuals. The slides should augment the words coming out of your mouth and the slides should not contain anything you can’t explain orally.
+</p>
+<p>
+(If you have yet to take your technical communication class, pay attention to your lecturer no matter how many people say the material is “useless”)
+</p>
+<p>
+Here’s an example of a good slide without the speaker’s words yet.
+</p>
+<h3>
+Part one of slide
+</h3>
+<p>
+<center>
+	<img src="internships-technical-aspect/slide-part1.png">
+	</img>
+</center>
+</p>
+<h3>
+Part two of slide
+</h3>
+<p>
+<center>
+	<img src="internships-technical-aspect/slide-part2.png">
+	</img>
+</center>
+</p>
+<p>
+Now add in the speaker:
+</p>
+<blockquote>
+In this project we want the computer to be able to figure out if two words like “cpu” and “processor” are similar.
+  <br/><br/>
+[make part 1 appear]
+  <br/><br/>
+Well, text on a computer is just a sequence of bytes and in part one, you see the computer really has no way to figure out if this first string of three bytes is similar to this next string of  nine bytes.
+  <br/><br/>
+[make part 2 appear]
+  <br/><br/>
+But what if we were able to represent every word as an N-dimensional vector? Then the computer can easily figure out if two words are related by computing the cosine similarity or other mathematical function on the vectors.
+</blockquote>
+<p>
+The two images are clearer, more concise, and add much more value than a slide with a series of bullet points such as the following:
+</p>
+<ul>
+	<li>How similar is “cpu” to “processor”?</li>
+	<li>Computer can’t figure out if 3 ascii characters are similar to 9 arbitrary characters</li>
+	<li>Represent as vectors instead</li>
+	<li>Vectors let you use cosine similarity as a metric</li>
+	<li>Cosine similarity is defined as: [insert complicated math formula]</li>
+</ul>
+<p>
+The bullet points are ineffective because the speaker is just repeating them. Furthermore, the slide should not delve deeper into the math behind cosine similarity because the audience can Google that on their own time and the speaker would just be saying, “hey look at that formula on the slide.”
+</p>
+<p>
+The audience of an oral presentation won’t have time to understand all technical details in a short span of time. Keep text and technical details to a minimum in your slides and focus on the big picture (yes, both literally and metaphorically). Rehearse your presentation beforehand so that you don’t have awkward gaps that interrupt your audience’s train of thought. Everything will go smoothly and you’ll end up leaving a positive impression on those who attend your presentation.
+</p>
+<h2>
+Summary
+</h2>
+<p>
+With the exception of requiring the guidance of an intern mentor, the software development parts of an internship mirror the steps you’d take for a personal project:
+</p>
+<ul>
+	<li>Generate your requirements (don’t skimp on this)</li>
+	<li>Understand your team’s codebase and diagram your software architecture</li>
+	<li>Write and test your code and address code review comments</li>
+</ul>
+<p>
+After your code is ready, be prepared to deliver documentation on how to use your project and rehearse a light-on-text and heavy-on-visuals presentation for upper management.
+</p>
+
+
