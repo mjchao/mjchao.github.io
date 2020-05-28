@@ -16,6 +16,7 @@ https://mjchao.github.io/blog/convincing-your-child-to-study-cs.html
 https://mjchao.github.io/blog/course-planning.html
 https://mjchao.github.io/blog/embellishing-your-resume.html
 https://mjchao.github.io/blog/incentives-for-declaring-cs.html
+https://mjchao.github.io/blog/internships-company-culture.html
 https://mjchao.github.io/blog/internships-technical-aspect.html
 https://mjchao.github.io/blog/internships-working-towards-return-offer.html
 https://mjchao.github.io/blog/job-search-timeline.html

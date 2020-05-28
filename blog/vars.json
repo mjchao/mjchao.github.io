@@ -1,25 +1,26 @@
 {
 "CONTENT_ORDERING": [
   "about-this-blog",
-  "six-attributes-of-the-cs-major",
-  "incentives-for-declaring-cs",
-  "course-planning",
-  "optimizing-your-workload",
-  "learning-intuition",
-  "waitlist-registration-tips",
-  "all-parts-of-grade-matter",
-  "benefits-of-unlimited-meal-plan",
-  "taking-advantage-of-autograder",
-  "job-search-timeline",
-  "personal-projects-first-internship",
-  "complete-solid-personal-project",
-  "embellishing-your-resume",
-  "choosing-best-teaching-assistants",
-  "behavioral-interviewing",
-  "career-fair",
-  "technical-interviewing-internships",
+  "internships-company-culture",
+  "internships-technical-aspect",
   "internships-working-towards-return-offer",
-  "internships-technical-aspect"
+  "technical-interviewing-internships",
+  "career-fair",
+  "behavioral-interviewing",
+  "choosing-best-teaching-assistants",
+  "embellishing-your-resume",
+  "complete-solid-personal-project",
+  "personal-projects-first-internship",
+  "job-search-timeline",
+  "taking-advantage-of-autograder",
+  "benefits-of-unlimited-meal-plan",
+  "all-parts-of-grade-matter",
+  "waitlist-registration-tips",
+  "learning-intuition",
+  "optimizing-your-workload",
+  "course-planning",
+  "incentives-for-declaring-cs",
+  "six-attributes-of-the-cs-major"
 ],
 "TITLE": "College Computer Science Tips",
 "CATEGORIES": [
@@ -48,7 +49,8 @@
       "career-fair",
       "technical-interviewing-internships",
       "internships-working-towards-return-offer",
-      "internships-technical-aspect"
+      "internships-technical-aspect",
+      "internships-company-culture"
     ]
   ]
 ]

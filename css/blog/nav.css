@@ -94,6 +94,8 @@ nav div.blog-nav-category h3 {
   color: #fff;
   font-size: 1.2em;
   margin-bottom: 0.2em;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 nav div.blog-nav-category div.blog-nav-article:hover {
@@ -106,3 +108,4 @@ nav div.blog-nav-category div.blog-nav-article a.blog-nav-article-link {
   padding: 10px 20px 0 10px;
   font-family: 'Raleway', sans-serif;
 }
+
