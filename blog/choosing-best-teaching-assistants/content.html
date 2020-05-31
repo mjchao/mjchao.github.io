@@ -40,48 +40,13 @@ In lecture, we learned the expression for the logistic loss function, its graph,
 where $\theta$ is the model parameters, $x^{(i)}$ are the features of a historical training input, and $y^{(i)}$ is the historical training output, which must be between 0 and 1. We also took the gradient to determine how to update the model parameters based on the training samples. After lecture, I knew how to update parameters on my own; however, I didn’t have a great idea of what this logistic loss function was doing to the parameters.
 </p>
 <p>
-In recitation, my TA brought up the problem of approximating how biased an unfair coin was given the results (heads or tails) of many tosses. He wrote out an expression for how likely it was for a coin to be biased to heads given the observed heads and tails. It’s
-</p>
-<center>
-  <p>
-		$Likelihood = \prod_{i=1}^{n}\left(P\right)^{y(i)}\left(1-P\right)^{(1 - y(i))}$
-  </p>
-</center>
-<p>
-where $P$ is the probability of heads given by our model and $y(i)$ is 1 if coin toss $i$ resulted in heads and 0 if the toss resulted in tails. After taking the log of both sides, we got
-</p>
-<center>
-  <p>
-		$\log(likelihood) = \sum_{i=1}^{n}\left(y^{(i)}\log(P) + \left(1 - y^{(i)}\right)\log(1 - P)\right)$
-  </p>
-</center>
-<p>
-After taking the derivative and setting it to 0, we found the most likely bias to be $P = (\# heads)/(\# tosses)$, which made perfect sense.
+The above formula looks pretty complicated, right? Well read on to see how my TA connected that formula to a simple English explanation of what the formula does. My machine learning TA started his recitation with the problem of flipping a biased coin multiple times to estimate how “fair” it was. In other words: someone gives you a random coin and as you flip the coin and observe the outcomes, you have to estimate the true probability that coin lands on heads versus tails.
 </p>
 <p>
-Then, because logistic regression uses the logistic (sigmoid) function as the probability of the positive output (i.e. heads),  he suggested we substitute the sigmoid function for the coin toss binomial probabilities. We simply set
-</p>
-<center>
-  <p>
-		$P = \sigma(x) = \frac{1}{1 + e^{-\theta^Tx^{(i)}}}$
-  </p>
-</center>
-<p>
-And viola - the logistic loss function (minus a negative sign in front) from lecture appeared:
-</p>
-<center>
-  <p>
-    $\log(likelihood) = \sum_{i=1}^{n}\left(y^{(i)}\log\left(\frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right) - \left(1 - y^{(i)}\right)\log\left(1 - \frac{1}{1 + e^{-\theta^Tx^{(i)}}}\right)\right)$
-  </p>
-</center>
-<p>
-Since $\theta$ is a many-dimensional vector with a ton of variables, we can’t take the derivative and set it to 0. Instead, to minimize $J = -\log(likelihood)$, which is equivalent to maximizing the likelihood, we follow the gradient.
+As we stepped through all the complicated math for estimating the bias of the coin given the outcomes of coin flips, I wasn’t entirely sure how it would be related to logistic regression at first. But as the derivation progressed, I started seeing parts of the logistic regression loss function appearing. Coincidence? Of course not. By the end of the recitation, with a small substitution, my TA had illustrated the connection between maximum likelihood estimation of a coin’s bias to logistic regression!
 </p>
 <p>
-This wasn’t a coincidence - this was an intuitive way of using a simple coin toss scenario to connect logistic regression and maximum likelihood estimation. Although the connection might seem “obvious” after the fact, it was definitely not elementary while trying to keep up with all the other concepts in the course.
-</p>
-<p>
-My machine learning TA presented the lecture material from a fresh, new perspective. In lecture, I learned how to use logistic regression; it was very practical but missing some conceptual ideas. From recitation, I learned the ideas from which logistic regression stemmed so that I was no longer blindly applying an arbitrary loss function to a problem. Instead of summarizing the lecture material, my machine learning TA augmented the lecture by helping me understand the connection between logistic regression and maximum likelihood estimation. My peers who skipped this recitation missed out on a very important concept.
+My machine learning TA presented the lecture material from a fresh, new perspective. In lecture, I learned how to use logistic regression; it was very practical but missing some conceptual ideas. From recitation, I learned the ideas from which logistic regression stemmed so that I was no longer blindly applying an arbitrary loss function to a problem. Instead of doing the bare minimum of summarizing lecture material, my machine learning TA augmented the lecture. He helped me understand some the intuition behind logistic regression by connecting it to a simple concept of coin flips. My peers who skipped this recitation missed out on a very important concept.
 </p>
 <h2>
 Why Teaching Assistant Quality Has High Variance
