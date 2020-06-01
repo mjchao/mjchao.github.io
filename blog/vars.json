@@ -1,6 +1,7 @@
 {
 "CONTENT_ORDERING": [
   "about-this-blog",
+  "internships-remote-tips",
   "internships-life-outside-work",
   "internships-company-culture",
   "internships-technical-aspect",
@@ -52,7 +53,8 @@
       "internships-working-towards-return-offer",
       "internships-technical-aspect",
       "internships-company-culture",
-      "internships-life-outside-work"
+      "internships-life-outside-work",
+      "internships-remote-tips"
     ]
   ]
 ]
