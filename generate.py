@@ -3,6 +3,7 @@ skills and projects subpages.
 """
 from content_generator import ContentGenerator
 from blog_generator import BlogGenerator
+from hft_generator import HftGenerator
 import os
 
 # ========= File paths ======= #
@@ -24,6 +25,9 @@ PROJECTS_DIR = os.path.join(ROOT, "projects")
 
 BLOG_DIR = os.path.join(ROOT, "blog")
 BLOG_TEMPLATES_DIR = os.path.join(TEMPLATES_DIR, "blog")
+
+HFT_DIR = os.path.join(ROOT, "hft")
+HFT_TEMPLATES_DIR = os.path.join(TEMPLATES_DIR, "hft")
 
 # ===== Load Nav HTML ==== #
 global_vars = {}
@@ -83,4 +87,19 @@ blog_generator = BlogGenerator(
             "nav.template")),
         global_vars)
 blog_generator.Generate()
+
+# ===== Generate HFT blog pages and hft.html ===== #
+hft_generator = BlogGenerator(
+      ROOT,
+      HFT_DIR,
+      ContentGenerator.ReadFile(os.path.join(HFT_TEMPLATES_DIR,
+          "blog.template")),
+      ContentGenerator.ReadFile(os.path.join(CONTENT_GEN_TEMPLATES_DIR,
+          "summary.template")),
+      ContentGenerator.ReadFile(os.path.join(HFT_TEMPLATES_DIR,
+          "blog-post.template")),
+      ContentGenerator.ReadFile(os.path.join(HFT_TEMPLATES_DIR,
+          "nav.template")),
+      global_vars)
+hft_generator.Generate()
 

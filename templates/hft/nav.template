@@ -1,0 +1,23 @@
+<script src="/js/blog-nav.js"></script>
+<nav>
+   <ul>
+    <li>
+     <a class="home" title="Home" href="/hft.html">
+      </a>
+    </li>
+    <li>
+      <a href="about-this-blog.html" title="About this Blog" class="post-link">
+        About
+      </a>
+    </li>
+    <li>
+      <a href="#" class="expand-toc" title="Table of Contents"
+        onclick="ToggleShowTOC(event)">
+        All Posts <i class="arrow down"></i> 
+      </a>
+    </li>
+  </ul>
+  <div class="toc"> 
+    {{CATEGORIES}}
+  </div>
+</nav>

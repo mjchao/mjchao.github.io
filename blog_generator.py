@@ -31,13 +31,13 @@ class BlogGenerator(ContentGenerator):
                 articles_html += (
 """
   <div class="blog-nav-article">
-    <a href="/blog/%s.html" class="blog-nav-article-link">
+    <a href="/%s/%s.html" class="blog-nav-article-link">
       %s
     </a>
   </div>
 
 """
-                %(article, title))
+                %(self._topic_dir, article, title))
             category_html = (
 """
 <div class="blog-nav-category">

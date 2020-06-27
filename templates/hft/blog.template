@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{TITLE}}</title>
     <link rel="stylesheet" type="text/css" media="screen" href="/css/blog/overview.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/college-cs-blog/overview.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/hft-blog/overview.css">
     <script src="js/nav.js"></script>
   </head>
   <body>
@@ -18,9 +18,9 @@
 
     <div class="all">
       <section class="intro">
-        <h1>College Computer Science Tips</h1> 
+        <h1>The High Frequency Trading Industry</h1> 
         <p>
-        Thinking about studying computer science in college? Or maybe you’ve already committed to it? This blog discusses ways to perform well in your computer science classes. In addition, we’ll explore ways to effectively pitch your abilities to companies and get valuable internship experiences and competitive full-time offers. Studying computer science leads to a lot of opportunities and when you succeed in the major, you unlock even more!
+        TODO, introduce this blog
         </p>
       </section>
 

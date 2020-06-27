@@ -3,14 +3,6 @@
 @import url("/css/content-generator/default-overview-gridlayout.css");
 @import url("/css/content-generator/default-summary-layout.css");
 
-nav ul li.blog {
-  background-color: #808080;
-}
-
-nav ul li.blog a {
-  color: gold;
-}
-
 div.all {
   position: absolute;
   top: 75px;
