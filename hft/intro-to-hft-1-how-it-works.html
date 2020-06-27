@@ -80,8 +80,69 @@
       </div>
       <div class="content">
         <p>
-Test
+High Frequency Trading, or HFT, is an industry that uses specialized technology to buy and sell  financial assets extremely fast. HFT uses custom software and hardware to process information about financial assets, decide whether to buy or sell, and send an order out to the electronic markets, all within a tiny fraction of a second. HFT companies trade all kinds of assets such as stocks, futures, bonds, options, currencies, and cryptocurrencies. In part 1 of our introduction to HFT, we’ll focus on how the industry makes its profits.
 </p>
+<h2>
+Where do the Profits Come From?
+</h2>
+<p>
+In the financial industry, people make money by buying low and selling high. The typical investor might buy and hope the price goes up one month later. A bank might employ traders to analyze trends and day trade based on the trader’s discretion. And finally, HFT firms write programs that run on computers and other hardware to buy and sell assets in fractions of a second.
+</p>
+<p>
+Trading strategies have various time horizons, which is how long you plan to hold on to a financial asset. Human investors speculating on the market operate over the course of hours, days, or longer; humans take a low-frequency time horizon. On the other hand, HFT companies hold positions for fractions of a second, which is the high-frequency horizon.
+</p>
+<p>
+While a human investor might buy one share of MSFT at $140 and hope to sell it for $160 a month later, a high-frequency algorithm will buy MSFT at $140.00 and hope it can sell it for $140.01 in a few milliseconds. If the high-frequency algorithm can do that for 2000 shares of MSFT, then it will make as much as the human would make. HFT strategies execute quickly, trade high volumes, and often on extremely low margins. We’ll provide some examples of strategies next.
+</p>
+<h3>
+Arbitrage
+</h3>
+<p>
+Arbitrage is probably the simplest strategy: when an asset is mispriced, there is an easy opportunity to earn money. Arbitrage opportunities are frequent in undeveloped asset classes, so for this example, we’ll use Bitcoin. Suppose in the United States, someone is willing to sell a Bitcoin to you for $10,000 (US dollars, or USD) and halfway across the globe in Korea, someone is willing to buy a Bitcoin from you for ₩12,400,000 (Korean Won, or KRW). Assuming an exchange rate of $1 = ₩1225, the person in Korea is practically offering to buy 1 Bitcoin from you at $10,122.45 because s/he doesn’t want to deal with trading in the US. So you can buy 1 Bitcoin in the US for $10,000 and immediately sell it in Korea for ₩12,400,000 = $10,122.45 and net a profit of $122.45. The winner of this arbitrage has to deal with balancing funds between the US and the Korea exchange and other operational and legal hassles; if their operational costs are $120, that could justify the premium of $122.45. And of course, many competitors will fight over such an arbitrage, so the fastest trading strategy wins. Arbitrage is probably the simplest automated strategy and naturally leads to competitors fighting over who can achieve the lowest latency and best operating methodology to capture the majority of the opportunity.
+</p>
+<h3>
+Market Making
+</h3>
+<p>
+Another standard trading strategy is market making; market making is riskier than arbitrage, but does not depend on competing with everyone else on small mispricings in the market. For this example, we use the high-volume MSFT stock. If MSFT last traded at $180.00, then a market maker could offer to buy MSFT at $179.95 and sell MSFT at $180.05. The market making strategy hopes that approximately the same number of shares of MSFT will be bought as will be sold so that the strategy makes 10 cents every buy-sell pair.
+</p>
+<p>
+Suppose At 10AM, I decide to sell my 100 shares of MSFT because I bought it at $160.00 a month ago and I want to realize my profits. I sell my 100 shares to the market maker at $179.95 per share, and although I would’ve preferred selling at $180.00 per share and getting $5 more, I care much more about netting the $1,995 in profit now, before the price changes for the worse.
+</p>
+<p>
+Then, suppose at 10:05AM, you decide to buy 100 shares of MSFT because you think the price will go from $180.00 to $200.00 in the next month. You buy 100 shares of MSFT from the market maker at $180.05 per share. Although you paid $5 extra, $18,000 versus $18,005 is inconsequential to you; if the price of MSFT does increase by $20 in the next month, you’ll earn $1,995 in profit and not care about $5.
+</p>
+<p>
+At 10AM, the market maker took on 100 shares of MSFT at $179.95. At 10:05AM, everything works out for the market maker and it offloads the 100 shares of MSFT at $180.05 to net a profit. With these two transactions, the market maker has made $10 and ends without owning or owing MSFT.
+</p>
+<p>
+One caveat is that the market maker needs to manage risk properly; in a different scenario, someone could sell 10,000 shares of MSFT at 10:01AM at $179.95 per share. Such a large trade could cause everyone else’s bids on the market to drop to $179.90, and leave the market maker with 10,100 shares of MSFT that can now only be sold for a loss of 5 cents. This scenario is called getting “run over” and market making strategies must be careful to avoid this.
+</p>
+<p>
+In this example, a market making strategy was paid a small 10 cent premium per share of MSFT, known as the “spread,” so that you and I, the buyer and seller, can find each other. If there were no professional market makers specialized in reducing the spread, the spread might be higher at $1. Then you and I would each pay $50 instead of $5 to complete our buy and sell transaction. The market maker earns the spread as a reward for helping buyers and sellers find each other in the market. The spread also serves as incentive for taking on the risk that a toxic actor in the market might dump a large number of shares and run the market maker over. Whoever manages the risk best will have the smallest spread for ordinary investors and get the majority of the business.
+</p>
+<h3>
+Price Prediction
+</h3>
+<p>
+Finally, we’ll discuss the price prediction side of HFT. If a trading strategy is able to predict the price movement of a financial asset correctly, then it can make a decent profit. For example, a trading strategy might analyze the historical correlation between ES, a futures contract based on the S&amp;P 500, and NQ, a futures contract based on the Nasdaq 100. ES and NQ are highly correlated because the S&amp;P 500 and Nasdaq 100 share a lot of the same stocks. The strategy could attempt to profit from price deviations between the two contracts.
+</p>
+<p>
+Suppose the strategy normalizes the ES price and the NQ price to some scale on which the two assets’ prices can be easily compared. Then the strategy analyzes historical data and determines the price difference between ES and NQ is between -100 to 100 units 95% of the time. If investors become panicked, such as by the outbreak of Covid 19, then the buying and selling of ES and NQ may no longer be rational. If ES and NQ may break away from the normal correlation and the strategy detects the ES prices becomes 110 units higher than the NQ price, then the strategy will start selling ES and buying NQ until the difference between the ES and NQ price stabilizes again in the -100 to 100 range.
+</p>
+<p>
+During periods of high volatility where investors act irrationally, HFT algorithms take advantage of their irrationality by taking the opposite sides of their trades. Naturally, this can yield significant profits and an onlooker may be dismayed by the opportunistic behavior. The other perspective is that in this example, HFT algorithms earn a premium by helping stabilize prices and preventing ES and NQ from irrationally drifting apart even further.
+</p>
+<h2>
+Competition in HFT
+</h2>
+<p>
+The trading strategies I described above are well-known, and unsophisticated; for example, a typical programmer could write an arbitrage strategy in “a few hours.” So why aren’t we all doing it then? It’s because ten other people out there already wrote the same strategy, but their code executes in microseconds or nanoseconds, while the newcomer’s code takes milliseconds or seconds. By the time the newcomer’s strategy submits orders to perform the arbitrage, all the opportunity has already been taken. Speed is an important factor for successful HFT strategies and in recent years, there has been a technology arms race pushing execution speed towards the limits of physics.
+</p>
+<p>
+The second important factor in HFT strategies is intelligence. At the high end of the intelligence spectrum, if you devise a profitable strategy that nobody else can ever think of, then you have no competition and you don’t have to worry about speed as much. But coming up with a strategy that nobody else has discovered is a massive feat. Intelligence research at HFT firms focuses on finding new signals in the markets that forecast price movements. On the intelligence dimension, there is a ton of competition for the best researchers and modelers in the hopes that they can discover signals that few others have figured out how to monetize.
+</p>
+
 
         
       </div>
