@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<meta charset="UTF-8">
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113887707-1"></script>
+    <script src="/js/analytics.js"></script>
+
+    <meta http-equiv="Content-Type" context="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Debunking the "Vaccines Cause Autism" Study of HFT</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/blog/content.css">
+    <script src="/js/blog-nav.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+      $( function() {
+        $( ".accordion" ).accordion({
+          active: false,
+          collapsible: true,
+          heightStyle: "content",
+        });
+      } );
+    </script>
+
+  </head>
+  <body>
+    <script src="/js/blog-nav.js"></script>
+<nav>
+   <ul>
+    <li>
+     <a class="home" title="Home" href="/hft.html">
+      </a>
+    </li>
+    <li>
+      <a href="about-this-blog.html" title="About this Blog" class="post-link">
+        About
+      </a>
+    </li>
+    <li>
+      <a href="#" class="expand-toc" title="Table of Contents"
+        onclick="ToggleShowTOC(event)">
+        All Posts <i class="arrow down"></i> 
+      </a>
+    </li>
+  </ul>
+  <div class="toc"> 
+    
+<div class="blog-nav-category">
+<h3>About the Industry</h3>
+
+  <div class="blog-nav-article">
+    <a href="/./hft/intro-to-hft-1-how-it-works.html" class="blog-nav-article-link">
+      Intro to HFT, Part 1: How it Works
+    </a>
+  </div>
+
+
+  <div class="blog-nav-article">
+    <a href="/./hft/debunking-vaccines-cause-autism-study-of-hft.html" class="blog-nav-article-link">
+      Debunking the "Vaccines Cause Autism" Study of HFT
+    </a>
+  </div>
+
+
+</div>
+
+
+<div class="blog-nav-category">
+<h3>The HFT Job Search</h3>
+
+</div>
+
+
+  </div>
+</nav>
+
+    <section class="main">
+      <div class="heading">
+        <h1>Debunking the "Vaccines Cause Autism" Study of HFT</h1>
+        <h2>July 1, 2020</h2>
+        <img src="/././hft/debunking-vaccines-cause-autism-study-of-hft/header.png"></img>
+      </div>
+      <div class="content">
+        <p>
+When there was a measles outbreak in the US in 2019, I saw a lot of backlash on the internet towards the “anti-vaxxers,” people who refuse to get their children vaccinated. One reason for their diehard refusal is a 1997 study by British surgeon Andrew Wakefield that concluded vaccines cause autism. Afterwards, it was discovered Wakefield had monetary incentives to arrive at his conclusions and he intentionally committed procedural errors in his research to obtain the data to support his conclusion. The publication was retracted over a decade later and Wakefield’s medical license was revoked, but there are still people today who are misled by the study.
+</p>
+
+<p>
+There is also a book on HFT that I believe is the “vaccines cause autism” study of HFT; however, this publication has not been retracted or even received much backlash. I believe part of the reason is because the HFT industry is fine with letting others believe what they want - negative press doesn’t affect the business. HFT firms are secretive and profitable, which lends support to conspiracy theories about the industry, but still, the claims are unfounded despite the widespread traction. In this article, we will address this “vaccines cause autism” book on HFT, and then point out what the valid concerns actually are.
+</p>
+
+<h2>
+HFT is not Built on Cheating the Market
+</h2>
+
+<p>
+Let me start by refuting the elephant in the room: a blatant accusation that HFT rigs the market. <i>Flash Boys</i> by Michael Lewis is the well-known New York Times bestselling work of journalism that suggests HFT cheats in the markets via a process called “front-running.” The problem with Lewis’ journalism is that he solely interviews outsiders speculating on how HFT works, and he does not interview anyone in HFT. Lewis’ arguments are refuted in a less-publicized book, <i>Flash Boys: Not So Fast</i> by Peter Kovac. Kovac was the chief operating officer at an HFT firm and explains the flaws in Lewis’ writing from an HFT insider’s perspective. While Kovac can take an aggressive and dismissive tone that even some of my coworkers dislike, I’ll present a calmer response here and explain why I view <i>Flash Boys</i> as the “vaccines cause autism” study of HFT. I will first challenge Lewis’ technical knowledge of the HFT domain, then I will refute his explanation of how HFT cheats, and finally, I will explain what likely happened in the incidents that Lewis presents.
+</p>
+
+<p>
+Lewis writes as a nontechnical outsider speculating on the technical parts of HFT without any primary sources. Some of his technical mistakes are so elementary that even first-year computer science students wouldn’t make that error. For example, an employee at Goldman Sachs illegally downloaded the company’s HFT code to his personal source control repository and then deleted his bash history; Lewis argues deleting the bash history was not intended to cover up the illegal activity:
+</p>
+
+<blockquote>
+And then he did what he had always done since he’d first started programming computers: He deleted his bash history - the commands he had typed into his own Goldman computer keyboard. To access the computer, he was required to type his password. If he didn’t delete his bash history, his password would be there to see, for anyone who had access to the system.
+</blockquote>
+
+<p>
+Pretty much everyone working in the software industry knows these facts:
+</p>
+
+<ul>
+	<li>logging onto a machine does not save your password to the bash history</li>
+	<li>logging onto a machine does not let you see other users’ bash history</li>
+</ul>
+
+<p>
+And as a software engineer myself, I’ve never met anyone who deletes their bash history regularly. Lewis tries to explain the simple action of deleting bash history, <b>and half of his sentences are false from a computer science standpoint</b>. The above excerpt suggests Lewis wrote his book about computers trading stocks without having ever used a bash terminal. His writing contains confident and blatantly false explanations that convince and mislead nontechnical readers. The biggest accusation satisfies the same pattern: Lewis proposes a method by which HFT cheats the markets, but with closer scrutiny, one will realize his hypothetical scheme won’t make money, and HFT firms definitely would not use a scheme like that.
+</p>
+
+<h3>
+HFT Does Not Front-Run Orders
+</h3>
+
+<p>
+Lewis’ boldest claim is that HFT “front-runs” orders in a scheme to cheat investors. His claim centers on a narrative about Brad Katsuyama, who was a trader at the Royal Bank of Canada. Katsuyama was tasked with buying large amounts of stock from clients at a discount and trying to offload them on the public markets with minimal price impact. Lewis writes,
+</p>
+
+<blockquote>
+The big investor who wished to sell 5 million shares of Solectron called Brad because he wanted Brad to take the risk on the other 4 million shares. And so Brad bought the shares at $3.65, slightly below the price quoted in the public markets.
+</blockquote>
+
+<p>
+Brad received his shares at a discount price because he was willing “to take the risk” of selling them all. Then, according to Lewis, Brad ran into difficulties offloading those shares with minimal price impact:
+</p>
+
+<blockquote>
+But when he turned to the public markets - the markets on his trading screens - the share price instantly moved. Almost as if the market had read his mind. Instead of selling a million shares at $3.70, as he’d assumed he could do, he sold a few hundred thousand and triggered a minicollapse in the price of Solectron. It was as if someone knew what he was trying to do and was reacting to his desire to sell before he had fully expressed it. By the time he was done selling all 5 million shares, at prices far below $3.70, he had lost a small fortune.
+</blockquote>
+
+<p>
+Eventually, Lewis tries to explain why Brad “lost a small fortune:”
+</p>
+
+<blockquote>
+Brad knew that he was being front-run - that some other trader was, in effect, noticing his demand for stock on one exchange and buying it on others in anticipation of selling it to him at a higher price. He’d identified a suspect: high-frequency traders.
+</blockquote>
+
+<p>
+Lewis claims that HFT strategies cheated Brad by predicting his large order was coming, selling down the price of Solectron on other exchanges in front of Brad’s order, and then buying those shares of Solectron back from Brad at a lower price. This accusation implies that HFT is capable of defrauding every investor in the world. Here is Lewis’ example of how front-running works:
+</p>
+
+<blockquote>
+you wish to buy 100,000 shares of Company XYZ at $25 and now, conveniently, there are 100,000 shares for sale at $25, 10,000 on each of ten different exchanges, all of which will charge the broker to trade on your behalf (though far less than the commission you have paid to him). There are, however, another 100 shares for sale, also at $25, on the BATS exchange - which will pay the broker for the trade. The sequential cost-effective router will go first to BATS and buy the 100 shares - and cause the other 100,000 shares to vanish into the paws of high-frequency traders (in the bargain relieving the broker of the obligation to pay to trade). The high-frequency traders can then turn around and sell the shares of Company XYZ at a higher price, or hold onto the shares for a few seconds more, while you, the investor, chase Company XYZ’s shares even higher. In either case, the result is unappealing to the original buyer of Company XYZ’s shares.
+</blockquote>
+
+<p>
+Kovac explains why no sane person would ever use this strategy and I’ll mention some of his points now. First, Lewis claims an HFT strategy can infer from a 100-share trade on BATS that there are 99,900 more shares coming - that’s impossible. HFT strategies apply machine learning and machine learning accomplishes miraculous tasks, but it cannot predict the future from a single feature: that a 100-share trade occurred. And suppose HFT strategies could infer 99,900 shares were coming. Then the buyer can simply play one level above the HFT strategy: place a resting order to buy 100,000 shares of XYZ at $24.99 that won’t trade immediately and wait or ask someone else to sell 100 shares of XYZ. When that happens, the HFT strategy would immediately sell you 99,900 shares and then try to buy them back at a lower price - but wait, no large sell order ever comes into the market for the HFT strategy to front run. You, the ordinary investor, happily walk away with $999 in savings, and the “evil” HFT firm ends up in a dangerous 100,000-share short position in XYZ that could bankrupt the firm if the price of XYZ increases significantly. Lewis’ proposed strategy is impossible and even if it were possible, it’s easily exploited and results in massive losses; such an exploitable strategy is absolutely not a cheat and not something a profitable HFT firm would even consider.
+</p>
+
+<p>
+Tangent: Kovac explains two additional problems (for a total of four) with Lewis’ highly-flawed explanation of front-running and you can read his explanations in his book. And for a bonus example of Lewis’ funniest, most-absurd claim that nearly had me rolling on the floor laughing, see the end of this article.
+</p>
+
+<p>
+Remember this key point: nobody is front-running Brad because nobody can guess how many shares Brad is trying to sell. So if Lewis’ explanation makes no sense, then what actually happened to Brad in the Solectron incident? A likely explanation is that Brad sent a large order into the market, but to get the best price, it had to be executed in many separate blocks at multiple exchanges. However, as electronic trading strategies noticed an abnormal number of shares of Solectron being sold, they all canceled their bids before the majority of Brad’s order could be routed to additional exchanges to trade against them. This triggered the “minicollapse” and it makes sense: regardless of stock analysis or other financial wisdom, if you see someone out-of-the-blue dumping millions of shares of Solectron, you would assume something is wrong and cancel your bids for Solectron.
+</p>
+
+<p>
+Brad’s bewilderment suggests he expected to buy 4 million shares of Solectron at $3.65 from his client and “just” resell them over a few hours at $3.70 and net a profit of $200,000. I think it’s scary how he made money for so many years with such a naive strategy. Before automated trading strategies became dominant, Brad would’ve been the fastest trader with his electronic trading setup and he would hit the “suckers” who couldn’t cancel their orders in time. But once other people started canceling their orders in time, the easy money went away. Brad’s job was to offload massive quantities of stock elegantly without triggering a “minicollapse,” and when people stopped falling for his naive strategy of just dumping massive quantities of stock in a short period of time, Brad’s strategy would trigger the “minicollapse” in price. Brad failed at his job and offloaded the blame, claiming mythical front-runners were cheating him.
+</p>
+
+<p>
+It’s no surprise when Lewis states,
+</p>
+
+<blockquote>
+There was still a role for Brad and traders like Brad - to sit between buyers and sellers of giant blocks of stock and the market. But the space was shrinking.
+</blockquote>
+
+<p>
+Like in other industries, technology and automation made Brad’s skillset obsolete, and many firms created algorithms to replace Brad. It’s understandable that as a human, Brad would blame anyone but himself. What is not acceptable is that Lewis, as a “financial journalist,” took Brad’s story, published wild claims about HFT cheating the markets as truth, and never considered a single perspective from the HFT side.
+</p>
+
+<h3>
+The Implications of <i>Flash Boys</i>
+</h3>
+
+<p>
+Towards the beginning the book, Lewis states,
+</p>
+
+<blockquote>
+no one could prove that high-frequency traders were front-running the orders of ordinary investors. The data didn’t exist.
+</blockquote>
+
+<p>
+Lewis could not find evidence to show “high-frequency traders were front-running” because HFT firms weren’t front-running. If HFT firms did engage in front-running, then Lewis could have found data to support his claim from the real-time order and trade data available to the public (it costs a few thousand dollars per exchange, which Lewis or his publishing company can absolutely afford). It is unprofessional for Lewis to assert there is no data to support his claim that HFT cheats the market, and still continue with a couple hundred pages of thought experiments speculating on how HFT cheats the market. Unsurprisingly, Kovac, an insider from the HFT industry, finds many blatant errors in Lewis’ speculation and writes a dismissive rebuttal.
+</p>
+
+<p>
+<i>Flash Boys</i> successfully used naive thought experiments to convince a wide, nontechnical audience that HFT rigs the markets; the book exemplifies the dangers of journalism when biased irresponsibly towards one side and the dangers of publishing research without any data on the research topic. As a result, my opinion is that <i>Flash Boys</i> has become the “vaccines cause autism” study of the HFT industry: an author with monetary incentives writes a book to evoke outrage and gain attention, rather than focusing on data and facts. It is shameful that <i>Flash Boys</i> successfully spread so much misinformation about the HFT industry. I hope you now have some doubt about Lewis’ understanding of this domain and consider reading Kovac’s entire rebuttal in <i>Flash Boys: Not So Fast</i> (<a href="https://www.amazon.com/Flash-Boys-Insiders-Perspective-High-Frequency/dp/0692336907">Amazon</a> link - I do not receive compensation for this referral).
+</p>
+
+<h2>
+The Real Negatives of HFT
+</h2>
+
+<p>
+Kovac shows the majority of Lewis’ claims have no supporting evidence and don’t make sense; the industry is not built to cheat via front-running. But that doesn’t mean HFT is perfect. HFT is like every other industry: it has both flaws and benefits to society. In the remainder of this article, we will discuss some actual negative impacts HFT can have on markets: bugs in trading software, and individual bad actors who cheat (not through front-running!) in the markets.
+</p>
+
+<p>
+(And in the next article, we will discuss some positive impacts)
+</p>
+
+<h3>
+HFT Disrupts the Markets Accidentally
+</h3>
+
+<p>
+A common piece of negative press is that HFT strategies disrupt markets. Let me be very clear: HFT firms do make errors that disrupt the markets. Perfect software is impossible to achieve and an uncontrolled bug can wreak havoc on the market. For example, in 2012, an HFT firm called Knight Capital Group made a fatal misconfiguration in their system and sent an uncontrollable stream of test orders to the real market. They were unable to shut down their trading system in time and lost several hundred million dollars in less than an hour. In this instance, Knight Capital Group’s mistake pushed hundreds of stocks to unrealistic prices and disrupted the markets.
+</p>
+
+<p>
+HFT firms have learned from these past mistakes and today, they all employ sophisticated safeguards to lower the chances they disrupt the market. Strategies that go haywire get automatically shut off by risk checks. Regulators and auditors frequently inquire with HFT firms about the different kinds of risk checks they employ. We don’t hear much more about massive crashes because the industry has become much more defensive in their trading systems, and HFT firms make it a priority to reduce the risks should bugs arise in their technology.
+</p>
+
+<p>
+Everybody makes mistakes, and in HFT, a mistake can have a noticeable impact on the market. Like in every industry, there are monetary fines and potentially criminal consequences to disincentivize negligence. The important point is that the HFT industry tries very hard to mitigate risks and you should have confidence that the impact on markets will be minimal should bugs occur in HFT firms’ electronic trading algorithms.
+</p>
+
+<h3>
+Bad Actors Get Caught and Pay Millions in Restitution
+</h3>
+
+<p>
+The second common negative press stems from bad actors who ignore the rules and try to cheat in the markets. Individual greed is the primary factor that drives people to cheat in rare circumstances. One way of cheating is called “spoofing,” or placing orders you had no intention of executing. For example, you could place large buy orders on the book to trick other market participants into thinking there was more demand for a product. Other participants might think the price will go up, and buy against your sell orders that you actually wanted to execute. Once your sell orders are executed, you cancel your buy orders. Any trader can do this, but there is no escape from the legal consequences because every order and trade in the market is reported to the regulators and recorded permanently. It is extremely short-sighted to try and cheat in the markets because the incriminating evidence will always be there.
+</p>
+
+<p>
+Like any major crime, the legal case might not get through the courts until years later, but regulators are serious about catching bad actors and imposing enormous fines. In November 2019, the Commodity Futures Trading Commission, which regulates the futures markets, fined Tower Research Capital LLC a whooping $67.4 million dollars for failing to stop three traders spoofing throughout 2012 and 2013. $43 million went to restitution and paying back their ill-gotten gains, and $24.4 million served as additional penalty. The fine was a significant portion of the firm’s profits in 2019 and the three traders at the center of the scandal were indicted and may face prison time if convicted. There is enough downside that most logical people wouldn’t consider cheating and HFT firms as a whole are incentivized to weed out bad actors.
+</p>
+
+<p>
+Most if not all HFT firms have a compliance department of employees who ensure all the trading strategies and technology are compliant with regulations. They will halt any activity deemed noncompliant and provide transparency to the regulators. Similar to how HFT firms employ risk checks against bugs that could negatively impact markets, HFT firms also surveil their own traders to ensure that nobody tries to cheat. The HFT industry is aware of the negative impacts it could have on the markets, and puts in extensive effort to minimize the risks.
+</p>
+
+<h2>
+Conclusion
+</h2>
+
+<p>
+HFT definitely is not an evil, cheating industry; a lot of the wild claims of front-running and other conspiracy theories are easily debunked. That said, there are still potential problems in the HFT industry and the industry works hard to mitigate the risks. Bugs in software are a huge issue and HFT firms create lots of risk checks to avoid hurting the market. Individual bad actors exist as well, but the industry as a whole tries to catch and weed them out. Despite the downsides, there are a lot of benefits from having HFT around, and we’ll get into more of that in the next article.
+</p>
+
+<h2>
+  Bonus Excerpt from <i>Flash Boys</i>
+</h2>
+
+<p>
+As a bonus example, this excerpt from <i>Flash Boys</i> really illustrates Lewis’ misunderstanding of artificial intelligence in HFT:
+</p>
+
+<blockquote>
+“I hadn’t even hit Execute,” says the hedge fund president. “I hadn’t done anything but put in a ticker symbol and a quantity to buy. And the market popped.” Then, after he had bought his ETF at a higher price than originally listed, the hedge fund president received a confirmation saying that the trade had been executed by Citadel Derivatives. Citadel was one of the biggest high-frequency trading firms. “And I wondered, Why is my online broker sending my trades to Citadel?”
+</blockquote>
+
+<p>
+In this example, Lewis implies that Citadel Derivatives, an HFT firm, happened to know the hedge fund president was typing in his order, and predicted he would click Execute (rather than exit the application) even before he clicked the button! I didn’t want sarcasm in the flow of the article, so I saved it for the end: given how well Citadel “spied” on this executive and “read his mind,” perhaps the FBI and CIA could use a few lessons from the HFT industry…
+</p>
+
+<p>
+Kovac provides a reasonable explanation of why this actually happened in his book. And last of all, I must say I appreciate that Lewis did not go as far as fabricating data when he could not find it.
+</p>
+
+
+        
+      </div>
+    </section>
+  </body>
+</html>
