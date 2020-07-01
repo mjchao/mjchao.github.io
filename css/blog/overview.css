@@ -16,11 +16,20 @@ section.intro h1 {
   text-align: center;
 }
 
-section.intro p {
+section p {
   max-width: 800px;
   margin: auto;
   padding-left: 16px;
   padding-right: 16px;
+}
+
+section.subscribe {
+  margin-bottom: 5em;
+}
+
+section.subscribe iframe.substack {
+  margin: auto;
+  display: block;
 }
 
 section.main aside.summary div.summary-content h1.summary-title {
