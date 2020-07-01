@@ -91,7 +91,7 @@ When there was a measles outbreak in the US in 2019, I saw a lot of backlash on 
 </p>
 
 <p>
-There is also a book on HFT that I believe is the “vaccines cause autism” study of HFT; however, this publication has not been retracted or even received much backlash. I believe part of the reason is because the HFT industry is fine with letting others believe what they want - negative press doesn’t affect the business. HFT firms are secretive and profitable, which lends support to conspiracy theories about the industry, but still, the claims are unfounded despite the widespread traction. In this article, we will address this “vaccines cause autism” book on HFT, and then point out what the valid concerns actually are.
+There is also a book on HFT that I believe is the “vaccines cause autism” study of HFT; however, this publication has not been retracted or even received much backlash. I believe part of the reason this book remains popular is because the HFT industry is okay with letting others believe what they want - negative press doesn’t affect business. HFT firms keep rolling out secret and profitable trading strategies, which naturally leads to conspiracy theories about how the money is being made. These conspiracy theories are unfounded despite their widespread traction. In this article, we will address this “vaccines cause autism” book on HFT, and then point out what the valid concerns actually are.
 </p>
 
 <h2>
@@ -99,7 +99,7 @@ HFT is not Built on Cheating the Market
 </h2>
 
 <p>
-Let me start by refuting the elephant in the room: a blatant accusation that HFT rigs the market. <i>Flash Boys</i> by Michael Lewis is the well-known New York Times bestselling work of journalism that suggests HFT cheats in the markets via a process called “front-running.” The problem with Lewis’ journalism is that he solely interviews outsiders speculating on how HFT works, and he does not interview anyone in HFT. Lewis’ arguments are refuted in a less-publicized book, <i>Flash Boys: Not So Fast</i> by Peter Kovac. Kovac was the chief operating officer at an HFT firm and explains the flaws in Lewis’ writing from an HFT insider’s perspective. While Kovac can take an aggressive and dismissive tone that even some of my coworkers dislike, I’ll present a calmer response here and explain why I view <i>Flash Boys</i> as the “vaccines cause autism” study of HFT. I will first challenge Lewis’ technical knowledge of the HFT domain, then I will refute his explanation of how HFT cheats, and finally, I will explain what likely happened in the incidents that Lewis presents.
+Let me start by refuting the elephant in the room: a blatant accusation that HFT rigs the market. <i>Flash Boys</i> by Michael Lewis is the well-known New York Times bestselling work of journalism that suggests HFT cheats in the markets via a process called “front-running.” The problem with Lewis’ journalism is that he solely interviews outsiders speculating on how HFT works, and he does not interview anyone in HFT. Lewis’ arguments are refuted in a less-publicized book, <i>Flash Boys: Not So Fast</i> by Peter Kovac. Kovac was the chief operating officer at an HFT firm and explains the flaws in Lewis’ writing from an HFT insider’s perspective. Here, I’ll explain why I view <i>Flash Boys</i> as the “vaccines cause autism” study of HFT and reference some of Kovac’s commentary as well. I will first challenge Lewis’ technical knowledge of the HFT domain, then I will refute his explanation of how HFT cheats, and finally, I will explain what really happened in the incidents where Lewis alleges HFT firms were cheating.
 </p>
 
 <p>
@@ -120,7 +120,7 @@ Pretty much everyone working in the software industry knows these facts:
 </ul>
 
 <p>
-And as a software engineer myself, I’ve never met anyone who deletes their bash history regularly. Lewis tries to explain the simple action of deleting bash history, <b>and half of his sentences are false from a computer science standpoint</b>. The above excerpt suggests Lewis wrote his book about computers trading stocks without having ever used a bash terminal. His writing contains confident and blatantly false explanations that convince and mislead nontechnical readers. The biggest accusation satisfies the same pattern: Lewis proposes a method by which HFT cheats the markets, but with closer scrutiny, one will realize his hypothetical scheme won’t make money, and HFT firms definitely would not use a scheme like that.
+And as a software engineer myself, I’ve never met anyone who deletes their bash history regularly. Lewis tries to explain the simple action of deleting bash history, <b>and half of his sentences are false from a computer science standpoint</b>. The above excerpt illustrates a lack of technical accuracy in Lewis’ writing. His writing contains blatantly false explanations that mislead a large, nontechnical audience. Unsurprisingly, Lewis’ biggest accusation also lacks technical accuracy: Lewis proposes a method by which HFT cheats the markets, but upon closer scrutiny, one realizes his hypothetical scheme won’t make money, and HFT firms definitely would not use a scheme like that.
 </p>
 
 <h3>
@@ -128,7 +128,7 @@ HFT Does Not Front-Run Orders
 </h3>
 
 <p>
-Lewis’ boldest claim is that HFT “front-runs” orders in a scheme to cheat investors. His claim centers on a narrative about Brad Katsuyama, who was a trader at the Royal Bank of Canada. Katsuyama was tasked with buying large amounts of stock from clients at a discount and trying to offload them on the public markets with minimal price impact. Lewis writes,
+Lewis’ boldest claim is that HFT “front-runs” orders in a scheme to cheat investors and we will show that his front-running explanation contains numerous trading inaccuracies, just as his bash history explanation was rife with computer science inaccuracies. Lewis’ claim centers on a narrative about Brad Katsuyama, who was a trader at the Royal Bank of Canada. Katsuyama was tasked with buying large amounts of stock from clients at a discount and trying to offload them on the public markets with minimal price impact. Lewis writes,
 </p>
 
 <blockquote>
@@ -160,11 +160,11 @@ you wish to buy 100,000 shares of Company XYZ at $25 and now, conveniently, ther
 </blockquote>
 
 <p>
-Kovac explains why no sane person would ever use this strategy and I’ll mention some of his points now. First, Lewis claims an HFT strategy can infer from a 100-share trade on BATS that there are 99,900 more shares coming - that’s impossible. HFT strategies apply machine learning and machine learning accomplishes miraculous tasks, but it cannot predict the future from a single feature: that a 100-share trade occurred. And suppose HFT strategies could infer 99,900 shares were coming. Then the buyer can simply play one level above the HFT strategy: place a resting order to buy 100,000 shares of XYZ at $24.99 that won’t trade immediately and wait or ask someone else to sell 100 shares of XYZ. When that happens, the HFT strategy would immediately sell you 99,900 shares and then try to buy them back at a lower price - but wait, no large sell order ever comes into the market for the HFT strategy to front run. You, the ordinary investor, happily walk away with $999 in savings, and the “evil” HFT firm ends up in a dangerous 100,000-share short position in XYZ that could bankrupt the firm if the price of XYZ increases significantly. Lewis’ proposed strategy is impossible and even if it were possible, it’s easily exploited and results in massive losses; such an exploitable strategy is absolutely not a cheat and not something a profitable HFT firm would even consider.
+Kovac explains why no sane person would ever use this trading strategy and I’ll mention some of his points now. First, Lewis claims an HFT strategy can infer from a 100-share trade on BATS that there are 99,900 more shares coming - that’s impossible. HFT strategies apply machine learning and machine learning accomplishes miraculous tasks, but it cannot predict the future from a single feature: that a 100-share trade occurred. And suppose HFT strategies could infer 99,900 shares were coming. Then the buyer can simply play one level above the HFT strategy: place a resting order to buy 100,000 shares of XYZ at $24.99 that won’t trade immediately and wait until someone else sells 100 shares of XYZ. When that happens, the HFT strategy would immediately sell you 99,900 shares and then try to buy them back at a lower price - but wait, no large sell order ever comes into the market for the HFT strategy to front run. You, the ordinary investor, happily walk away with $999 in savings, and the “evil” HFT firm ends up in a dangerous 100,000-share short position in XYZ that could bankrupt the firm if the price of XYZ increases significantly. Lewis’ proposed strategy is impossible and, even if it were possible, it’s easily exploited and results in massive losses; such an exploitable strategy is absolutely not a cheat and not something a profitable HFT firm would even consider.
 </p>
 
 <p>
-Tangent: Kovac explains two additional problems (for a total of four) with Lewis’ highly-flawed explanation of front-running and you can read his explanations in his book. And for a bonus example of Lewis’ funniest, most-absurd claim that nearly had me rolling on the floor laughing, see the end of this article.
+Tangent: Kovac explains two additional problems (for a total of four) with Lewis’ highly-flawed explanation of front-running and you can read his explanations in his book. And for a bonus example of what I thought was Lewis’ funniest and most-absurd claim, see the end of this article.
 </p>
 
 <p>
@@ -200,15 +200,15 @@ no one could prove that high-frequency traders were front-running the orders of 
 </blockquote>
 
 <p>
-Lewis could not find evidence to show “high-frequency traders were front-running” because HFT firms weren’t front-running. If HFT firms did engage in front-running, then Lewis could have found data to support his claim from the real-time order and trade data available to the public (it costs a few thousand dollars per exchange, which Lewis or his publishing company can absolutely afford). It is unprofessional for Lewis to assert there is no data to support his claim that HFT cheats the market, and still continue with a couple hundred pages of thought experiments speculating on how HFT cheats the market. Unsurprisingly, Kovac, an insider from the HFT industry, finds many blatant errors in Lewis’ speculation and writes a dismissive rebuttal.
+Lewis could not find evidence to show “high-frequency traders were front-running” because HFT firms weren’t front-running. If HFT firms did engage in front-running, then Lewis could have found data to support his claim from the real-time order and trade data available to the public (it costs a few thousand dollars per exchange, which Lewis or his publishing company can absolutely afford). It is unprofessional for Lewis to assert there is no data to support his claim that HFT cheats the market, and still continue with a couple hundred pages of thought experiments speculating on how HFT cheats the market. The data didn’t support Lewis’ hypothesis, but he tried to justify it anyways. Unsurprisingly, Lewis’ justifications are rife with technical errors and Kovac refutes Lewis’ speculation in a dismissive rebuttal.
 </p>
 
 <p>
-<i>Flash Boys</i> successfully used naive thought experiments to convince a wide, nontechnical audience that HFT rigs the markets; the book exemplifies the dangers of journalism when biased irresponsibly towards one side and the dangers of publishing research without any data on the research topic. As a result, my opinion is that <i>Flash Boys</i> has become the “vaccines cause autism” study of the HFT industry: an author with monetary incentives writes a book to evoke outrage and gain attention, rather than focusing on data and facts. It is shameful that <i>Flash Boys</i> successfully spread so much misinformation about the HFT industry. I hope you now have some doubt about Lewis’ understanding of this domain and consider reading Kovac’s entire rebuttal in <i>Flash Boys: Not So Fast</i> (<a href="https://www.amazon.com/Flash-Boys-Insiders-Perspective-High-Frequency/dp/0692336907">Amazon</a> link - I do not receive compensation for this referral).
+<i>Flash Boys</i> successfully ignored the data and used naive thought experiments to convince a wide, nontechnical audience that HFT rigs the markets; the book exemplifies the dangers of journalism when biased irresponsibly towards one side and the dangers of publishing research without any data on the research topic. As a result, my opinion is that <i>Flash Boys</i> has become the “vaccines cause autism” study of the HFT industry: an author with monetary incentives writes a book to evoke outrage and gain attention, rather than focusing on data and facts. It is shameful that <i>Flash Boys</i> successfully spread so much misinformation about the HFT industry. I hope you now have some doubt about Lewis’ understanding of this domain and consider reading Kovac’s entire rebuttal in <i>Flash Boys: Not So Fast</i> (<a href="https://www.amazon.com/Flash-Boys-Insiders-Perspective-High-Frequency/dp/0692336907">Amazon</a> link - I do not receive compensation for this referral).
 </p>
 
 <h2>
-The Real Negatives of HFT
+The Real Imperfections of HFT
 </h2>
 
 <p>
@@ -256,7 +256,7 @@ Conclusion
 </h2>
 
 <p>
-HFT definitely is not an evil, cheating industry; a lot of the wild claims of front-running and other conspiracy theories are easily debunked. That said, there are still potential problems in the HFT industry and the industry works hard to mitigate the risks. Bugs in software are a huge issue and HFT firms create lots of risk checks to avoid hurting the market. Individual bad actors exist as well, but the industry as a whole tries to catch and weed them out. Despite the downsides, there are a lot of benefits from having HFT around, and we’ll get into more of that in the next article.
+HFT definitely is not an evil, cheating industry; a lot of the wild claims of front-running and other conspiracy theories are easily debunked. That said, there are still potential problems in the HFT industry and the industry works hard to mitigate the risks. Bugs in software are a huge issue and HFT firms create lots of risk checks to avoid hurting the market. Individual bad actors exist as well, but the industry as a whole tries to catch and weed them out. Although there are downsides, HFT firms work hard to prevent them from wreaking havoc on the markets. Plus, there are a lot of benefits from having HFT around, and we’ll get into more of that in the next article.
 </p>
 
 <h2>
@@ -272,7 +272,7 @@ As a bonus example, this excerpt from <i>Flash Boys</i> really illustrates Lewis
 </blockquote>
 
 <p>
-In this example, Lewis implies that Citadel Derivatives, an HFT firm, happened to know the hedge fund president was typing in his order, and predicted he would click Execute (rather than exit the application) even before he clicked the button! I didn’t want sarcasm in the flow of the article, so I saved it for the end: given how well Citadel “spied” on this executive and “read his mind,” perhaps the FBI and CIA could use a few lessons from the HFT industry…
+In this example, Lewis implies that Citadel Derivatives, an HFT firm, happened to know the hedge fund president was typing in his order, and predicted he would click Execute (rather than exit the application) even before he clicked the button! Given how well Citadel “spied” on this executive and “read his mind,” perhaps the FBI, CIA, and NSA could use a few lessons from the HFT industry… (sarcasm)
 </p>
 
 <p>
