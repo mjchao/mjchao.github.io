@@ -39,6 +39,12 @@
       <div class="content">
         {{CONTENT}}
         {{RELATED}}
+        <h2>Legal Disclaimer</h2>
+        <p>
+        <i>
+        This article is solely an opinion and should be used for informational purposes only. This article solely reflects my opinion and does not reflect the opinion of any company in the HFT industry. While I try my best to ensure correctness in the facts presented, there is no guarantee on the accuracy of this article. This article is also not intended to be used as investment advice; please seek a licensed professional for investment advice.
+        </i>
+        </p>
       </div>
     </section>
   </body>

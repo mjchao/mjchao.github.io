@@ -1,13 +1,15 @@
 {
 "CONTENT_ORDERING": [
   "about-this-blog",
-  "intro-to-hft-1-how-it-works",
-  "debunking-vaccines-cause-autism-study-of-hft"
+  "intro-to-hft-2-benefits",
+  "debunking-vaccines-cause-autism-study-of-hft",
+  "intro-to-hft-1-how-it-works"
 ],
 "TITLE": "High Frequency Trading",
 "CATEGORIES": [
   ["About the Industry", [
       "intro-to-hft-1-how-it-works",
+      "intro-to-hft-2-benefits",
       "debunking-vaccines-cause-autism-study-of-hft"
     ]
   ],
